@@ -1,0 +1,1461 @@
+.navbar {
+  width: 100%;
+  background: #07090a;
+  height: 64px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Logo */
+.logo img {
+  display: block;
+}
+
+/* Links */
+.navbar-links ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 8px 16px;
+  border: 2px solid #16191b;
+  border-radius: 50px;
+  margin-left: 120px;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  color: #c1c3c3;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-links ul li a:hover {
+  color: #fff;
+}
+
+/* CTA */
+.navbar-cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid #1d2027;
+  background: #14171b;
+  border-radius: 8px;
+  padding: 4px 12px;
+}
+
+.navbar-cta a {
+  text-decoration: none;
+  color: #c1c3c3;
+  font-weight: 600;
+  padding: 8px 16px;
+  transition: color 0.3s;
+}
+
+.navbar-cta a:hover {
+  color: #fff;
+}
+
+.navbar-cta svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Hamburger */
+.navbar-toggle {
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: white;
+  transition: 0.3s ease-in-out;
+}
+.getInTouch {
+  width: 20%;
+}
+.activeBtn {
+  background: #fcaf17 !important; /* highlight color */
+  color: #fff !important; /* text contrast */
+  font-weight: 700;
+}
+
+.autoShow {
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 100vh;
+}
+.newsLetterbtn {
+  background-color: #fcaf17;
+  color: #fff;
+  padding: 0px 20px 0px 20px;
+  border-radius: 10px;
+  border: none;
+  height: 50px;
+  cursor: pointer;
+}
+.returnBoxOne {
+  width: 80%;
+}
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    /* transform: translateY(400px); */
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeUp {
+  animation: fadeUp 0.6s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateX(-300px) scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.fadeUp2 {
+  animation: fadeUp2 0.6s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+@keyframes fadeUp2 {
+  from {
+    opacity: 0;
+    transform: translateX(100px) scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+.fadeUp3 {
+  animation: fadeUp3 0.6s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+@keyframes fadeUp3 {
+  from {
+    opacity: 0;
+    transform: translateX(100px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.paraAnimation {
+  animation: paraAni 0.6s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+@keyframes paraAni {
+  from {
+    opacity: 0;
+    transform: translateX(-600px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 3s;
+}
+.show {
+  opacity: 1;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+.benifitsSection {
+  gap: 10px;
+  width: 10%;
+}
+.PaidAidsBox {
+  color: #666b73;
+  width: 30%;
+  border-radius: 7px;
+}
+.OurClientsSection {
+  gap: 20px;
+  width: 15%;
+  margin-top: 40px;
+}
+.card-section {
+  position: relative;
+  width: 990px;
+  height: 450px;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.4s ease, z-index 0.4s ease;
+  padding-bottom: 130px;
+}
+.CardOneImage {
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.cardOnePara {
+  font-size: 16px;
+  width: 70%;
+  color: #727680;
+}
+.cardOneGradient {
+  background: linear-gradient(#06090f, #0c1016);
+  border-radius: 10px;
+}
+.ApproachSection {
+  gap: 20px;
+  width: 15%;
+  margin-top: 40px;
+}
+.reviewSection {
+  gap: 20px;
+  width: 15%;
+  margin-top: 40px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.comparisonSection {
+  gap: 20px;
+  width: 15%;
+  margin-top: 40px;
+}
+.gridTwo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 30px;
+}
+.faqSection {
+  gap: 6px;
+  width: 6%;
+  margin-top: 40px;
+}
+.questionSection {
+  gap: 30px;
+}
+.questions {
+  width: 45%;
+}
+.responsiveGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
+  gap: 20px;
+}
+.ContactForm {
+  width: 516px;
+  height: 668px;
+  background: linear-gradient(to right, #04070d, #05080e, #0c0f16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-left: 20px;
+  padding-top: 25px;
+  border-top: 2px solid #2f363f;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-left: 1px solid #1d222b;
+  border-right: 1px solid #1d222b;
+  border-bottom: 1px solid #0a0d13;
+}
+.ContactEmailUs {
+  background: linear-gradient(to right, #04070d, #05080e, #0c0f16);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 20px;
+  padding-top: 25px;
+  border-top: 2px solid #2f363f;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-left: 1px solid #1d222b;
+  border-right: 1px solid #1d222b;
+  border-bottom: 1px solid #0a0d13;
+  width: 452px;
+  height: 204px;
+  gap: 20px;
+}
+.ContactUsQuestionBox {
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+}
+.faqQuestionBookBox {
+  padding: 5px 10px 5px 10px;
+  border-radius: 8px;
+}
+.ContactFAQ {
+  width: 80%;
+}
+.faq {
+  background: linear-gradient(#06090f, #0c1016);
+  width: 368px;
+  height: 300px;
+}
+
+@media (max-width: 480px) {
+  .navbar-links,
+  .navbar-cta {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background: #07090a;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000; /* make sure it's above other elements */
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 20px;
+    border: none;
+  }
+
+  .navbar-cta {
+    margin-top: 20px;
+    border-radius: 0;
+  }
+
+  .navbar-toggle {
+    display: block; /* show hamburger on mobile */
+    z-index: 1100; /* keep button clickable */
+  }
+
+  /* 👇 must come after display:none so it overrides it */
+  .navbar-links.active {
+    display: flex !important;
+  }
+  .navbar-cta.active {
+    display: flex !important;
+    margin-top: 160px;
+    width: 100%;
+    flex-direction: row;
+    gap: 7px;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .desktopNavbar {
+    display: none;
+  }
+  .desktopNavbar2 {
+    display: none;
+  }
+  .hamburgerIcon {
+    display: block;
+  }
+  .heroSection {
+    width: 80%;
+  }
+  .heroSectionPara {
+    text-align: center;
+    font-size: 17px;
+    padding: 40px;
+  }
+  .heroSectionPara2 {
+    font-size: 25px;
+  }
+  .heroSection2 {
+    width: 70%;
+  }
+  .responsiveImg {
+    width: 30px;
+    height: 20px;
+  }
+  .returnsSection {
+    width: 85%;
+  }
+  .returnSectionPara {
+    font-size: 25px;
+  }
+  .returnSectionPara2 {
+    font-size: 17px;
+    width: 80%;
+  }
+  .returnSectionBoxes {
+    display: flex;
+    flex-direction: column;
+  }
+  .returnBoxOne {
+    width: 80%;
+  }
+  .svgImages {
+    width: 50px;
+    height: 50px;
+  }
+  .benifitsSection {
+    gap: 10px;
+    width: 30%;
+  }
+  .BenifitsSectionPara2 {
+    width: 100%;
+    font-size: 17px;
+  }
+  .benifitsBoxes {
+    display: flex;
+    flex-direction: column;
+  }
+  .processSection {
+    display: flex;
+    flex-direction: column;
+  }
+  .processSectionActive {
+    display: flex;
+    flex-direction: column;
+  }
+  .PaidAidsBox {
+    color: #666b73;
+    width: 30%;
+    border-radius: 7px;
+    width: 80%;
+  }
+  .OurClientsSection {
+    gap: 20px;
+    width: 50%;
+    margin-top: 40px;
+  }
+  .card-section {
+    position: relative;
+    width: 100%;
+    height: 1050px;
+  }
+
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.4s ease, z-index 0.4s ease;
+    padding-bottom: 130px;
+  }
+  #card3 {
+    /* background: linear-gradient(135deg, #f7971e, #ffd200); */
+    background: #04070d;
+    border-top: 2px solid #38404a;
+    border-left: 1px solid #191e26;
+    border-right: 1px solid #191e26;
+    border-bottom: 1px solid #191e26;
+  }
+  .card:nth-child(1) {
+    transform: translateY(-170px);
+    z-index: 1;
+  }
+  .card:nth-child(2) {
+    transform: translateY(-140px);
+    z-index: 2;
+  }
+  .card:nth-child(3) {
+    transform: translateY(-100px);
+    z-index: 3;
+  }
+
+  /* Active card on top */
+  .card.active {
+    transform: translateY(-60px) scale(1.05);
+    z-index: 10;
+  }
+  .CardOneImage {
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .carasoulSectionBoxes {
+    display: flex;
+    flex-direction: column;
+  }
+  .cardOnePara {
+    font-size: 16px;
+    width: 100%;
+    color: #727680;
+  }
+  .cardOneGradient {
+    background: linear-gradient(#06090f, #0c1016);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .ApproachSection {
+    gap: 20px;
+    width: 60%;
+    margin-top: 40px;
+  }
+  .reviewSection {
+    gap: 20px;
+    width: 45%;
+    margin-top: 40px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .responsiveGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .comparisonSection {
+    gap: 20px;
+    width: 60%;
+    margin-top: 40px;
+  }
+  .gridTwo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    gap: 30px;
+  }
+  .faqSection {
+    gap: 6px;
+    width: 35%;
+    margin-top: 40px;
+  }
+  .questionSection {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .question1Box {
+    width: 100%;
+  }
+  .questions {
+    width: 90%;
+  }
+  .footerSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footerPara {
+    text-align: center;
+  }
+  .contactFormSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+  .ContactForm {
+    width: 100%;
+  }
+  .ContactEmailUs {
+    width: 100%;
+  }
+  .TwoBox {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  .ContactRespPara {
+    font-size: 20px;
+    text-align: center;
+  }
+  .ContactUsQuestions {
+    display: flex;
+    flex-direction: column;
+  }
+  .ContactUsQuestionBox {
+    width: 100%;
+    height: 252px;
+    padding: 10px;
+  }
+  .faqQuestionBookBox {
+    font-size: 12px;
+    border-radius: 8px;
+  }
+  .ContactFooterSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .ContactUsLastSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .questionsContact {
+    width: 100%;
+  }
+  .faq {
+    background: linear-gradient(#06090f, #0c1016);
+    width: 311px;
+    height: 340px;
+  }
+  .questionPara {
+    font-size: 14px;
+  }
+  .autoShow {
+    animation: text-appear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 100vh;
+  }
+  @keyframes text-appear {
+    from {
+      opacity: 0;
+      /* transform: translateY(400px); */
+      scale: 0.8;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fadeUp {
+    animation: fadeUp 0.6s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateX(-300px) scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+
+  .fadeUp2 {
+    animation: fadeUp2 0.6s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+  @keyframes fadeUp2 {
+    from {
+      opacity: 0;
+      transform: translateX(80px) scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+  .fadeUp3 {
+    animation: fadeUp3 0.6s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  @keyframes fadeUp3 {
+    from {
+      opacity: 0;
+      transform: translateX(80px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+
+  .paraAnimation {
+    animation: paraAni 0.6s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  @keyframes paraAni {
+    from {
+      opacity: 0;
+      transform: translateX(-600px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .navbar-links,
+  .navbar-cta {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background: #07090a;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000; /* make sure it's above other elements */
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 20px;
+    border: none;
+  }
+
+  .navbar-cta {
+    margin-top: 20px;
+    border-radius: 0;
+  }
+
+  .navbar-toggle {
+    display: block; /* show hamburger on mobile */
+    z-index: 1100; /* keep button clickable */
+  }
+
+  /* 👇 must come after display:none so it overrides it */
+  .navbar-links.active {
+    display: flex !important;
+  }
+  .navbar-cta.active {
+    display: flex !important;
+    margin-top: 160px;
+    width: 100%;
+    flex-direction: row;
+    gap: 7px;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .desktopNavbar {
+    display: none;
+  }
+  .desktopNavbar2 {
+    display: none;
+  }
+  .hamburgerIcon {
+    display: block;
+  }
+  .heroSection {
+    width: 80%;
+  }
+  .heroSectionPara {
+    text-align: center;
+    font-size: 17px;
+    padding: 40px;
+  }
+  .heroSectionPara2 {
+    font-size: 25px;
+  }
+  .heroSection2 {
+    width: 70%;
+  }
+  .responsiveImg {
+    width: 30px;
+    height: 20px;
+  }
+  .returnsSection {
+    width: 85%;
+  }
+  .returnSectionPara {
+    font-size: 25px;
+  }
+  .returnSectionPara2 {
+    font-size: 17px;
+    width: 80%;
+  }
+  .returnSectionBoxes {
+    display: flex;
+    flex-direction: column;
+  }
+  .returnBoxOne {
+    width: 80%;
+  }
+  .svgImages {
+    width: 50px;
+    height: 50px;
+  }
+  .benifitsSection {
+    gap: 10px;
+    width: 30%;
+  }
+  .BenifitsSectionPara2 {
+    width: 100%;
+    font-size: 17px;
+  }
+  .benifitsBoxes {
+    display: flex;
+    flex-direction: column;
+  }
+  .processSection {
+    display: flex;
+    flex-direction: column;
+  }
+  .processSectionActive {
+    display: flex;
+    flex-direction: column;
+  }
+  .PaidAidsBox {
+    color: #666b73;
+    width: 30%;
+    border-radius: 7px;
+    width: 80%;
+  }
+  .OurClientsSection {
+    gap: 20px;
+    width: 50%;
+    margin-top: 40px;
+  }
+  .card-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.4s ease, z-index 0.4s ease;
+    padding-bottom: 130px;
+  }
+  #card3 {
+    /* background: linear-gradient(135deg, #f7971e, #ffd200); */
+    background: #04070d;
+    border-top: 2px solid #38404a;
+    border-left: 1px solid #191e26;
+    border-right: 1px solid #191e26;
+    border-bottom: 1px solid #191e26;
+  }
+  .card:nth-child(1) {
+    transform: translateY(-170px);
+    z-index: 1;
+  }
+  .card:nth-child(2) {
+    transform: translateY(-140px);
+    z-index: 2;
+  }
+  .card:nth-child(3) {
+    transform: translateY(-100px);
+    z-index: 3;
+  }
+
+  /* Active card on top */
+  .card.active {
+    transform: translateY(-60px) scale(1.05);
+    z-index: 10;
+  }
+  .CardOneImage {
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .carasoulSectionBoxes {
+    display: flex;
+    flex-direction: row;
+  }
+  .cardOnePara {
+    font-size: 16px;
+    width: 100%;
+    color: #727680;
+  }
+  .cardOneGradient {
+    background: linear-gradient(#06090f, #0c1016);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .ApproachSection {
+    gap: 20px;
+    width: 60%;
+    margin-top: 40px;
+  }
+  .reviewSection {
+    gap: 20px;
+    width: 45%;
+    margin-top: 40px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .responsiveGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .comparisonSection {
+    gap: 20px;
+    width: 60%;
+    margin-top: 40px;
+  }
+  .gridTwo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    gap: 30px;
+  }
+  .faqSection {
+    gap: 6px;
+    width: 35%;
+    margin-top: 40px;
+  }
+  .questionSection {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .question1Box {
+    width: 100%;
+  }
+  .questions {
+    width: 100%;
+  }
+  .footerSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footerPara {
+    text-align: center;
+  }
+  .contactFormSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .autoShow {
+    animation: text-appear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 100vh;
+  }
+  @keyframes text-appear {
+    from {
+      opacity: 0;
+      /* transform: translateY(400px); */
+      scale: 0.8;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fadeUp {
+    animation: fadeUp 0.6s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateX(-300px) scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+
+  .fadeUp2 {
+    animation: fadeUp2 0.6s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+  @keyframes fadeUp2 {
+    from {
+      opacity: 0;
+      transform: translateX(100px) scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+  .fadeUp3 {
+    animation: fadeUp3 0.6s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  @keyframes fadeUp3 {
+    from {
+      opacity: 0;
+      transform: translateX(100px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+
+  .paraAnimation {
+    animation: paraAni 0.6s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  @keyframes paraAni {
+    from {
+      opacity: 0;
+      transform: translateX(-600px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .navbar-links,
+  .navbar-cta {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background: #07090a;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000; /* make sure it's above other elements */
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 20px;
+    border: none;
+  }
+
+  .navbar-cta {
+    margin-top: 20px;
+    border-radius: 0;
+  }
+
+  .navbar-toggle {
+    display: block; /* show hamburger on mobile */
+    z-index: 1100; /* keep button clickable */
+  }
+
+  /* 👇 must come after display:none so it overrides it */
+  .navbar-links.active {
+    display: flex !important;
+  }
+  .navbar-cta.active {
+    display: flex !important;
+    margin-top: 160px;
+    width: 100%;
+    flex-direction: row;
+    gap: 7px;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+  .desktopNavbar {
+    display: none;
+  }
+  .desktopNavbar2 {
+    display: none;
+  }
+  .hamburgerIcon {
+    display: block;
+  }
+  .heroSection {
+    width: 80%;
+  }
+  .heroSectionPara {
+    text-align: center;
+    font-size: 17px;
+    padding: 40px;
+  }
+  .heroSectionPara2 {
+    font-size: 25px;
+  }
+  .heroSection2 {
+    width: 70%;
+  }
+  .responsiveImg {
+    width: 30px;
+    height: 20px;
+  }
+  .returnsSection {
+    width: 85%;
+  }
+  .returnSectionPara {
+    font-size: 25px;
+  }
+  .returnSectionPara2 {
+    font-size: 17px;
+    width: 80%;
+  }
+  .returnSectionBoxes {
+    display: flex;
+    flex-direction: column;
+  }
+  .returnBoxOne {
+    width: 80%;
+  }
+  .svgImages {
+    width: 50px;
+    height: 50px;
+  }
+  .benifitsSection {
+    gap: 10px;
+    width: 30%;
+  }
+  .BenifitsSectionPara2 {
+    width: 100%;
+    font-size: 17px;
+  }
+  .benifitsBoxes {
+    display: flex;
+    flex-direction: column;
+  }
+  .processSection {
+    display: flex;
+    flex-direction: column;
+  }
+  .processSectionActive {
+    display: flex;
+    flex-direction: column;
+  }
+  .PaidAidsBox {
+    color: #666b73;
+    width: 30%;
+    border-radius: 7px;
+    width: 80%;
+  }
+  .OurClientsSection {
+    gap: 20px;
+    width: 50%;
+    margin-top: 40px;
+  }
+  .card-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.4s ease, z-index 0.4s ease;
+    padding-bottom: 130px;
+  }
+  #card3 {
+    /* background: linear-gradient(135deg, #f7971e, #ffd200); */
+    background: #04070d;
+    border-top: 2px solid #38404a;
+    border-left: 1px solid #191e26;
+    border-right: 1px solid #191e26;
+    border-bottom: 1px solid #191e26;
+  }
+  .card:nth-child(1) {
+    transform: translateY(-170px);
+    z-index: 1;
+  }
+  .card:nth-child(2) {
+    transform: translateY(-140px);
+    z-index: 2;
+  }
+  .card:nth-child(3) {
+    transform: translateY(-100px);
+    z-index: 3;
+  }
+
+  /* Active card on top */
+  .card.active {
+    transform: translateY(-60px) scale(1.05);
+    z-index: 10;
+  }
+  .CardOneImage {
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .carasoulSectionBoxes {
+    display: flex;
+    flex-direction: row;
+  }
+  .cardOnePara {
+    font-size: 16px;
+    width: 100%;
+    color: #727680;
+  }
+  .cardOneGradient {
+    background: linear-gradient(#06090f, #0c1016);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .ApproachSection {
+    gap: 20px;
+    width: 60%;
+    margin-top: 40px;
+  }
+  .reviewSection {
+    gap: 20px;
+    width: 45%;
+    margin-top: 40px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .responsiveGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .comparisonSection {
+    gap: 20px;
+    width: 60%;
+    margin-top: 40px;
+  }
+  .gridTwo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    gap: 30px;
+  }
+  .faqSection {
+    gap: 6px;
+    width: 35%;
+    margin-top: 40px;
+  }
+  .questionSection {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .question1Box {
+    width: 100%;
+  }
+  .questions {
+    width: 100%;
+  }
+  .footerSection {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .footerPara {
+    text-align: left;
+  }
+  .contactFormSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .autoShow {
+    animation: text-appear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 100vh;
+  }
+  @keyframes text-appear {
+    from {
+      opacity: 0;
+      /* transform: translateY(400px); */
+      scale: 0.8;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fadeUp {
+    animation: fadeUp 0.6s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateX(-300px) scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+
+  .fadeUp2 {
+    animation: fadeUp2 0.6s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+  @keyframes fadeUp2 {
+    from {
+      opacity: 0;
+      transform: translateX(100px) scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+  .fadeUp3 {
+    animation: fadeUp3 0.6s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  @keyframes fadeUp3 {
+    from {
+      opacity: 0;
+      transform: translateX(100px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+
+  .paraAnimation {
+    animation: paraAni 0.6s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  @keyframes paraAni {
+    from {
+      opacity: 0;
+      transform: translateX(-600px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+  .footerLast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* background-color: yellow; */
+  }
+  .mainFooterDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .desktopNavbar2 {
+  }
+  .navbutton {
+    padding: 0px;
+    font-size: 12px;
+  }
+  .returnSectionBoxes {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* scroll bar */
+/* For WebKit browsers (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust scrollbar width as desired */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Transparent background for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fcaf17; /* Scrollbar thumb color */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+/* For Firefox */
+/* Note: Firefox's scrollbar-color property styles both the thumb and track.
+To achieve a transparent track, we're effectively styling the thumb. */
+.my-scrollable-element {
+  scrollbar-color: #fcaf17 transparent; /* thumb color track color */
+  scrollbar-width: thin; /* Adjust width as desired: auto, thin, none */
+}
+
+/* Example of applying the custom scrollbar to a specific div */
+.my-scrollable-element {
+  height: 300px;
+  width: 80%;
+  margin: 50px auto;
+  overflow-y: scroll; /* Enable vertical scrolling for this div */
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: white;
+}

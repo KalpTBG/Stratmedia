@@ -1,0 +1,4151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stratmedia</title>
+    <meta
+      name="description"
+      content="CREATIVE THAT WORKS. STRATEGY THAT CONVERTS!"
+    />
+    <!-- <link rel="stylesheet" href="./src/output.css" /> -->
+    <link rel="icon" type="image/png" href="./src/assets/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./app.js"></script>
+    <!-- <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+          "three/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+        }
+      }
+    </script> -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+          "three/examples/jsm/loaders/GLTFLoader.js": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/loaders/GLTFLoader.js",
+          "three/examples/jsm/controls/OrbitControls.js": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/controls/OrbitControls.js"
+        }
+      }
+    </script>
+    <style>
+      /*! CSS Used from: Embedded */
+      * {
+        box-sizing: border-box;
+        -webkit-font-smoothing: inherit;
+      }
+      .framer-RjH9o .framer-jdv2th-container {
+        aspect-ratio: 1 / 1;
+        flex: none;
+        height: var(--framer-aspect-ratio-supported, 23px);
+        position: relative;
+        width: 20px;
+      }
+      /*! CSS Used from: Embedded */
+      * {
+        box-sizing: border-box;
+        -webkit-font-smoothing: inherit;
+      }
+      .framer-jr2tz .framer-1ulwos2-container {
+        aspect-ratio: 1 / 1;
+        flex: none;
+        height: var(--framer-aspect-ratio-supported, 96px);
+        position: relative;
+        width: 96px;
+        will-change: var(--framer-will-change-effect-override, transform);
+        z-index: 5;
+      }
+      @media (min-width: 810px) and (max-width: 1199px) {
+        .framer-jr2tz .framer-1ulwos2-container {
+          height: var(--framer-aspect-ratio-supported, 80px);
+          width: 80px;
+        }
+      }
+      @media (max-width: 809px) {
+        .framer-jr2tz .framer-1ulwos2-container {
+          width: 80px;
+        }
+      }
+      .framer-2Oiu6.framer-1kwgrva {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        height: 96px;
+        justify-content: center;
+        overflow: visible;
+        padding: 10px;
+        position: relative;
+        width: 96px;
+      }
+      .framer-2Oiu6 .framer-1j6fkt8 {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex: 1 0 0px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        height: 100%;
+        justify-content: center;
+        overflow: visible;
+        padding: 16px;
+        position: relative;
+        width: 1px;
+      }
+      .framer-2Oiu6 .framer-qtoqks {
+        flex: 1 0 0px;
+        height: 100%;
+        overflow: visible;
+        position: relative;
+        width: 1px;
+      }
+      .tab-para {
+        display: none;
+      }
+      .active-tab {
+        display: block;
+      }
+      .active-tab p {
+        display: block;
+        color: #fff;
+      }
+      /* .card-section {
+        position: relative;
+        width: 990px;
+        height: 450px;
+      }
+
+      .card {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.4s ease, z-index 0.4s ease;
+        padding-bottom: 130px;
+      } */
+
+      #card1 {
+        /* background: linear-gradient(135deg, #ff5f6d, #ffc371); */
+        background: #04070d;
+        border-top: 2px solid #38404a;
+        border-left: 1px solid #191e26;
+        border-right: 1px solid #191e26;
+        border-bottom: 1px solid #191e26;
+      }
+
+      #card2 {
+        /* background: linear-gradient(135deg, #24c6dc, #514a9d); */
+        background: #04070d;
+        border-top: 2px solid #38404a;
+        border-left: 1px solid #191e26;
+        border-right: 1px solid #191e26;
+        border-bottom: 1px solid #191e26;
+      }
+
+      #card3 {
+        /* background: linear-gradient(135deg, #f7971e, #ffd200); */
+        background: #04070d;
+        border-top: 2px solid #38404a;
+        border-left: 1px solid #191e26;
+        border-right: 1px solid #191e26;
+        border-bottom: 1px solid #191e26;
+      }
+
+      /* Default stair stacking */
+      .card:nth-child(1) {
+        transform: translateY(-170px);
+        z-index: 1;
+      }
+      .card:nth-child(2) {
+        transform: translateY(-140px);
+        z-index: 2;
+      }
+      .card:nth-child(3) {
+        transform: translateY(-100px);
+        z-index: 3;
+      }
+
+      /* Active card on top */
+      .card.active {
+        transform: translateY(-60px) scale(1.05);
+        z-index: 10;
+      }
+
+      /* .cardOnePara {
+        font-size: 16px;
+        width: 70%;
+        color: #727680;
+      } */
+      /* .CardOneImage {
+        width: 400px;
+        height: 300px;
+        border-radius: 10px;
+        object-fit: cover;
+      } */
+      /* .cardOneGradient {
+        background: linear-gradient(#06090f, #0c1016);
+        border-radius: 10px;
+      } */
+      .VisitiorsCard {
+        background: linear-gradient(#06090f, #0c1016);
+      }
+      .gradientBg {
+        background: linear-gradient(#06090f, #0c1016);
+        width: 85%;
+      }
+      .outside-para {
+        display: none;
+        background: #1e232b;
+        padding: 20px;
+        margin: 0 auto;
+        border-radius: 10px;
+        width: 300px;
+        text-align: left;
+        line-height: 1.5;
+      }
+
+      .outside-para.active {
+        display: block;
+      }
+      /* .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      } */
+      .blur-border {
+        width: 400px;
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          transparent 0%,
+          rgba(237, 28, 28, 0.7) 20%,
+          white 50%,
+          rgba(255, 255, 255, 0.7) 80%,
+          transparent 100%
+        );
+        filter: blur(1px);
+      }
+      /* .gridTwo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: 30px;
+      } */
+      .COMPARISON {
+        width: 85%;
+      }
+      .faq {
+        background: linear-gradient(#06090f, #0c1016);
+      }
+      .faqBox {
+        background: linear-gradient(to right, #10131c, #13171d, #12151c);
+        border-radius: 6px;
+        margin-top: 10px;
+      }
+
+      /* .questions {
+        width: 45%;
+      } */
+      .answerColor {
+        color: #7e828c;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+      }
+      .faqBox.open .answerColor {
+        max-height: 500px; /* big enough to fit your longest answer */
+        opacity: 1;
+      }
+
+      /* optional: rotate the chevron when open */
+      .faqBox svg {
+        transition: transform 0.2s ease;
+      }
+      .faqBox.open svg {
+        transform: rotate(180deg);
+      }
+
+      /* optional: make the header look clickable */
+      .faqBox > .flex {
+        cursor: pointer;
+        user-select: none;
+      }
+      .divider {
+        display: flex;
+        align-items: center;
+        color: #d5dbe6;
+        font-style: italic;
+        font-size: 18px;
+        font-family: sans-serif;
+        margin-top: 30px;
+      }
+
+      .divider::before,
+      .divider::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid #d5dbe6;
+        margin: 0 10px;
+      }
+      /* .hamburgerIcon {
+        display: none;
+        height: 40px;
+        width: 40px;
+      } */
+
+      /* .autoShow {
+        animation: text-appear 1s ease-out both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 100vh;
+      }
+      @keyframes text-appear {
+        from {
+          opacity: 0;
+          transform: translateY(300px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fadeUp {
+        animation: fadeUp both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 100vh;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(100px) scale(0.5);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0px) scale(1);
+        }
+      } */
+
+      #viewer {
+        width: 100vw;
+        height: 200px;
+        margin-top: 10px;
+        padding-top: 40px;
+      }
+    </style>
+  </head>
+
+  <body class="flex-1 h-full flex-col bg-[#07090a]">
+    <!-- <div
+      class="w-full flex flex-row items-center justify-center bg-[#07090a] h-16 text-white"
+    >
+      <div
+        class="w-[90%] flex flex-row items-center justify-between gap-[100px]"
+      >
+        <div>
+          <a href="#" class="text-2xl text-[#fcaf17] font-bold">
+            <img
+              src="./src/assets/Startmedia Vector-02.svg"
+              alt=""
+              style="width: 100%; height: 30px"
+            />
+          </a>
+        </div>
+        <button class="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <div class="ml-[80px] desktopNavbar">
+          <ul
+            class="flex flex-row gap-[50px] border-[#16191b] border-2 px-6 py-1 rounded-full"
+          >
+            <li>
+              <a
+                href="/server.html"
+                class="text-[#c1c3c3] font-medium hover:text-white"
+              >
+                Process
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-[#c1c3c3] font-medium hover:text-white">
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contact.html"
+                class="text-[#c1c3c3] font-medium hover:text-white"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="flex items-center justify-center space-x-2 border-[#1d2027] rounded-[8px] border-2 px-3 bg-[#14171b] desktopNavbar2"
+        >
+          <a
+            href="#"
+            class="text-[#c1c3c3] px-4 py-2 font-semibold hover:text-white navbutton"
+          >
+            BOOK YOUR FREE DISCOVERY CALL
+          </a>
+          <div class="h-[20px] mb-[10px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+              style="
+                user-select: none;
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                fill: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                color: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                weight="regular"
+              >
+                <path
+                  d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="#">
+            <img
+              src="./src/assets/Startmedia Vector-02.svg"
+              alt="logo"
+              style="height: 30px"
+            />
+          </a>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="navbar-toggle" id="menu-btn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="navbar-links" id="menu">
+          <ul>
+            <li><a href="#">Process</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="navbar-cta" id="menu-btn2">
+          <a href="#">BOOK YOUR FREE DISCOVERY CALL</a>
+          <div class="icon">
+            <!-- your SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+              style="
+                user-select: none;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                fill: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                color: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                weight="regular"
+              >
+                <path
+                  d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative w-full h-screen overflow-hidden">
+      <video
+        class="absolute top-0 left-0 w-full h-[90%] object-cover z-0 filter brightness-100 bg-[#000]"
+        src="./src/assets/abstract-black-and-white-fractal-formation-backgro-2024-07-05-06-26-35-utc3.mov"
+        autoplay
+        muted
+        loop
+      ></video>
+      <!-- Removed blur-xs from the video class -->
+      <div
+        class="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4"
+      >
+        <!-- <div
+          class="framer-1ulwos2-container"
+          data-framer-appear-id="1ulwos2"
+          style="opacity: 1; transform: none; will-change: transform"
+          bis_skin_checked="1"
+        >
+          <div
+            class="framer-2Oiu6 framer-1kwgrva framer-v-1kwgrva"
+            data-framer-name="primary"
+            style="
+              background-color: var(
+                --token-eb09dbbf-ef85-4b7f-81a5-44e9b062efb7,
+                rgb(11, 14, 24)
+              );
+              border-radius: 16px;
+              box-shadow: rgba(64, 120, 168, 0.37) 0px 0.706592px 0.706592px -0.666667px,
+                rgba(64, 120, 168, 0.36) 0px 1.80656px 1.80656px -1.33333px,
+                rgba(64, 120, 168, 0.34) 0px 3.62176px 3.62176px -2px,
+                rgba(64, 120, 168, 0.31) 0px 6.8656px 6.8656px -2.66667px,
+                rgba(64, 120, 168, 0.247) 0px 13.6468px 13.6468px -3.33333px,
+                rgba(64, 120, 168, 0.094) 0px 30px 30px -4px;
+              height: 200%;
+              width: 200%;
+              opacity: 1;
+            "
+            bis_skin_checked="1"
+          >
+            <div
+              class="framer-1j6fkt8"
+              data-framer-name="Container"
+              style="
+                background-color: var(
+                  --token-eb09dbbf-ef85-4b7f-81a5-44e9b062efb7,
+                  rgb(11, 14, 24)
+                );
+                border-radius: 10px;
+                box-shadow: rgba(87, 133, 179, 0.48) 0px 0.796192px 0.796192px -0.875px,
+                  rgba(87, 133, 179, 0.455) 0px 2.41451px 2.41451px -1.75px,
+                  rgba(87, 133, 179, 0.4) 0px 6.38265px 6.38265px -2.625px,
+                  rgba(87, 133, 179, 0.21) 0px 20px 20px -3.5px;
+                opacity: 1;
+              "
+              bis_skin_checked="1"
+            >
+              <div
+                class="framer-qtoqks"
+                data-framer-name="Icon"
+                style="transform: rotate(90deg); opacity: 1"
+                bis_skin_checked="1"
+              >
+                <div
+                  style="
+                    position: absolute;
+                    border-radius: inherit;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                  "
+                  data-framer-background-image-wrapper="true"
+                  bis_skin_checked="1"
+                >
+                  <img
+                    decoding="async"
+                    width="74"
+                    height="74"
+                    sizes="max(max(96px - 20px, 1px) - 32px, 1px)"
+                    src="./src/assets/5BVUI56YoqDFZ1xvzbir5lf9sZA.svg"
+                    alt=""
+                    style="
+                      display: block;
+                      width: 100%;
+                      height: 100%;
+                      border-radius: inherit;
+                      object-position: center;
+                      object-fit: contain;
+                    "
+                  />
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div id="viewer"></div>
+        <h1
+          class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-b from-[#565a62] via-[#fff] to-[#686d75] bg-clip-text text-transparent pb-4 mt-[10px]"
+        >
+          Creation that works. <br />
+          Strategythat scales.
+        </h1>
+
+        <p
+          class="text-lg md:text-xl mt-2 bg-gradient-to-r from-[#565a62] via-[#FFF] to-[#686d75] bg-clip-text text-transparent"
+        >
+          We help ambitious brands cut through the noise with high-end content
+          and paid media that drives measurable growth
+        </p>
+        <!-- <a
+          href="#"
+          class="inline-flex items-center justify-center gap-2 mt-[20px] px-6 py-3 rounded-lg bg-black text-white font-bold text-[16px] tracking-wide hover:border-b-white transition duration-500 border border-white/10"
+        >
+          BOOK YOUR FREE DISCOVERY CALL
+          <i class="fa-solid fa-arrow-right -rotate-45"></i>
+        </a> -->
+        <button
+          class="relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group mt-[50px] hover:cursor-pointer"
+        >
+          <span class="relative z-10 flex items-center gap-2">
+            Book Your Free Strategy Call
+            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+          </span>
+          <!-- white glow highlight at the bottom -->
+          <div
+            class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
+          ></div>
+        </button>
+        <div class="flex items-center justify-center gap-[30px]">
+          <!-- <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            focusable="false"
+            color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
+            class="hover:cursor-pointer"
+            style="
+              user-select: none;
+              width: 12%;
+              height: 20%;
+              display: inline-block;
+              fill: var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #9398a2);
+              color: var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca);
+              flex-shrink: 0;
+            "
+          >
+            <g
+              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
+              weight="regular"
+            >
+              <path
+                d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"
+              ></path>
+            </g>
+          </svg> -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            focusable="false"
+            color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+            style="
+              user-select: none;
+              width: 12%;
+              height: 20%;
+              display: inline-block;
+              fill: var(
+                --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                rgb(255, 255, 255)
+              );
+              color: var(
+                --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                rgb(255, 255, 255)
+              );
+              flex-shrink: 0;
+            "
+          >
+            <g
+              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+              weight="regular"
+            >
+              <path
+                d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+              ></path>
+            </g>
+          </svg>
+
+          <div class="h-[30px] w-[2px] bg-[#222429]"></div>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            focusable="false"
+            class="hover:cursor-pointer"
+            color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
+            style="
+              user-select: none;
+              width: 12%;
+              height: 20%;
+              display: inline-block;
+              fill: var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #9398a2);
+              color: var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca);
+              flex-shrink: 0;
+            "
+          >
+            <g
+              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
+              weight="regular"
+            >
+              <path
+                d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+              ></path>
+            </g>
+          </svg>
+
+          <div class="h-[30px] w-[2px] bg-[#222429]"></div>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            focusable="false"
+            color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
+            class="hover:cursor-pointer"
+            style="
+              user-select: none;
+              width: 12%;
+              height: 20%;
+              display: inline-block;
+              fill: var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #9398a2);
+              color: var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca);
+              flex-shrink: 0;
+            "
+          >
+            <g
+              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
+              weight="regular"
+            >
+              <path
+                d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center w-full">
+      <div class="w-[80%]">
+        <marquee behavior="" direction="" scrollamount="10" loop="infinite">
+          <ul class="flex flex-row item-center gap-[70px] blur-s filter">
+            <li>
+              <img
+                src="./src/assets/m1.svg"
+                alt=""
+                class="w-full h-[60px] object-contain"
+              />
+            </li>
+            <li>
+              <img
+                src="./src/assets/m2.svg"
+                alt=""
+                class="w-full h-[60px] object-contain"
+              />
+            </li>
+            <li>
+              <img
+                src="./src/assets/m3.svg"
+                alt=""
+                class="w-full h-[60px] object-contain"
+              />
+            </li>
+            <li>
+              <img
+                src="./src/assets/m4.svg"
+                alt=""
+                class="w-full h-[60px] object-contain"
+              />
+            </li>
+            <li>
+              <img
+                src="./src/assets/m5.svg"
+                alt=""
+                class="w-full h-[60px] object-contain"
+              />
+            </li>
+            <li>
+              <img
+                src="./src/assets/m6.svg"
+                alt=""
+                class="w-full h-[60px] object-contain"
+              />
+            </li>
+            <li>
+              <img
+                src="./src/assets/m7.svg"
+                alt=""
+                class="w-full h-[60px] object-contain"
+              />
+            </li>
+          </ul>
+        </marquee>
+      </div>
+    </div>
+    <div
+      class="flex flex-row items-center justify-center gap-3 mt-[90px] autoShow"
+    >
+      <div
+        class="flex flex-row items-center justify-center gap-3 border-2 border-[#0d1117] rounded-full px-3 py-1 heroSection"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+          focusable="false"
+          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+          style="
+            user-select: none;
+            width: 17px;
+            height: 17px;
+            display: inline-block;
+            fill: var(
+              --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+              rgb(213, 219, 230)
+            );
+            color: var(
+              --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+              rgb(213, 219, 230)
+            );
+            flex-shrink: 0;
+          "
+        >
+          <g
+            color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+            weight="fill"
+          >
+            <path
+              d="M216,32H152a8,8,0,0,0-6.34,3.12l-64,83.21L72,108.69a16,16,0,0,0-22.64,0l-8.69,8.7a16,16,0,0,0,0,22.63l22,22-32,32a16,16,0,0,0,0,22.63l8.69,8.68a16,16,0,0,0,22.62,0l32-32,22,22a16,16,0,0,0,22.64,0l8.69-8.7a16,16,0,0,0,0-22.63l-9.64-9.64,83.21-64A8,8,0,0,0,224,104V40A8,8,0,0,0,216,32Zm-8,68.06-81.74,62.88L115.32,152l50.34-50.34a8,8,0,0,0-11.32-11.31L104,140.68,93.07,129.74,155.94,48H208Z"
+            ></path>
+          </g>
+        </svg>
+        <p class="text-[#bcc1cc] text-center text-xs">
+          From the Founders of STRATMEDIA.
+        </p>
+      </div>
+    </div>
+    <div
+      class="opacity-0 translate-y-10 transition-all duration-1000 ease-out flex items-center justify-center w-full mt-[30px] autoShow"
+    >
+      <div class="w-[60%]">
+        <p
+          class="text-[#5e6773] text-center text-2xl font-medium heroSectionPara"
+        >
+          We built
+          <span class="italic text-[#bcc1cc]" style="color: #fcaf17">
+            STRATMEDIA
+          </span>
+          to prove that brands deserve more than
+          <br />
+          cookie-cutter campaigns and vanity metrics. Every piece of creative
+          <br />
+          we produce, every dollar we place, is engineered to generate
+          <br />
+          momentum — not just impressions.
+        </p>
+        <p
+          class="text-[#5e6773] text-center text-2xl font-medium mt-4 heroSectionPara"
+        >
+          We’re strategists, filmmakers, and marketers who believe <br />
+          performance and creativity don’t compete — they compound. That’s
+          <br />
+          why our clients don’t just see views; they see pipelines filled,
+          <br />
+          communities engaged, and businesses scaled.
+          <br />
+          unlocking a force that reshapes markets.
+        </p>
+        <p
+          class="text-[#5e6773] text-center text-2xl font-medium mt-4 heroSectionPara"
+        >
+          If you’re looking for a partner who pushes for measurable growth
+          <br />
+          while staying rooted in culture and creativity, that’s who we are.
+        </p>
+      </div>
+    </div>
+    <!-- <p
+      class="text-[#fcaf17] text-center text-3xl mt-[20px] italic heroSectionPara2"
+    >
+      Welcome to the deep end.
+    </p> -->
+    <div class="flex flex-row items-center justify-center">
+      <div
+        class="flex flex-row items-center justify-center gap-2 mt-[50px] heroSection2"
+      >
+        <div class="border-2 border-white rounded-full">
+          <img
+            src="./src/assets/p16HnSkuAySU99Ijqk6zeif9Yg8.avif"
+            alt=""
+            class="w-[30px] h-[30px] rounded-full responsiveImg"
+          />
+        </div>
+        <p class="text-[#d5dbe6] text-center">Aditya Patel & Amartya Tiwari</p>
+      </div>
+    </div>
+
+    <div class="flex flex-row items-center justify-center autoShow">
+      <div
+        class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] w-[90%] returnsSection"
+      >
+        <div
+          class="flex flex-row items-center justify-center gap-2.5 border border-[#13171d] py-2 rounded-full mt-[60px]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            focusable="false"
+            color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+            style="
+              user-select: none;
+              width: 3%;
+              height: 3%;
+              display: inline-block;
+              fill: var(
+                --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                rgb(213, 219, 230)
+              );
+              color: var(
+                --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                rgb(213, 219, 230)
+              );
+              flex-shrink: 0;
+            "
+          >
+            <g
+              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+              weight="fill"
+            >
+              <path
+                d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,120,47.65,76,128,32l80.35,44Zm8,99.64V133.83l80-43.78v85.76Z"
+              ></path>
+            </g>
+          </svg>
+          <p class="text-[#aeb3bd]">OUR SIMPLE 3 STEP PROCESS</p>
+        </div>
+
+        <h2
+          class="text-[#d5dbe6] text-4xl font-semibold returnSectionPara"
+          style="line-height: 0"
+        >
+          Here At
+          <span class="text-[#fcaf17]">Stratmedia</span>, We
+        </h2>
+        <span
+          class="text-[#d5dbe6] text-4xl text-center font-semibold returnSectionPara"
+          >Focus On <span class="italic text-[#fcaf17]">Returns.</span></span
+        >
+        <p class="text-[#aeb3bd] text-center w-[50%] returnSectionPara2">
+          We're dedicated to scaling your brand with paid ads, with over 700M+
+          spent on paid traffic and billions in revenue generated across our
+          portfolio of companies…you're in <br />
+          good hands.
+        </p>
+        <div
+          class="flex flex-row items-center justify-between gap-[20px] mb-[30px] returnSectionBoxes"
+        >
+          <div
+            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] ransition-shadow duration-300 returnBoxOne fadeUp"
+          >
+            <div
+              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
+            >
+              <div
+                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
+                    ></path>
+                  </g>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
+              <h2
+                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
+              >
+                Discover & Diagnose
+              </h2>
+              <p class="text-[#81868f] text-center">
+                We start with a deep-dive intake to uncover what’s draining your
+                time and where the gaps are. No fluff — just clarity.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] ransition-shadow duration-300 returnBoxOne fadeUp"
+          >
+            <div
+              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
+            >
+              <div
+                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
+                    ></path>
+                  </g>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
+              <h2
+                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
+              >
+                Strategy Alignment
+              </h2>
+              <p class="text-[#81868f] text-center">
+                Through a focused strategy call, we align on your goals, your
+                market, and the fastest path to measurable growth.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] ransition-shadow duration-300 returnBoxOne fadeUp"
+          >
+            <div
+              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
+            >
+              <div
+                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
+                    ></path>
+                  </g>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
+              <h2
+                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
+              >
+                Creative Engine
+              </h2>
+              <p class="text-[#81868f] text-center">
+                Our team builds scroll-stopping content and ad campaigns
+                designed to dominate attention in your industry.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] ransition-shadow duration-300 returnBoxOne fadeUp"
+          >
+            <div
+              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
+            >
+              <div
+                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
+                    ></path>
+                  </g>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
+              <h2
+                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
+              >
+                Launch & Scale
+              </h2>
+              <p class="text-[#81868f] text-center">
+                We deploy your campaigns, track performance, and refine
+                relentlessly — so your growth compounds, month after month.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center mt-[90px] autoShow">
+      <div class="w-[90%] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d]">
+        <div class="flex items-center justify-center mt-[40px]">
+          <div
+            class="flex items-center justify-center border border-[#1f2329] rounded-full benifitsSection"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+              style="
+                user-select: none;
+                width: 14%;
+                height: 14%;
+                display: inline-block;
+                fill: var(
+                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                  rgb(213, 219, 230)
+                );
+                color: var(
+                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                  rgb(213, 219, 230)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                weight="fill"
+              >
+                <path
+                  d="M208,144a15.78,15.78,0,0,1-10.42,14.94L146,178l-19,51.62a15.92,15.92,0,0,1-29.88,0L78,178l-51.62-19a15.92,15.92,0,0,1,0-29.88L78,110l19-51.62a15.92,15.92,0,0,1,29.88,0L146,110l51.62,19A15.78,15.78,0,0,1,208,144ZM152,48h16V64a8,8,0,0,0,16,0V48h16a8,8,0,0,0,0-16H184V16a8,8,0,0,0-16,0V32H152a8,8,0,0,0,0,16Zm88,32h-8V72a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0V96h8a8,8,0,0,0,0-16Z"
+                ></path>
+              </g>
+            </svg>
+            <p class="text-[#d5dbe6]">BENEFITS</p>
+          </div>
+        </div>
+        <p
+          class="text-[#d5dbe6] text-4xl text-center font-medium mt-[20px] returnSectionPara"
+        >
+          Why Choose
+          <span class="italic text-[#a0a5af]" style="color: #fcaf17"
+            >Stratmedia ?</span
+          >
+        </p>
+        <p
+          class="text-[#d5dbe6] text-[20px] text-center mt-[20px] BenifitsSectionPara2"
+        >
+          Because you don’t need another agency that adds noise — you need a
+          partner who delivers clarity and <br />
+          growth.
+        </p>
+        <div
+          class="flex flex-row items-center justify-center gap-[20px] mt-[40px] benifitsBoxes"
+        >
+          <div
+            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] transition-shadow duration-300 returnBoxOne fadeUp"
+          >
+            <div
+              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
+            >
+              <div
+                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
+              <h2
+                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
+              >
+                Time Back
+              </h2>
+              <p class="text-[#81868f] text-center">
+                We build systems that cut out wasted effort, so you can focus on
+                running your business — not chasing marketing
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] transition-shadow duration-300 returnBoxOne fadeUp"
+          >
+            <div
+              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
+            >
+              <div
+                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM193.22,192H62.78L48.86,108.52,81.79,149A8,8,0,0,0,88,152a7.83,7.83,0,0,0,1.08-.07,8,8,0,0,0,6.26-4.74l29.3-67.4a27,27,0,0,0,6.72,0l29.3,67.4a8,8,0,0,0,6.26,4.74A7.83,7.83,0,0,0,168,152a8,8,0,0,0,6.21-3l32.93-40.52ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
+              <h2
+                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
+              >
+                Modern Execution
+              </h2>
+              <p class="text-[#81868f] text-center">
+                From content to paid ads, everything we deliver is designed to
+                match today’s platforms and your audience’s attention.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] transition-shadow duration-300 returnBoxOne fadeUp"
+          >
+            <div
+              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
+            >
+              <div
+                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M239.76,158.06,217.28,68.12A16,16,0,0,0,201.75,56H136V40a16,16,0,0,0-16-16H80A16,16,0,0,0,64,40V56H54.25A16,16,0,0,0,38.72,68.12L16.24,158.06A7.93,7.93,0,0,0,16,160v32a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V160A7.93,7.93,0,0,0,239.76,158.06ZM80,40h40V56H80ZM54.25,72h147.5l20,80H34.25ZM32,192V168H224v24ZM64,96a8,8,0,0,1,8-8H88a8,8,0,0,1,0,16H72A8,8,0,0,1,64,96Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H120A8,8,0,0,1,112,96Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H168A8,8,0,0,1,160,96ZM64,128a8,8,0,0,1,8-8H88a8,8,0,0,1,0,16H72A8,8,0,0,1,64,128Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H120A8,8,0,0,1,112,128Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H168A8,8,0,0,1,160,128Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M192,116a12,12,0,1,1-12-12A12,12,0,0,1,192,116ZM152,64H112a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm96,48v32a24,24,0,0,1-24,24h-2.36l-16.21,45.38A16,16,0,0,1,190.36,224H177.64a16,16,0,0,1-15.07-10.62L160.65,208h-57.3l-1.92,5.38A16,16,0,0,1,86.36,224H73.64a16,16,0,0,1-15.07-10.62L46,178.22a87.69,87.69,0,0,1-21.44-48.38A16,16,0,0,0,16,144a8,8,0,0,1-16,0,32,32,0,0,1,24.28-31A88.12,88.12,0,0,1,112,32H216a8,8,0,0,1,0,16H194.61a87.93,87.93,0,0,1,30.17,37c.43,1,.85,2,1.25,3A24,24,0,0,1,248,112Zm-16,0a8,8,0,0,0-8-8h-3.66a8,8,0,0,1-7.64-5.6A71.9,71.9,0,0,0,144,48H112A72,72,0,0,0,58.91,168.64a8,8,0,0,1,1.64,2.71L73.64,208H86.36l3.82-10.69A8,8,0,0,1,97.71,192h68.58a8,8,0,0,1,7.53,5.31L177.64,208h12.72l18.11-50.69A8,8,0,0,1,216,152h8a8,8,0,0,0,8-8Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
+              <h2
+                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
+              >
+                Proven Growth
+              </h2>
+              <p class="text-[#81868f] text-center">
+                Proven Growth Our process isn’t theory — it’s tested across
+                industries, built to create measurable results you can track.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] transition-shadow duration-300 returnBoxOne fadeUp"
+          >
+            <div
+              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
+            >
+              <div
+                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M239.76,158.06,217.28,68.12A16,16,0,0,0,201.75,56H136V40a16,16,0,0,0-16-16H80A16,16,0,0,0,64,40V56H54.25A16,16,0,0,0,38.72,68.12L16.24,158.06A7.93,7.93,0,0,0,16,160v32a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V160A7.93,7.93,0,0,0,239.76,158.06ZM80,40h40V56H80ZM54.25,72h147.5l20,80H34.25ZM32,192V168H224v24ZM64,96a8,8,0,0,1,8-8H88a8,8,0,0,1,0,16H72A8,8,0,0,1,64,96Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H120A8,8,0,0,1,112,96Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H168A8,8,0,0,1,160,96ZM64,128a8,8,0,0,1,8-8H88a8,8,0,0,1,0,16H72A8,8,0,0,1,64,128Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H120A8,8,0,0,1,112,128Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H168A8,8,0,0,1,160,128Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M192,116a12,12,0,1,1-12-12A12,12,0,0,1,192,116ZM152,64H112a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm96,48v32a24,24,0,0,1-24,24h-2.36l-16.21,45.38A16,16,0,0,1,190.36,224H177.64a16,16,0,0,1-15.07-10.62L160.65,208h-57.3l-1.92,5.38A16,16,0,0,1,86.36,224H73.64a16,16,0,0,1-15.07-10.62L46,178.22a87.69,87.69,0,0,1-21.44-48.38A16,16,0,0,0,16,144a8,8,0,0,1-16,0,32,32,0,0,1,24.28-31A88.12,88.12,0,0,1,112,32H216a8,8,0,0,1,0,16H194.61a87.93,87.93,0,0,1,30.17,37c.43,1,.85,2,1.25,3A24,24,0,0,1,248,112Zm-16,0a8,8,0,0,0-8-8h-3.66a8,8,0,0,1-7.64-5.6A71.9,71.9,0,0,0,144,48H112A72,72,0,0,0,58.91,168.64a8,8,0,0,1,1.64,2.71L73.64,208H86.36l3.82-10.69A8,8,0,0,1,97.71,192h68.58a8,8,0,0,1,7.53,5.31L177.64,208h12.72l18.11-50.69A8,8,0,0,1,216,152h8a8,8,0,0,0,8-8Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
+              <h2
+                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
+              >
+                Partnership First
+              </h2>
+              <p class="text-[#81868f] text-center">
+                We don’t just deliver assets. We integrate with your team, close
+                gaps, and act as your long-term growth partner.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div
+          class="flex flex-row items-center justify-center gap-[20px] mt-[60px] benifitsBoxes"
+        >
+          <div
+            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] transition-shadow duration-300 returnBoxOne fadeUp2"
+          >
+            <div
+              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
+            >
+              <div
+                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M83.19,174.4a8,8,0,0,0,11.21-1.6,52,52,0,0,1,83.2,0,8,8,0,1,0,12.8-9.6A67.88,67.88,0,0,0,163,141.51a40,40,0,1,0-53.94,0A67.88,67.88,0,0,0,81.6,163.2,8,8,0,0,0,83.19,174.4ZM112,112a24,24,0,1,1,24,24A24,24,0,0,1,112,112Zm96-88H64A16,16,0,0,0,48,40V64H32a8,8,0,0,0,0,16H48v40H32a8,8,0,0,0,0,16H48v40H32a8,8,0,0,0,0,16H48v24a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V40A16,16,0,0,0,208,24Zm0,192H64V40H208Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
+              <h2
+                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
+              >
+                Client-Centric Partnership
+              </h2>
+              <p class="text-[#81868f] text-center">
+                We work with, not for. True collaboration means shared ambition
+                and shared wins.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] transition-shadow duration-300 returnBoxOne fadeUp2"
+          >
+            <div
+              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
+            >
+              <div
+                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm109.94-52.79a8,8,0,0,0-3.89-5.4l-29.83-17-.12-33.62a8,8,0,0,0-2.83-6.08,111.91,111.91,0,0,0-36.72-20.67,8,8,0,0,0-6.46.59L128,41.85,97.88,25a8,8,0,0,0-6.47-.6A112.1,112.1,0,0,0,54.73,45.15a8,8,0,0,0-2.83,6.07l-.15,33.65-29.83,17a8,8,0,0,0-3.89,5.4,106.47,106.47,0,0,0,0,41.56,8,8,0,0,0,3.89,5.4l29.83,17,.12,33.62a8,8,0,0,0,2.83,6.08,111.91,111.91,0,0,0,36.72,20.67,8,8,0,0,0,6.46-.59L128,214.15,158.12,231a7.91,7.91,0,0,0,3.9,1,8.09,8.09,0,0,0,2.57-.42,112.1,112.1,0,0,0,36.68-20.73,8,8,0,0,0,2.83-6.07l.15-33.65,29.83-17a8,8,0,0,0,3.89-5.4A106.47,106.47,0,0,0,237.94,107.21Zm-15,34.91-28.57,16.25a8,8,0,0,0-3,3c-.58,1-1.19,2.06-1.81,3.06a7.94,7.94,0,0,0-1.22,4.21l-.15,32.25a95.89,95.89,0,0,1-25.37,14.3L134,199.13a8,8,0,0,0-3.91-1h-.19c-1.21,0-2.43,0-3.64,0a8.08,8.08,0,0,0-4.1,1l-28.84,16.1A96,96,0,0,1,67.88,201l-.11-32.2a8,8,0,0,0-1.22-4.22c-.62-1-1.23-2-1.8-3.06a8.09,8.09,0,0,0-3-3.06l-28.6-16.29a90.49,90.49,0,0,1,0-28.26L61.67,97.63a8,8,0,0,0,3-3c.58-1,1.19-2.06,1.81-3.06a7.94,7.94,0,0,0,1.22-4.21l.15-32.25a95.89,95.89,0,0,1,25.37-14.3L122,56.87a8,8,0,0,0,4.1,1c1.21,0,2.43,0,3.64,0a8.08,8.08,0,0,0,4.1-1l28.84-16.1A96,96,0,0,1,188.12,55l.11,32.2a8,8,0,0,0,1.22,4.22c.62,1,1.23,2,1.8,3.06a8.09,8.09,0,0,0,3,3.06l28.6,16.29A90.49,90.49,0,0,1,222.9,142.12Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
+              <h2
+                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
+              >
+                Relentless Execution
+              </h2>
+              <p class="text-[#81868f] text-center">
+                Ideas are cheap. What sets us apart is how we show up and
+                deliver - every time
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] transition-shadow duration-300 returnBoxOne fadeUp2"
+          >
+            <div
+              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
+            >
+              <div
+                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color=" rgb(213, 219, 230)"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g color=" rgb(213, 219, 230)" weight="regular">
+                    <path
+                      d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="rgb(213, 219, 230)"
+                  style="
+                    user-select: none;
+                    width: 30%;
+                    height: 20%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(rgb(213, 219, 230));
+                    flex-shrink: 0;
+                  "
+                >
+                  <g color="rgb(213, 219, 230)" weight="regular">
+                    <path
+                      d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm109.94-52.79a8,8,0,0,0-3.89-5.4l-29.83-17-.12-33.62a8,8,0,0,0-2.83-6.08,111.91,111.91,0,0,0-36.72-20.67,8,8,0,0,0-6.46.59L128,41.85,97.88,25a8,8,0,0,0-6.47-.6A112.1,112.1,0,0,0,54.73,45.15a8,8,0,0,0-2.83,6.07l-.15,33.65-29.83,17a8,8,0,0,0-3.89,5.4,106.47,106.47,0,0,0,0,41.56,8,8,0,0,0,3.89,5.4l29.83,17,.12,33.62a8,8,0,0,0,2.83,6.08,111.91,111.91,0,0,0,36.72,20.67,8,8,0,0,0,6.46-.59L128,214.15,158.12,231a7.91,7.91,0,0,0,3.9,1,8.09,8.09,0,0,0,2.57-.42,112.1,112.1,0,0,0,36.68-20.73,8,8,0,0,0,2.83-6.07l.15-33.65,29.83-17a8,8,0,0,0,3.89-5.4A106.47,106.47,0,0,0,237.94,107.21Zm-15,34.91-28.57,16.25a8,8,0,0,0-3,3c-.58,1-1.19,2.06-1.81,3.06a7.94,7.94,0,0,0-1.22,4.21l-.15,32.25a95.89,95.89,0,0,1-25.37,14.3L134,199.13a8,8,0,0,0-3.91-1h-.19c-1.21,0-2.43,0-3.64,0a8.08,8.08,0,0,0-4.1,1l-28.84,16.1A96,96,0,0,1,67.88,201l-.11-32.2a8,8,0,0,0-1.22-4.22c-.62-1-1.23-2-1.8-3.06a8.09,8.09,0,0,0-3-3.06l-28.6-16.29a90.49,90.49,0,0,1,0-28.26L61.67,97.63a8,8,0,0,0,3-3c.58-1,1.19-2.06,1.81-3.06a7.94,7.94,0,0,0,1.22-4.21l.15-32.25a95.89,95.89,0,0,1,25.37-14.3L122,56.87a8,8,0,0,0,4.1,1c1.21,0,2.43,0,3.64,0a8.08,8.08,0,0,0,4.1-1l28.84-16.1A96,96,0,0,1,188.12,55l.11,32.2a8,8,0,0,0,1.22,4.22c.62,1,1.23,2,1.8,3.06a8.09,8.09,0,0,0,3,3.06l28.6,16.29A90.49,90.49,0,0,1,222.9,142.12Z"
+                      fill="#fff"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
+              <h2
+                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
+              >
+                Relentless Execution
+              </h2>
+              <p class="text-[#81868f] text-center">
+                Ideas are cheap. What sets us apart is how we show up and
+                deliver - every time
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+        <div
+          class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] paraAnimation"
+        >
+          <div class="flex items-center justify-center mt-[40px]">
+            <div
+              class="flex items-center justify-center border border-[#1f2329] rounded-full"
+              style="gap: 10px; width: 30%"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                style="
+                  user-select: none;
+                  width: 14%;
+                  height: 14%;
+                  display: inline-block;
+                  fill: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  color: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  weight="fill"
+                >
+                  <path
+                    d="M240,56V200a8,8,0,0,1-8,8H8a8,8,0,0,1,0-16H56V152a8,8,0,0,1,8-8h48V104a8,8,0,0,1,8-8h48V56a8,8,0,0,1,8-8h56A8,8,0,0,1,240,56Z"
+                  ></path>
+                </g>
+              </svg>
+              <p class="text-[#d5dbe6]">PROCESS</p>
+            </div>
+          </div>
+          <h1 class="text-white text-5xl font-semibold returnSectionPara">
+            How <span style="color: #fcaf17">Stratmedia</span> Can Help
+            <span class="italic text-[#868b94]" style="color: #fcaf17"
+              >You?
+            </span>
+          </h1>
+          <p class="text-center" style="color: #d2d8e3">
+            Maximize ROI with elite paid traffic strategies engineered to
+            convert, scale, and <br />
+            dominate your market.
+          </p>
+
+          <div
+            class="shadow-[0_4px_20px_rgba(252,175,23,0.2)] border-t-2 border-[#38404a] border-l border-[#191e25] border-r border-[#191e25] w-[90%] rounded-3xl px-3"
+          >
+            <div
+              class="flex flex-row items-center justify-center gap-[20px] py-[20px] processSection"
+            >
+              <button
+                onclick="showPara(1)"
+                class="bg-[#12161f] text-center px-[20px] py-1.5 PaidAidsBox"
+              >
+                Paid Ads
+              </button>
+              <button
+                onclick="showPara(2)"
+                class="bg-[#12161f] text-center px-[20px] py-1.5 PaidAidsBox"
+              >
+                AI & Automation Systems
+              </button>
+              <button
+                onclick="showPara(3)"
+                class="bg-[#12161f] text-center px-[20px] py-1.5 PaidAidsBox"
+              >
+                Email & SMS Marketing
+              </button>
+            </div>
+
+            <div
+              id="para1"
+              class="tab-para active-tab"
+              style="margin-top: 50px"
+            >
+              <div
+                class="flex flex-row itmes-center justify-center gap-[30px] processSectionActive"
+              >
+                <img
+                  src="./src/assets/b0ruEz3spIHTSi4xCfbfwoX2koM.avif"
+                  alt=""
+                  class="w-[50%] h-[60%]"
+                />
+                <div class="flex flex-col items-start gap-2.5">
+                  <p class="text-[#5c6470]" style="color: #fcaf17">01</p>
+                  <p class="text-white font-semibold text-2xl">
+                    Paid Advertising (Meta, Google, TikTok, LinkedIn)
+                  </p>
+                  <p style="color: #7a7f88; font-size: 18px" class="leading-5">
+                    At STRATMEDIA, we don’t just launch ads we build systems
+                    that compound. Our paid media strategies are engineered for
+                    ROI, combining proven frameworks with a team that adapts as
+                    quickly as the platforms evolve. From cold traffic campaigns
+                    to full-funnel retargeting, we design and optimize across
+                    Meta, Google, TikTok, and LinkedIn blending creative with
+                    data to drive measurable growth. With top talent and systems
+                    behind every campaign, your brand doesn’t just compete in
+                    the market it dominates it
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="para2" class="tab-para" style="margin-top: 50px">
+              <div
+                class="flex flex-row itmes-center justify-center gap-[30px] processSectionActive"
+              >
+                <img
+                  src="./src/assets/EPErbkkqsOxh8MmRFjfhCGP08 (1).avif"
+                  alt=""
+                  class="w-[50%] h-[60%]"
+                />
+                <div class="flex flex-col items-start gap-2.5">
+                  <p class="text-[#5c6470]" style="color: #fcaf17">02</p>
+                  <p class="text-white font-semibold text-2xl">
+                    AI & Automation Systems
+                  </p>
+                  <p style="color: #7a7f88; font-size: 18px" class="leading-5">
+                    At STRATMEDIA, we design systems that work while you don’t.
+                    Our AI solutions sharpen decision-making and campaign
+                    performance, while our automation frameworks handle the
+                    repetitive workflows that slow teams down. From onboarding
+                    sequences to lead nurturing to reporting, every process is
+                    built to save time and unlock scale. By combining
+                    intelligence with efficiency, we give businesses the ability
+                    to move faster, reduce costs, and compound ROI without
+                    adding complexity.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="para3" class="tab-para" style="margin-top: 50px">
+              <div
+                class="flex flex-row itmes-center justify-center gap-[30px] processSectionActive"
+              >
+                <img
+                  src="./src/assets/EPErbkkqsOxh8MmRFjfhCGP08 (1).avif"
+                  alt=""
+                  class="w-[50%] h-[60%]"
+                />
+                <div class="flex flex-col items-start gap-2.5">
+                  <p class="text-[#5c6470]" style="color: #fcaf17">03</p>
+                  <p class="text-white font-semibold text-2xl">
+                    Email & SMS Marketing
+                  </p>
+                  <p style="color: #7a7f88; font-size: 18px" class="leading-5">
+                    At STRATMEDIA, we make sure your follow-up works as hard as
+                    your ads. Using automated email and SMS campaigns through
+                    GoHighLevel, we help you stay in front of leads, nurture
+                    relationships, and turn prospects into paying customers.
+                    From welcome sequences to reminders and promotions, our
+                    messaging is built to save you time and increase conversions
+                    so every lead has a clear path to becoming a client
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] border-b-2 border-[#1f2329] autoShow"
+        >
+          <div
+            class="flex items-center justify-center border border-[#1f2329] rounded-full OurClientsSection"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+              style="
+                user-select: none;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                fill: var(
+                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                  rgb(213, 219, 230)
+                );
+                color: var(
+                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                  rgb(213, 219, 230)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                weight="fill"
+              >
+                <path
+                  d="M253.66,133.66l-32,32a8,8,0,0,1-11.32,0l-16-16a8,8,0,0,1,11.32-11.32L216,148.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM144,157.68a68,68,0,1,0-71.9,0c-20.65,6.76-39.23,19.39-54.17,37.17A8,8,0,0,0,24,208H192a8,8,0,0,0,6.13-13.15C183.18,177.07,164.6,164.44,144,157.68Z"
+                ></path>
+              </g>
+            </svg>
+            <p class="text-[#d5dbe6]">Success Stories</p>
+          </div>
+          <h2 class="text-white text-5xl returnSectionPara">
+            Success Stories to
+            <span class="italic" style="color: #fcaf17">Inspire</span>
+          </h2>
+          <p class="text-white">See how we help our clients WIN</p>
+          <section class="card-section" style="margin-top: 190px">
+            <div class="card" id="card1" data-target="para1">
+              <div
+                class="flex flex-row items-center justify-between border-b border-[#191e26] w-full px-4 py-2.5"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 3%;
+                    height: 3%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="duotone"
+                  >
+                    <path
+                      d="M168,100a60,60,0,1,1-60-60A60,60,0,0,1,168,100Z"
+                      opacity="0.2"
+                    ></path>
+                    <path
+                      d="M144,157.68a68,68,0,1,0-71.9,0c-20.65,6.76-39.23,19.39-54.17,37.17a8,8,0,0,0,12.25,10.3C50.25,181.19,77.91,168,108,168s57.75,13.19,77.87,37.15a8,8,0,0,0,12.25-10.3C183.18,177.07,164.6,164.44,144,157.68ZM56,100a52,52,0,1,1,52,52A52.06,52.06,0,0,1,56,100Zm197.66,33.66-32,32a8,8,0,0,1-11.32,0l-16-16a8,8,0,0,1,11.32-11.32L216,148.69l26.34-26.35a8,8,0,0,1,11.32,11.32Z"
+                    ></path>
+                  </g>
+                </svg>
+                <i class="fa-solid fa-ellipsis" style="color: #fcaf17"></i>
+              </div>
+              <div
+                class="flex flex-row justify-between px-6"
+                style="margin-top: 30px"
+              >
+                <div
+                  class="flex flex-col items-start"
+                  style="gap: 20px; width: 60%"
+                >
+                  <h3 class="text-white">Justin's Credit Repair Empire</h3>
+                  <p class="cardOnePara">
+                    Justin partnered with Stratmedia to transform his credit
+                    repair agency through elite funnel optimization,
+                    laser-targeted paid traffic, and irresistible offers. The
+                    result? A 22x revenue explosion and a brand that now
+                    dominates its niche.
+                  </p>
+                  <div
+                    class="flex flex-row items-center gap-[20px] carasoulSectionBoxes"
+                  >
+                    <div
+                      class="flex flex-col items-center justify-center h-[109px] py-2.5 bg-gradient-to-b from-[#06090f] to-[#0c1016] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] px-3 cardOneGradient"
+                    >
+                      <p class="text-white">60%</p>
+                      <p class="text-white">increase in ROI</p>
+                    </div>
+                    <div
+                      class="flex flex-col items-center justify-center h-[109px] py-2.5 bg-[#06090f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] px-3 cardOneGradient"
+                    >
+                      <p class="text-white">45%</p>
+                      <p class="text-white">boost in revenue</p>
+                    </div>
+                  </div>
+                </div>
+
+                <img
+                  src="./src/assets/UIvIiOgvanSbz4B7kTc9ykLWDOk.avif"
+                  alt=""
+                  class="CardOneImage"
+                />
+              </div>
+            </div>
+            <div class="card" id="card2" data-target="para2">
+              <div
+                class="flex flex-row items-center justify-between border-b border-[#191e26] w-full px-4 py-2.5"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 3%;
+                    height: 3%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="duotone"
+                  >
+                    <path
+                      d="M168,100a60,60,0,1,1-60-60A60,60,0,0,1,168,100Z"
+                      opacity="0.2"
+                    ></path>
+                    <path
+                      d="M144,157.68a68,68,0,1,0-71.9,0c-20.65,6.76-39.23,19.39-54.17,37.17a8,8,0,0,0,12.25,10.3C50.25,181.19,77.91,168,108,168s57.75,13.19,77.87,37.15a8,8,0,0,0,12.25-10.3C183.18,177.07,164.6,164.44,144,157.68ZM56,100a52,52,0,1,1,52,52A52.06,52.06,0,0,1,56,100Zm197.66,33.66-32,32a8,8,0,0,1-11.32,0l-16-16a8,8,0,0,1,11.32-11.32L216,148.69l26.34-26.35a8,8,0,0,1,11.32,11.32Z"
+                    ></path>
+                  </g>
+                </svg>
+                <i class="fa-solid fa-ellipsis" style="color: #fcaf17"></i>
+              </div>
+              <div
+                class="flex flex-row justify-between px-6"
+                style="margin-top: 30px"
+              >
+                <div
+                  class="flex flex-col items-start"
+                  style="gap: 20px; width: 60%"
+                >
+                  <h3 class="text-white">
+                    Paul Gruber – Miracle Pronunciation Academy
+                  </h3>
+                  <p class="cardOnePara">
+                    8X ROAS & Millions Generated Teaching English With our
+                    advanced media buying strategy and creative testing
+                    framework, Paul scaled his pronunciation course globally.
+                    Maintaining an 8X ROAS while spending aggressively, he built
+                    a multi-million dollar online academy that impacts lives
+                    around the world..
+                  </p>
+                  <div
+                    class="flex flex-row items-center gap-[20px] carasoulSectionBoxes"
+                  >
+                    <div
+                      class="flex flex-col items-center justify-center h-[109px] py-2.5 bg-gradient-to-b from-[#06090f] to-[#0c1016] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] px-3 cardOneGradient"
+                    >
+                      <p class="text-white">70%</p>
+                      <p class="text-white">growth in sales</p>
+                    </div>
+                    <div
+                      class="flex flex-col items-center justify-center h-[109px] py-2.5 bg-[#06090f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] px-3 cardOneGradient"
+                    >
+                      <p class="text-white">50%</p>
+                      <p class="text-white">rise in engagement</p>
+                    </div>
+                  </div>
+                </div>
+                <div style="border-radius: 20px">
+                  <img
+                    src="./src/assets/lhMw0Urj78jKOnVEY6QfOousbs.avif"
+                    alt=""
+                    class="CardOneImage"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="card" id="card3" data-target="para3">
+              <div
+                class="flex flex-row items-center justify-between border-b border-[#191e26] w-full px-4 py-2.5"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 3%;
+                    height: 3%;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="duotone"
+                  >
+                    <path
+                      d="M168,100a60,60,0,1,1-60-60A60,60,0,0,1,168,100Z"
+                      opacity="0.2"
+                    ></path>
+                    <path
+                      d="M144,157.68a68,68,0,1,0-71.9,0c-20.65,6.76-39.23,19.39-54.17,37.17a8,8,0,0,0,12.25,10.3C50.25,181.19,77.91,168,108,168s57.75,13.19,77.87,37.15a8,8,0,0,0,12.25-10.3C183.18,177.07,164.6,164.44,144,157.68ZM56,100a52,52,0,1,1,52,52A52.06,52.06,0,0,1,56,100Zm197.66,33.66-32,32a8,8,0,0,1-11.32,0l-16-16a8,8,0,0,1,11.32-11.32L216,148.69l26.34-26.35a8,8,0,0,1,11.32,11.32Z"
+                    ></path>
+                  </g>
+                </svg>
+                <i class="fa-solid fa-ellipsis" style="color: #fcaf17"></i>
+              </div>
+              <div
+                class="flex flex-row justify-between px-6"
+                style="margin-top: 30px"
+              >
+                <div
+                  class="flex flex-col items-start"
+                  style="gap: 20px; width: 60%"
+                >
+                  <h3 class="text-white">
+                    Project 369 – Spiritual Enlightenment Powerhouse
+                  </h3>
+                  <p class="cardOnePara">
+                    $0 to $10M+ in D2C Revenue Project 369 came to us with a
+                    bold vision and strong mission. We engineered a
+                    high-converting ad ecosystem across Meta and Google,
+                    resulting in viral growth and $10M+ in sales. This spiritual
+                    lifestyle brand became a cult phenomenon — fast.
+                  </p>
+                  <div
+                    class="flex flex-row items-center gap-[20px] carasoulSectionBoxes"
+                  >
+                    <div
+                      class="flex flex-col items-center justify-center h-[109px] py-2.5 bg-gradient-to-b from-[#06090f] to-[#0c1016] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] px-3 cardOneGradient"
+                    >
+                      <p class="text-white">40%</p>
+                      <p class="text-white">gain in retention</p>
+                    </div>
+                    <div
+                      class="flex flex-col items-center justify-center h-[109px] py-2.5 bg-[#06090f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] px-3 cardOneGradient"
+                    >
+                      <p class="text-white">50%</p>
+                      <p class="text-white">surge in profits</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div style="border-radius: 20px"> -->
+                <img
+                  src="./src/assets/6sL0omFGfxhr9QQi3ENJAEZ0.avif"
+                  alt=""
+                  class="CardOneImage"
+                />
+                <!-- </div> -->
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div
+          class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] autoShow"
+        >
+          <div
+            class="flex items-center justify-center border border-[#1f2329] rounded-full ApproachSection"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+              style="
+                user-select: none;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                fill: var(
+                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                  rgb(213, 219, 230)
+                );
+                color: var(
+                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                  rgb(213, 219, 230)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                weight="fill"
+              >
+                <path
+                  d="M220,169.09l-92,53.65L36,169.09A8,8,0,0,0,28,182.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,169.09Z"
+                ></path>
+                <path
+                  d="M220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09Z"
+                ></path>
+                <path
+                  d="M28,86.91l96,56a8,8,0,0,0,8.06,0l96-56a8,8,0,0,0,0-13.82l-96-56a8,8,0,0,0-8.06,0l-96,56a8,8,0,0,0,0,13.82Z"
+                ></path>
+              </g>
+            </svg>
+            <p class="text-[#d5dbe6]">Stay Informed</p>
+          </div>
+          <p class="text-5xl text-white text-center returnSectionPara">
+            Join our
+            <span class="italic" style="color: #fcaf17">Newsletter </span>
+          </p>
+          <p style="color: #c3c8d3" class="text-center">
+            Stay informed on newest trends and news. <br />
+            STRATMEDIA keeps you informed via our weekly newsletter.
+          </p>
+          <button class="newsLetterbtn">Enter your e-mail address</button>
+        </div>
+        <div
+          class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] border-b-2 border-[#1f2329] autoShow"
+        >
+          <div
+            class="flex items-center justify-center border border-[#1f2329] rounded-full reviewSection"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+              style="
+                user-select: none;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                fill: var(
+                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                  rgb(213, 219, 230)
+                );
+                color: var(
+                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                  rgb(213, 219, 230)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                weight="fill"
+              >
+                <path
+                  d="M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z"
+                ></path>
+              </g>
+            </svg>
+            <p class="text-[#d5dbe6]">REVIEWS</p>
+          </div>
+          <p class="text-center text-5xl text-white returnSectionPara">
+            Trusted by
+            <span style="color: #fcaf17">Visionaries & Market Leaders</span>
+          </p>
+          <p class="text-center text-white">
+            Hear from our clients who've received real results with our
+            advertising efforts.
+          </p>
+          <div style="width: 100%; padding: 20px">
+            <div class="responsiveGrid">
+              <!-- <div class="grid"> -->
+              <div
+                class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] border-b-2 border-[#1f2329] border-l border-[#1f2329] border-r border-[#1f2329] flex flex-col items-start fadeUp"
+                style="border-radius: 15px; gap: 30px"
+              >
+                <div
+                  class="px-3 py-3 flex flex-row gap-2.5 border-t-2 w-full border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
+                  style="padding-left: 30px; border-radius: 15px"
+                >
+                  <img
+                    src="./src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
+                    alt=""
+                    class="w-[50px] h-[50px]"
+                  />
+                  <div>
+                    <p class="text-white">Adam Attallah</p>
+                    <!-- <p style="color: #62666e">Credit Repair</p> -->
+                  </div>
+                </div>
+                <p style="color: #a1a7b0; padding: 30px; font-size: 18px">
+                  I discussed with the team a general idea of what I was trying
+                  to accomplish and they went to work. From the time we made
+                  contact, I knew I was in good hands. Words cannot describe how
+                  much I recommend this team.
+                </p>
+              </div>
+              <div
+                class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] border-b-2 border-[#1f2329] border-l border-[#1f2329] border-r border-[#1f2329] flex flex-col items-start fadeUp"
+                style="border-radius: 15px; gap: 30px"
+              >
+                <div
+                  class="px-3 py-3 flex flex-row gap-2.5 border-t-2 w-full border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
+                  style="padding-left: 30px; border-radius: 15px"
+                >
+                  <img
+                    src="./src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
+                    alt=""
+                    class="w-[50px] h-[50px]"
+                  />
+                  <div>
+                    <p class="text-white">Amrith Bhaskaran</p>
+                    <!-- <p style="color: #62666e">Credit Repair</p> -->
+                  </div>
+                </div>
+                <p style="color: #a1a7b0; padding: 30px; font-size: 18px">
+                  I consulted with strat media for my business and I couldn’t be
+                  happier with their services. They were extremely knowledgeable
+                  and helped me bring my brand to the next level.
+                </p>
+              </div>
+              <div
+                class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] border-b-2 border-[#1f2329] border-l border-[#1f2329] border-r border-[#1f2329] flex flex-col items-start fadeUp"
+                style="border-radius: 15px; gap: 30px"
+              >
+                <div
+                  class="px-3 py-3 flex flex-row gap-2.5 border-t-2 w-full border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
+                  style="padding-left: 30px; border-radius: 15px"
+                >
+                  <img
+                    src="./src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
+                    alt=""
+                    class="w-[50px] h-[50px]"
+                  />
+                  <div>
+                    <p class="text-white">Zeeshan Tariq</p>
+                    <!-- <p style="color: #62666e">Credit Repair</p> -->
+                  </div>
+                </div>
+                <p style="color: #a1a7b0; padding: 30px; font-size: 18px">
+                  The team did a wonderful job improving our marketing and
+                  website. The ideas, feedback and implementation was quick and
+                  they were very helpful.
+                </p>
+              </div>
+              <!-- </div> -->
+              <!-- <div class="grid" style="margin-top: 40px"> -->
+              <!-- <div
+                class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] border-b-2 border-[#1f2329] border-l border-[#1f2329] border-r border-[#1f2329] flex flex-col items-start fadeUp3"
+                style="border-radius: 15px; gap: 30px"
+              >
+                <div
+                  class="px-3 py-3 flex flex-row gap-2.5 border-t-2 border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
+                  style="padding-left: 30px; border-radius: 15px"
+                >
+                  <img
+                    src="/src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
+                    alt=""
+                    class="w-[50px] h-[50px]"
+                  />
+                  <div>
+                    <p class="text-white">Justin S.</p>
+                    <p style="color: #62666e">Credit Repair</p>
+                  </div>
+                </div>
+                <p style="color: #a1a7b0; padding: 30px; font-size: 18px">
+                  "Stratmedia completely changed the game for us. We went from
+                  struggling to scale to doing consistent $400K months."
+                </p>
+              </div>
+              <div
+                class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] border-b-2 border-[#1f2329] border-l border-[#1f2329] border-r border-[#1f2329] flex flex-col items-start fadeUp3"
+                style="border-radius: 15px; gap: 30px"
+              >
+                <div
+                  class="px-3 py-3 flex flex-row gap-2.5 border-t-2 border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
+                  style="padding-left: 30px; border-radius: 15px"
+                >
+                  <img
+                    src="/src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
+                    alt=""
+                    class="w-[50px] h-[50px]"
+                  />
+                  <div>
+                    <p class="text-white">Justin S.</p>
+                    <p style="color: #62666e">Credit Repair</p>
+                  </div>
+                </div>
+                <p style="color: #a1a7b0; padding: 30px; font-size: 18px">
+                  "Stratmedia completely changed the game for us. We went from
+                  struggling to scale to doing consistent $400K months."
+                </p>
+              </div>
+              <div
+                class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] border-b-2 border-[#1f2329] border-l border-[#1f2329] border-r border-[#1f2329] flex flex-col items-start fadeUp3"
+                style="border-radius: 15px; gap: 30px"
+              >
+                <div
+                  class="px-3 py-3 flex flex-row gap-2.5 border-t-2 border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
+                  style="padding-left: 30px; border-radius: 15px"
+                >
+                  <img
+                    src="/src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
+                    alt=""
+                    class="w-[50px] h-[50px]"
+                  />
+                  <div>
+                    <p class="text-white">Justin S.</p>
+                    <p style="color: #62666e">Credit Repair</p>
+                  </div>
+                </div>
+                <p style="color: #a1a7b0; padding: 30px; font-size: 18px">
+                  "Stratmedia completely changed the game for us. We went from
+                  struggling to scale to doing consistent $400K months."
+                </p>
+              </div> -->
+              <!-- </div> -->
+            </div>
+            <div
+              class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] autoShow"
+            >
+              <div
+                class="flex items-center justify-center border border-[#1f2329] rounded-full comparisonSection"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="fill"
+                  >
+                    <path
+                      d="M42.34,85.66a8,8,0,0,1,0-11.32l32-32A8,8,0,0,1,88,48V72H208a8,8,0,0,1,0,16H88v24a8,8,0,0,1-13.66,5.66Zm171.32,84.68-32-32A8,8,0,0,0,168,144v24H48a8,8,0,0,0,0,16H168v24a8,8,0,0,0,13.66,5.66l32-32A8,8,0,0,0,213.66,170.34Z"
+                    ></path>
+                  </g>
+                </svg>
+                <p class="text-[#d5dbe6]">COMPARISON</p>
+              </div>
+              <p class="text-white text-5xl returnSectionPara">
+                Why
+                <span style="color: #fcaf17" class="italic">Stratmedia</span>
+                Stands Out
+              </p>
+              <p class="text-white">
+                See how we stack against the "competition".
+              </p>
+
+              <div class="gridTwo">
+                <div class="flex flex-col items-center">
+                  <p class="text-[#fcaf17] text-3xl font-bold">
+                    Stratmedia
+                    <!-- <span class="text-3xl text-white font-normal">OCEAN</span> -->
+                  </p>
+                  <div
+                    class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-start justify-center gap-[20px] border-b-2 border-[#1f2329] gradientBg"
+                    style="padding: 30px; margin-top: 30px"
+                  >
+                    <div
+                      class="flex flex-col items-start w-full"
+                      style="gap: 30px"
+                    >
+                      <div
+                        class="flex flex-row items-center gap-3 border-b"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-check" style="color: #fff"></i>
+                        <p class="text-white">
+                          Constant, proactive communication
+                        </p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-check" style="color: #fff"></i>
+                        <p class="text-white">Omni-channel approach</p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-check" style="color: #fff"></i>
+                        <p class="text-white">Tailored best-fit solutions</p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-check" style="color: #fff"></i>
+                        <p class="text-white">
+                          Provides industry specific expertise
+                        </p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-check" style="color: #fff"></i>
+                        <p class="text-white">
+                          Experts with decades of experience
+                        </p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-check" style="color: #fff"></i>
+                        <p class="text-white">
+                          We treat your business like it’s our own
+                        </p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-check" style="color: #fff"></i>
+                        <p class="text-white">
+                          Boutique partnership — no cookie-cutter campaigns
+                        </p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-check" style="color: #fff"></i>
+                        <p class="text-white">
+                          Measurable ROI, not vanity metrics
+                        </p>
+                      </div>
+                      <div class="flex flex-row items-center gap-3">
+                        <i class="fa-solid fa-check" style="color: #fff"></i>
+                        <p class="text-white">
+                          Fast-moving team that adapts as platforms evolve
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col items-center">
+                  <p class="text-white text-3xl font-bold">
+                    Other Company
+                    <!-- <span class="text-3xl text-white font-normal">OCEAN</span> -->
+                  </p>
+                  <div
+                    class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-start gap-[20px] border-b-2 border-[#1f2329] gradientBg"
+                    style="padding: 30px; margin-top: 30px"
+                  >
+                    <div
+                      class="flex flex-col items-start w-full"
+                      style="gap: 30px"
+                    >
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-xmark" style="color: #43474e"></i>
+                        <p class="text-white" style="color: #43474e">
+                          Slow communication
+                        </p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-xmark" style="color: #43474e"></i>
+                        <p class="text-white" style="color: #43474e">
+                          Single channel approach
+                        </p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-xmark" style="color: #43474e"></i>
+                        <p class="text-white" style="color: #43474e">
+                          Outdated growth strategies
+                        </p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-xmark" style="color: #43474e"></i>
+                        <p class="text-white" style="color: #43474e">
+                          Lack of industry research
+                        </p>
+                      </div>
+
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-xmark" style="color: #43474e"></i>
+                        <p class="text-white" style="color: #43474e">
+                          Outsourced to mediocre talent
+                        </p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-xmark" style="color: #43474e"></i>
+                        <p class="text-white" style="color: #43474e">
+                          Treat you like “just another client”
+                        </p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-xmark" style="color: #43474e"></i>
+                        <p class="text-white" style="color: #43474e">
+                          One-size-fits-all campaigns
+                        </p>
+                      </div>
+                      <div
+                        class="flex flex-row items-center gap-3 border-b w-full"
+                        style="border-color: #1f2329; padding-bottom: 10px"
+                      >
+                        <i class="fa-solid fa-xmark" style="color: #43474e"></i>
+                        <p class="text-white" style="color: #43474e">
+                          Focus on impressions, not results
+                        </p>
+                      </div>
+                      <div class="flex flex-row items-center gap-3">
+                        <i class="fa-solid fa-xmark" style="color: #43474e"></i>
+                        <p class="text-white" style="color: #43474e">
+                          Struggle to keep up with changing platforms
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] autoShow"
+            >
+              <div
+                class="flex items-center justify-center border border-[#1f2329] rounded-full faqSection"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  style="
+                    user-select: none;
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      rgb(213, 219, 230)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                    weight="fill"
+                  >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm-4,48a12,12,0,1,1-12,12A12,12,0,0,1,124,72Zm12,112a16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40a8,8,0,0,1,0,16Z"
+                    ></path>
+                  </g>
+                </svg>
+                <p class="text-[#d5dbe6]">FAQ'S</p>
+              </div>
+              <p class="text-5xl text-white text-center returnSectionPara">
+                Frequently Asked
+                <span class="italic" style="color: #fcaf17"> Question </span>
+              </p>
+              <p class="text-center text-white">
+                Find quick answers to the most common questions about our
+                platform
+              </p>
+              <div
+                class="flex flex-row items-center justify-center w-full questionSection"
+                style="gap: 30px"
+              >
+                <div
+                  class="faq border-t-2 border-[#1f2329] border border-[#1c2229] rounded-3xl flex flex-col items-center gap-3 px-3"
+                  style="width: 368px; height: 252px"
+                >
+                  <div class="faqBox px-3 py-3 border-t-2 border-[#1f2329]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                      focusable="false"
+                      color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                      style="
+                        user-select: none;
+                        width: 32px;
+                        height: 32px;
+                        display: inline-block;
+                        fill: var(
+                          --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                          rgb(213, 219, 230)
+                        );
+                        color: var(
+                          --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                          rgb(213, 219, 230)
+                        );
+                        flex-shrink: 0;
+                      "
+                    >
+                      <g
+                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                        weight="regular"
+                      >
+                        <path
+                          d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <p class="text-2xl text-center" style="color: #d5dbe6">
+                    Still Have Questions?
+                  </p>
+                  <p class="text-center" style="color: #6e727b">
+                    Still have questions? Speak with a marketing expert on our
+                    team today.
+                  </p>
+                  <div
+                    class="flex flex-row items-center gap-2 px-2 py-1.5 border border-[#1f2329] faqBox"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                      focusable="false"
+                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                      style="
+                        user-select: none;
+                        width: 18px;
+                        height: 20px;
+                        display: inline-block;
+                        fill: var(
+                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                          rgb(255, 255, 255)
+                        );
+                        color: var(
+                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                          rgb(255, 255, 255)
+                        );
+                        flex-shrink: 0;
+                      "
+                    >
+                      <g
+                        color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                        weight="regular"
+                      >
+                        <path
+                          d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"
+                        ></path>
+                      </g>
+                    </svg>
+                    <p style="color: #d5dbe6" class="font-medium">
+                      BOOK YOUR FREE DISCOVERY CALL
+                    </p>
+                  </div>
+                </div>
+
+                <div class="questions">
+                  <div
+                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+                    style="border-radius: 10px"
+                  >
+                    <div
+                      class="flex flex-row items-center justify-between w-full"
+                    >
+                      <p class="text-white">
+                        1. What services does Stratmedia provide?
+                      </p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        focusable="false"
+                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                        style="
+                          user-select: none;
+                          width: 20px;
+                          height: 20px;
+                          display: inline-block;
+                          fill: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          color: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          flex-shrink: 0;
+                        "
+                      >
+                        <g
+                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                          weight="regular"
+                        >
+                          <path
+                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                            fill="#fcaf17"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <p class="answerColor">
+                      Stratmedia offers full-service marketing solutions,
+                      including brand strategy, digital advertising, social
+                      media management, content creation, SEO, and performance
+                      analytics.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+                    style="border-radius: 10px"
+                  >
+                    <div
+                      class="flex flex-row items-center justify-between w-full"
+                    >
+                      <p class="text-white">
+                        2. What industries does Stratmedia specialize in?
+                      </p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        focusable="false"
+                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                        style="
+                          user-select: none;
+                          width: 20px;
+                          height: 20px;
+                          display: inline-block;
+                          fill: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          color: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          flex-shrink: 0;
+                        "
+                      >
+                        <g
+                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                          weight="regular"
+                        >
+                          <path
+                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                            fill="#fcaf17"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <p class="answerColor">
+                      We work with ambitious brands across various sectors,
+                      including tech, lifestyle, sports, e-commerce, and
+                      startups—any industry ready to break through the noise.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+                    style="border-radius: 10px"
+                  >
+                    <div
+                      class="flex flex-row items-center justify-between w-full"
+                    >
+                      <p class="text-white">
+                        3. How does the onboarding process work?
+                      </p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        focusable="false"
+                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                        style="
+                          user-select: none;
+                          width: 20px;
+                          height: 20px;
+                          display: inline-block;
+                          fill: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          color: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          flex-shrink: 0;
+                        "
+                      >
+                        <g
+                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                          weight="regular"
+                        >
+                          <path
+                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                            fill="#fcaf17"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <p class="answerColor">
+                      Once you reach out, we schedule a discovery session to
+                      understand your goals. Then we craft a custom strategy,
+                      align on objectives, and launch with precision.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+                    style="border-radius: 10px"
+                  >
+                    <div
+                      class="flex flex-row items-center justify-between w-full"
+                    >
+                      <p class="text-white">
+                        4. What makes Stratmedia different from other agencies?
+                      </p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        focusable="false"
+                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                        style="
+                          user-select: none;
+                          width: 20px;
+                          height: 20px;
+                          display: inline-block;
+                          fill: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          color: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          flex-shrink: 0;
+                        "
+                      >
+                        <g
+                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                          weight="regular"
+                        >
+                          <path
+                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                            fill="#fcaf17"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <p class="answerColor">
+                      We don’t do cookie-cutter campaigns. At Stratmedia, we
+                      dive deep into your brand’s DNA to craft bold,
+                      performance-driven strategies that actually move the
+                      needle.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+                    style="border-radius: 10px"
+                  >
+                    <div
+                      class="flex flex-row items-center justify-between w-full"
+                    >
+                      <p class="text-white">
+                        5. What size businesses do you work with?
+                      </p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        focusable="false"
+                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                        style="
+                          user-select: none;
+                          width: 20px;
+                          height: 20px;
+                          display: inline-block;
+                          fill: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          color: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          flex-shrink: 0;
+                        "
+                      >
+                        <g
+                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                          weight="regular"
+                        >
+                          <path
+                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                            fill="#fcaf17"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <p class="answerColor">
+                      We work with startups, mid-sized companies, and enterprise
+                      clients. Whether you’re scaling fast or rebranding, we
+                      adapt to your growth stage and vision.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+                    style="border-radius: 10px"
+                  >
+                    <div
+                      class="flex flex-row items-center justify-between w-full"
+                    >
+                      <p class="text-white">
+                        6. How much does it cost to work with STRATMEDIA?
+                      </p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        focusable="false"
+                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                        style="
+                          user-select: none;
+                          width: 20px;
+                          height: 20px;
+                          display: inline-block;
+                          fill: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          color: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          flex-shrink: 0;
+                        "
+                      >
+                        <g
+                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                          weight="regular"
+                        >
+                          <path
+                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                            fill="#fcaf17"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <p class="answerColor">
+                      We build tailored growth packages based on your goals and
+                      industry. Our retainers typically start at $3,000/month
+                      for content-only partnerships and $6,000–$7,000/month for
+                      full-service content + ads growth systems
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+                    style="border-radius: 10px"
+                  >
+                    <div
+                      class="flex flex-row items-center justify-between w-full"
+                    >
+                      <p class="text-white">
+                        7. Is there a minimum commitment?
+                      </p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        focusable="false"
+                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                        style="
+                          user-select: none;
+                          width: 20px;
+                          height: 20px;
+                          display: inline-block;
+                          fill: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          color: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          flex-shrink: 0;
+                        "
+                      >
+                        <g
+                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                          weight="regular"
+                        >
+                          <path
+                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                            fill="#fcaf17"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <p class="answerColor">
+                      Yes, most of our retainers run on 6–12 month partnerships.
+                      This ensures enough runway to execute, optimize, and
+                      compound results.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+                    style="border-radius: 10px"
+                  >
+                    <div
+                      class="flex flex-row items-center justify-between w-full"
+                    >
+                      <p class="text-white">
+                        8. Do you manage ad spend or is that separate?
+                      </p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        focusable="false"
+                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                        style="
+                          user-select: none;
+                          width: 20px;
+                          height: 20px;
+                          display: inline-block;
+                          fill: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          color: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          flex-shrink: 0;
+                        "
+                      >
+                        <g
+                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                          weight="regular"
+                        >
+                          <path
+                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                            fill="#fcaf17"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <p class="answerColor">
+                      Ad spend is billed directly to Meta, Google, TikTok, or
+                      LinkedIn. Our retainers cover creative, strategy,
+                      management, and reporting.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+                    style="border-radius: 10px"
+                  >
+                    <div
+                      class="flex flex-row items-center justify-between w-full"
+                    >
+                      <p class="text-white">
+                        9. Do you work with businesses outside Detroit/Michigan?
+                      </p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        focusable="false"
+                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                        style="
+                          user-select: none;
+                          width: 20px;
+                          height: 20px;
+                          display: inline-block;
+                          fill: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          color: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          flex-shrink: 0;
+                        "
+                      >
+                        <g
+                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                          weight="regular"
+                        >
+                          <path
+                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                            fill="#fcaf17"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <p class="answerColor">
+                      Yes. While we’re based in Michigan, we work with
+                      businesses nationwide.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+                    style="border-radius: 10px"
+                  >
+                    <div
+                      class="flex flex-row items-center justify-between w-full"
+                    >
+                      <p class="text-white">10. How do you measure success?</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        focusable="false"
+                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                        style="
+                          user-select: none;
+                          width: 20px;
+                          height: 20px;
+                          display: inline-block;
+                          fill: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          color: var(
+                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                            rgb(213, 219, 230)
+                          );
+                          flex-shrink: 0;
+                        "
+                      >
+                        <g
+                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                          weight="regular"
+                        >
+                          <path
+                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                            fill="#fcaf17"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <p class="answerColor">
+                      Every engagement comes with reporting dashboards and
+                      measurable KPIs — not vanity metrics. We track ROI, leads,
+                      and real growth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] autoShow"
+            >
+              <div class="divider">Limited Availability, Inquire Today.</div>
+              <p
+                class="text-[#fcaf17] text-5xl text-center returnSectionPara paraAnimation"
+              >
+                Achieve More Than Ever <br />
+                Before with <span class="italic"> STRATMEDIA </span>
+              </p>
+              <p class="text-white text-center paraAnimation">
+                We don’t ride waves — we create them.
+              </p>
+              <p class="text-white text-center paraAnimation">
+                No obligation. Just clarity on how to scale faster.
+              </p>
+              <button
+                class="relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group mt-[20px] hover:cursor-pointer paraAnimation"
+              >
+                <span class="relative z-10 flex items-center gap-2">
+                  BOOK YOUR FREE DISCOVERY CALL
+                  <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                </span>
+
+                <!-- white glow highlight at the bottom -->
+                <div
+                  class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
+                ></div>
+              </button>
+              <p class="text-white text-[12px] font-medium">
+                Takes less than 30 seconds to schedule.
+              </p>
+              <div
+                class="flex items-center justify-center gap-[30px] paraAnimation"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                  style="
+                    user-select: none;
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    fill: var(
+                      --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                      rgb(255, 255, 255)
+                    );
+                    color: var(
+                      --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                      rgb(255, 255, 255)
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                    weight="regular"
+                  >
+                    <path
+                      d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                    ></path>
+                  </g>
+                </svg>
+
+                <div class="h-[30px] w-[2px] bg-[#222429]"></div>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  class="hover:cursor-pointer"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
+                  style="
+                    user-select: none;
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      #9398a2
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      #bac0ca
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
+                    weight="regular"
+                  >
+                    <path
+                      d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                    ></path>
+                  </g>
+                </svg>
+
+                <div class="h-[30px] w-[2px] bg-[#222429]"></div>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
+                  class="hover:cursor-pointer"
+                  style="
+                    user-select: none;
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    fill: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      #9398a2
+                    );
+                    color: var(
+                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                      #bac0ca
+                    );
+                    flex-shrink: 0;
+                  "
+                >
+                  <g
+                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
+                    weight="regular"
+                  >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="mainFooterDiv">
+              <div
+                class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-start justify-center gap-[20px] px-3 footerLast"
+                style="padding-bottom: 40px"
+              >
+                <div
+                  class="flex flex-row items-center justify-between w-full mt-[30px] footerSection"
+                >
+                  <a href="#" class="text-2xl text-[#fcaf17] font-bold">
+                    <img
+                      src="./src/assets/Startmedia Vector-02.svg"
+                      alt=""
+                      style="width: 100%; height: 30px"
+                    />
+                  </a>
+                  <div class="flex flex-row items-center" style="gap: 20px">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                      focusable="false"
+                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                      style="
+                        user-select: none;
+                        width: 24px;
+                        height: 24px;
+                        display: inline-block;
+                        fill: var(
+                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                          rgb(255, 255, 255)
+                        );
+                        color: var(
+                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                          rgb(255, 255, 255)
+                        );
+                        flex-shrink: 0;
+                      "
+                    >
+                      <g
+                        color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                        weight="regular"
+                      >
+                        <path
+                          d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                        ></path>
+                      </g>
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                      focusable="false"
+                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                      style="
+                        user-select: none;
+                        width: 24px;
+                        height: 24px;
+                        display: inline-block;
+                        fill: var(
+                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                          rgb(255, 255, 255)
+                        );
+                        color: var(
+                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                          rgb(255, 255, 255)
+                        );
+                        flex-shrink: 0;
+                      "
+                    >
+                      <g
+                        color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                        weight="regular"
+                      >
+                        <path
+                          d="M224,72a48.05,48.05,0,0,1-48-48,8,8,0,0,0-8-8H128a8,8,0,0,0-8,8V156a20,20,0,1,1-28.57-18.08A8,8,0,0,0,96,130.69V88a8,8,0,0,0-9.4-7.88C50.91,86.48,24,119.1,24,156a76,76,0,0,0,152,0V116.29A103.25,103.25,0,0,0,224,128a8,8,0,0,0,8-8V80A8,8,0,0,0,224,72Zm-8,39.64a87.19,87.19,0,0,1-43.33-16.15A8,8,0,0,0,160,102v54a60,60,0,0,1-120,0c0-25.9,16.64-49.13,40-57.6v27.67A36,36,0,1,0,136,156V32h24.5A64.14,64.14,0,0,0,216,87.5Z"
+                        ></path>
+                      </g>
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                      focusable="false"
+                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                      style="
+                        user-select: none;
+                        width: 24px;
+                        height: 24px;
+                        display: inline-block;
+                        fill: var(
+                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                          rgb(255, 255, 255)
+                        );
+                        color: var(
+                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                          rgb(255, 255, 255)
+                        );
+                        flex-shrink: 0;
+                      "
+                    >
+                      <g
+                        color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                        weight="regular"
+                      >
+                        <path
+                          d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                        ></path>
+                      </g>
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                      focusable="false"
+                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                      style="
+                        user-select: none;
+                        width: 24px;
+                        height: 24px;
+                        display: inline-block;
+                        fill: var(
+                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                          rgb(255, 255, 255)
+                        );
+                        color: var(
+                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                          rgb(255, 255, 255)
+                        );
+                        flex-shrink: 0;
+                      "
+                    >
+                      <g
+                        color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                        weight="regular"
+                      >
+                        <path
+                          d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"
+                        ></path>
+                      </g>
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                      focusable="false"
+                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                      style="
+                        user-select: none;
+                        width: 24px;
+                        height: 24px;
+                        display: inline-block;
+                        fill: var(
+                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                          rgb(255, 255, 255)
+                        );
+                        color: var(
+                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                          rgb(255, 255, 255)
+                        );
+                        flex-shrink: 0;
+                      "
+                    >
+                      <g
+                        color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                        weight="regular"
+                      >
+                        <path
+                          d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <!-- <a
+                  href="./contact.html"
+                  class="text-white text-left sm:text-center footerPara"
+                  >Get in touch with us</a
+                > -->
+                <button
+                  class="w-[30%] relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group mt-[20px] hover:cursor-pointer getInTouch"
+                >
+                  <span class="relative z-10 flex items-center gap-2">
+                    <a href="/contact.html"> Get in touch with us </a>
+                    <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                  </span>
+                  <!-- white glow highlight at the bottom -->
+                  <div
+                    class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
+                  ></div>
+                </button>
+                <p
+                  class="w-full"
+                  style="height: 1.5px; background-color: #13171d"
+                ></p>
+                <div
+                  class="flex flex-row items-center justify-between w-full footerSection"
+                >
+                  <p class="text-white">
+                    © 2025 Stratmedia Marketing®, All Rights Reserved.
+                  </p>
+                  <p class="text-white">
+                    Designed & Developed By Neff Industries, LLC.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script>
+      function showPara(num) {
+        document
+          .querySelectorAll(".tab-para")
+          .forEach((p) => (p.style.display = "none"));
+        console.log("hello");
+
+        document.getElementById("para" + num).style.display = "block";
+      }
+
+      
+      showPara(1);
+    </script> -->
+
+    <script>
+      function showPara(num) {
+        // hide all paras
+        document
+          .querySelectorAll(".tab-para")
+          .forEach((p) => (p.style.display = "none"));
+
+        // remove highlight from all buttons
+        document
+          .querySelectorAll(".PaidAidsBox")
+          .forEach((btn) => btn.classList.remove("activeBtn"));
+
+        // show the correct para
+        document.getElementById("para" + num).style.display = "block";
+
+        // highlight the clicked button
+        document
+          .querySelectorAll(".PaidAidsBox")
+          [num - 1].classList.add("activeBtn");
+      }
+
+      // Show first para by default
+      showPara(1);
+    </script>
+
+    <script>
+      const cards = document.querySelectorAll(".card");
+      const paras = document.querySelectorAll(".outside-para");
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          // Remove active class from all cards
+          cards.forEach((c) => c.classList.remove("active"));
+          // Add active to clicked card
+          card.classList.add("active");
+
+          // Hide all paragraphs
+          paras.forEach((p) => p.classList.remove("active"));
+          // Show the target paragraph
+          const targetId = card.getAttribute("data-target");
+          document.getElementById(targetId).classList.add("active");
+        });
+      });
+    </script>
+    <script>
+      // Event delegation: works for existing and future .faqBox items
+      document.addEventListener("click", (e) => {
+        const box = e.target.closest(".faqBox");
+        if (!box) return;
+
+        // If you click inside the answer text, do nothing (optional)
+        if (e.target.closest(".answerColor")) return;
+
+        // Toggle this one
+        box.classList.toggle("open");
+
+        // If you want accordion behavior (only one open), uncomment below:
+        // document.querySelectorAll(".faqBox.open").forEach(b => {
+        //   if (b !== box) b.classList.remove("open");
+        // });
+      });
+    </script>
+    <!-- <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script> -->
+
+    <!-- <script type="module">
+      import * as THREE from "three";
+      import { OrbitControls } from "three/controls/OrbitControls.js";
+      import { GLTFLoader } from "three/loaders/GLTFLoader.js";
+
+      const container = document.getElementById("viewer");
+
+      
+      const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true,
+      });
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      container.appendChild(renderer.domElement);
+
+    
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x0b1220);
+      scene.background = null;
+
+      
+      const camera = new THREE.PerspectiveCamera(
+        60,
+        container.clientWidth / container.clientHeight,
+        0.01,
+        2000
+      );
+      camera.position.set(4, 2, 4);
+
+      
+      const controls = new OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+
+      
+      const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1);
+      scene.add(hemiLight);
+      const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+      dirLight.position.set(5, 10, 7.5);
+      scene.add(dirLight);
+
+      
+      const loader = new GLTFLoader();
+      loader.load(
+        "./src/assets/final-logo.glb", 
+        (gltf) => {
+          const model = gltf.scene;
+          scene.add(model);
+
+          
+          const box = new THREE.Box3().setFromObject(model);
+          const size = box.getSize(new THREE.Vector3()).length();
+          const center = box.getCenter(new THREE.Vector3());
+
+          controls.reset();
+          model.position.sub(center); 
+          camera.position.set(size, size, size);
+          model.scale.set(1, 1, 2);
+          controls.update();
+        },
+        undefined,
+        (error) => {
+          console.error("Error loading GLB:", error);
+        }
+      );
+
+      
+      window.addEventListener("resize", () => {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+      });
+
+      
+      function animate() {
+        requestAnimationFrame(animate);
+
+        controls.update();
+        renderer.render(scene, camera);
+      }
+      animate();
+    </script> -->
+
+    <script type="module">
+      // import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+      // import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js";
+      // import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js";
+      import * as THREE from "three";
+      import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+      import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+      const container = document.getElementById("viewer");
+
+      // Renderer
+      const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true,
+      });
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      container.appendChild(renderer.domElement);
+
+      // Scene
+      const scene = new THREE.Scene();
+
+      // Camera
+      const camera = new THREE.PerspectiveCamera(
+        60,
+        container.clientWidth / container.clientHeight,
+        0.01,
+        2000
+      );
+      camera.position.set(2, 2, 4);
+
+      // Controls
+      const controls = new OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.enableRotate = true; // disable manual rotation if only auto-spin needed
+      controls.enableZoom = false;
+      controls.minPolarAngle = Math.PI / 2; // lock vertical angle
+      controls.maxPolarAngle = Math.PI / 2; // lock vertical angle
+      controls.autoRotate = true; // auto spin
+      controls.autoRotateSpeed = 8.0;
+      // Lights
+      const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1);
+      scene.add(hemiLight);
+      const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+      dirLight.position.set(5, 10, 7.5);
+      scene.add(dirLight);
+
+      const spotLight = new THREE.SpotLight(0xffffff, 2); // color, intensity
+      spotLight.position.set(0, 10, 0); // directly above the model
+      spotLight.angle = Math.PI / 6; // spotlight cone angle
+      spotLight.penumbra = 0.3; // softer edges
+      spotLight.decay = 2; // realistic falloff
+      spotLight.distance = 50; // how far the light reaches
+
+      // make shadows work
+      spotLight.castShadow = true;
+      renderer.shadowMap.enabled = true;
+
+      // optional: add helper to visualize spotlight
+      // const spotHelper = new THREE.SpotLightHelper(spotLight);
+      // scene.add(spotHelper);
+
+      scene.add(spotLight);
+
+      // Loader
+      let model;
+      const loader = new GLTFLoader();
+      loader.load(
+        "./src/assets/final-logo.glb", // adjust path if needed
+        (gltf) => {
+          model = gltf.scene;
+          scene.add(model);
+
+          // Frame & scale model
+          const box = new THREE.Box3().setFromObject(model);
+          const size = box.getSize(new THREE.Vector3()).length();
+          const center = box.getCenter(new THREE.Vector3());
+
+          model.position.sub(center); // center the model
+          camera.position.set(size, size, size);
+          model.scale.set(1.3, 1.5, 1);
+          controls.update();
+        },
+        undefined,
+        (error) => {
+          console.error("Error loading GLB:", error);
+        }
+      );
+
+      // Resize
+      window.addEventListener("resize", () => {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+      });
+
+      // Animate
+      function animate() {
+        requestAnimationFrame(animate);
+
+        // if (model) {
+        //   model.rotation.y += 0.01; // 🔥 only rotate in circle around Y axis
+        // }
+
+        controls.update();
+        renderer.render(scene, camera);
+      }
+      animate();
+    </script>
+  </body>
+</html>

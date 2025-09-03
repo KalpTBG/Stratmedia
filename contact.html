@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+      .contactSection {
+        gap: 10px;
+        padding: 5px 10px 5px 10px;
+        font-size: 12px;
+        border-radius: 20px;
+        border-color: #16191b;
+      }
+      /* .ContactEmailUs {
+        background: linear-gradient(to right, #04070d, #05080e, #0c0f16);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 20px;
+        padding-top: 25px;
+        border-top: 2px solid #2f363f;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-left: 1px solid #1d222b;
+        border-right: 1px solid #1d222b;
+        border-bottom: 1px solid #0a0d13;
+        width: 452px;
+        height: 204px;
+        gap: 20px;
+      } */
+      .Contactbox {
+        background: linear-gradient(to right, #10131c, #13171d, #12151c);
+        padding: 4px;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+      }
+      .Contactpara {
+        color: #a6acb6;
+        text-align: center;
+      }
+      .ContactLink {
+        color: #aeb3bd;
+        text-decoration: underline;
+      }
+      /* .ContactForm {
+        width: 516px;
+        height: 668px;
+        background: linear-gradient(to right, #04070d, #05080e, #0c0f16);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-left: 20px;
+        padding-top: 25px;
+        border-top: 2px solid #2f363f;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-left: 1px solid #1d222b;
+        border-right: 1px solid #1d222b;
+        border-bottom: 1px solid #0a0d13;
+      } */
+      .form-container {
+        background: #1a1f25;
+        padding: 30px;
+        border-radius: 10px;
+        width: 100%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .form-container h2 {
+        text-align: center;
+        color: #d5dbe6;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        color: #d5dbe6;
+        font-size: 14px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #191e26;
+        border-radius: 6px;
+        background: #111418;
+        color: #fff;
+        font-size: 14px;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: #4a90e2;
+        outline: none;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        background: #4a90e2;
+        border: none;
+        padding: 12px;
+        border-radius: 6px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background: #357ab8;
+      }
+      /* .faq {
+        background: linear-gradient(#06090f, #0c1016);
+      } */
+      .faqBox {
+        background: linear-gradient(to right, #0c1016, #04070d, #04070d);
+        border-radius: 6px;
+        margin-top: 10px;
+        padding: 10px 20px 10px 20px;
+      }
+
+      /* .questions {
+        width: 45%;
+      } */
+      .answerColor {
+        color: #7e828c;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+      }
+      .faqBox.open .answerColor {
+        max-height: 500px;
+        opacity: 1;
+      }
+
+      .faqBox svg {
+        transition: transform 0.2s ease;
+      }
+      .faqBox.open svg {
+        transform: rotate(180deg);
+      }
+
+      .faqBox > .flex {
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .topGap {
+        margin-top: 90px;
+      }
+    </style>
+  </head>
+  <body class="flex-1 h-full flex-col bg-[#07090a]">
+    <div
+      class="w-full flex flex-row items-center justify-center bg-[#07090a] h-16 text-white"
+    >
+      <div
+        class="w-[90%] flex flex-row items-center justify-between gap-[100px]"
+      >
+        <div>
+          <a href="/index.html" class="text-2xl text-[#fcaf17] font-bold">
+            <img
+              src="./src/assets/Startmedia Vector-02.svg"
+              alt=""
+              style="width: 100%; height: 30px"
+            />
+          </a>
+        </div>
+        <button id="menu-btn">
+          <i class="fa-solid fa-bars fa-2x hamburgerIcon"></i>
+        </button>
+        <div class="ml-[80px] desktopNavbar">
+          <ul
+            class="flex flex-row gap-[50px] border-[#16191b] border-2 px-6 py-1 rounded-full"
+            style="padding: 5px 10px 5px 10px"
+          >
+            <li>
+              <a
+                href="/index.html"
+                class="text-[#c1c3c3] font-medium hover:text-white"
+              >
+                Process
+              </a>
+            </li>
+            <li>
+              <a
+                href="/index.html"
+                class="text-[#c1c3c3] font-medium hover:text-white"
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contact.html"
+                class="text-[#c1c3c3] font-medium hover:text-white"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="flex items-center justify-center space-x-2 border-[#1d2027] rounded-[8px] border-2 px-3 bg-[#14171b] desktopNavbar2"
+        >
+          <a
+            href="#"
+            class="text-[#c1c3c3] px-4 py-2 font-semibold hover:text-white navbutton"
+            style="padding: 5px 10px 5px 10px"
+          >
+            BOOK YOUR FREE DISCOVERY CALL
+          </a>
+          <div class="h-[20px] mb-[10px]" style="margin-bottom: 10px">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+              style="
+                user-select: none;
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                fill: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                color: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                weight="regular"
+              >
+                <path
+                  d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col items-center justify-center"
+      style="margin-top: 70px; gap: 20px"
+    >
+      <div class="flex flex-row items-center contactSection">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+          focusable="false"
+          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+          style="
+            user-select: none;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            fill: var(
+              --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+              rgb(213, 219, 230)
+            );
+            color: var(
+              --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+              rgb(213, 219, 230)
+            );
+            flex-shrink: 0;
+          "
+        >
+          <g
+            color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+            weight="fill"
+          >
+            <path
+              d="M231.88,175.08A56.26,56.26,0,0,1,176,224C96.6,224,32,159.4,32,80A56.26,56.26,0,0,1,80.92,24.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,117.39,96c-.18.27-.37.52-.57.77L96,121.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.17-1.4l.13.06,47.11,21.11A16,16,0,0,1,231.88,175.08Z"
+            ></path>
+          </g>
+        </svg>
+        <p class="text-white">CONTACT</p>
+      </div>
+      <p class="text-5xl text-white ContactRespPara">
+        React Us <span class="italic">Anytime</span>
+      </p>
+      <p class="text-white ContactRespPara">
+        Have questions or need help? We’re here for you
+      </p>
+    </div>
+
+    <div
+      class="flex flex-row justify-center contactFormSection"
+      style="gap: 30px; margin-top: 60px"
+    >
+      <div class="flex flex-col TwoBox">
+        <div class="ContactEmailUs">
+          <div class="flex flex-row items-center" style="gap: 20px">
+            <div class="Contactbox">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                style="
+                  user-select: none;
+                  width: 32px;
+                  height: 32px;
+                  display: inline-block;
+                  fill: var(
+                    --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                    rgb(255, 255, 255)
+                  );
+                  color: var(
+                    --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                    rgb(255, 255, 255)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                  weight="regular"
+                >
+                  <path
+                    d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="text-2xl text-white">Email Us</p>
+          </div>
+          <p class="Contactpara">
+            Looking To Build A Strategic Referall Partnership?
+          </p>
+          <a href="" class="ContactLink">paul@Stratmediamarketing.com</a>
+        </div>
+        <div class="ContactEmailUs" style="margin-top: 40px">
+          <div class="flex flex-row items-center" style="gap: 20px">
+            <div class="Contactbox">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                style="
+                  user-select: none;
+                  width: 32px;
+                  height: 32px;
+                  display: inline-block;
+                  fill: var(
+                    --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                    rgb(255, 255, 255)
+                  );
+                  color: var(
+                    --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                    rgb(255, 255, 255)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                  weight="regular"
+                >
+                  <path
+                    d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="text-2xl text-white">Contact Sales</p>
+          </div>
+          <p class="Contactpara">
+            Ready to Make Waves? Let’s Chart Your Course Together.
+          </p>
+          <a href="" class="ContactLink">Book Your Free Discovery Call</a>
+        </div>
+      </div>
+      <div class="ContactForm">
+        <div class="Contactbox">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            focusable="false"
+            color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+            style="
+              user-select: none;
+              width: 32px;
+              height: 32px;
+              display: inline-block;
+              fill: var(
+                --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                rgb(213, 219, 230)
+              );
+              color: var(
+                --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                rgb(213, 219, 230)
+              );
+              flex-shrink: 0;
+            "
+          >
+            <g
+              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+              weight="regular"
+            >
+              <path
+                d="M201.89,54.66A103.43,103.43,0,0,0,128.79,24H128A104,104,0,0,0,24,128v56a24,24,0,0,0,24,24H64a24,24,0,0,0,24-24V144a24,24,0,0,0-24-24H40.36A88.12,88.12,0,0,1,190.54,65.93,87.39,87.39,0,0,1,215.65,120H192a24,24,0,0,0-24,24v40a24,24,0,0,0,24,24h24a24,24,0,0,1-24,24H136a8,8,0,0,0,0,16h56a40,40,0,0,0,40-40V128A103.41,103.41,0,0,0,201.89,54.66ZM64,136a8,8,0,0,1,8,8v40a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V136Zm128,56a8,8,0,0,1-8-8V144a8,8,0,0,1,8-8h24v56Z"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <p class="text-white text-center font-semibold text-[20px]">
+          We’d love to help! Let us know how
+        </p>
+        <form style="width: 90%">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="business">Type of Business</label>
+          <input type="text" id="business" name="business" required />
+
+          <label for="message">How May We Assist You?</label>
+          <textarea id="message" name="message" required></textarea>
+          <div class="flex items-center justify-center">
+            <button
+              class="relative bg-[#0d1117] text-white flex items-center justify-center font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group mt-[20px] hover:cursor-pointer"
+              style="width: 100%; padding: 10px 0px 10px 0px"
+            >
+              <span class="relative z-10 flex items-center text-centers gap-2">
+                Send Your Message
+                <i class="fa-solid fa-arrow-right -rotate-45"></i>
+              </span>
+              <!-- white glow highlight at the bottom -->
+              <div
+                class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
+              ></div>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div
+      class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] autoShow"
+    >
+      <div
+        class="flex items-center justify-center border border-[#1f2329] rounded-full faqSection"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+          focusable="false"
+          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+          style="
+            user-select: none;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            fill: var(
+              --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+              rgb(213, 219, 230)
+            );
+            color: var(
+              --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+              rgb(213, 219, 230)
+            );
+            flex-shrink: 0;
+          "
+        >
+          <g
+            color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+            weight="fill"
+          >
+            <path
+              d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm-4,48a12,12,0,1,1-12,12A12,12,0,0,1,124,72Zm12,112a16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40a8,8,0,0,1,0,16Z"
+            ></path>
+          </g>
+        </svg>
+        <p class="text-[#d5dbe6]">FAQ'S</p>
+      </div>
+      <p class="text-5xl text-white text-center returnSectionPara">
+        Frequently Asked
+        <span class="italic" style="color: #fcaf17"> Question </span>
+      </p>
+      <p class="text-center text-white">
+        Find quick answers to the most common questions about our platform
+      </p>
+      <div
+        class="flex flex-row items-center justify-center w-full questionSection"
+        style="gap: 30px"
+      >
+        <div
+          class="faq border-t-2 border-[#1f2329] border border-[#1c2229] rounded-3xl flex flex-col items-center gap-3 px-3"
+          style="width: 368px; height: 252px"
+        >
+          <div class="faqBox px-3 py-3 border-t-2 border-[#1f2329]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+              style="
+                user-select: none;
+                width: 32px;
+                height: 32px;
+                display: inline-block;
+                fill: var(
+                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                  rgb(213, 219, 230)
+                );
+                color: var(
+                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                  rgb(213, 219, 230)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                weight="regular"
+              >
+                <path
+                  d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <p class="text-2xl text-center" style="color: #d5dbe6">
+            Still Have Questions?
+          </p>
+          <p class="text-center" style="color: #6e727b">
+            Still have questions? Speak with a marketing expert on our team
+            today.
+          </p>
+          <div
+            class="flex flex-row items-center gap-2 px-2 py-1.5 border border-[#1f2329] faqBox"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+              style="
+                user-select: none;
+                width: 18px;
+                height: 20px;
+                display: inline-block;
+                fill: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                color: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                weight="regular"
+              >
+                <path
+                  d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"
+                ></path>
+              </g>
+            </svg>
+            <p style="color: #d5dbe6" class="font-medium">
+              BOOK YOUR FREE DISCOVERY CALL
+            </p>
+          </div>
+        </div>
+
+        <div class="questions">
+          <div
+            class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+            style="border-radius: 10px"
+          >
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-white">
+                1. What services does Stratmedia provide?
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                style="
+                  user-select: none;
+                  width: 20px;
+                  height: 20px;
+                  display: inline-block;
+                  fill: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  color: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  weight="regular"
+                >
+                  <path
+                    d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                    fill="#fcaf17"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="answerColor">
+              Stratmedia offers full-service marketing solutions, including
+              brand strategy, digital advertising, social media management,
+              content creation, SEO, and performance analytics.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+            style="border-radius: 10px"
+          >
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-white">
+                2. What industries does Stratmedia specialize in?
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                style="
+                  user-select: none;
+                  width: 20px;
+                  height: 20px;
+                  display: inline-block;
+                  fill: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  color: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  weight="regular"
+                >
+                  <path
+                    d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                    fill="#fcaf17"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="answerColor">
+              We work with ambitious brands across various sectors, including
+              tech, lifestyle, sports, e-commerce, and startups—any industry
+              ready to break through the noise.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+            style="border-radius: 10px"
+          >
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-white">3. How does the onboarding process work?</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                style="
+                  user-select: none;
+                  width: 20px;
+                  height: 20px;
+                  display: inline-block;
+                  fill: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  color: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  weight="regular"
+                >
+                  <path
+                    d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                    fill="#fcaf17"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="answerColor">
+              Once you reach out, we schedule a discovery session to understand
+              your goals. Then we craft a custom strategy, align on objectives,
+              and launch with precision.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+            style="border-radius: 10px"
+          >
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-white">
+                4. What makes Stratmedia different from other agencies?
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                style="
+                  user-select: none;
+                  width: 20px;
+                  height: 20px;
+                  display: inline-block;
+                  fill: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  color: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  weight="regular"
+                >
+                  <path
+                    d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                    fill="#fcaf17"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="answerColor">
+              We don’t do cookie-cutter campaigns. At Stratmedia, we dive deep
+              into your brand’s DNA to craft bold, performance-driven strategies
+              that actually move the needle.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+            style="border-radius: 10px"
+          >
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-white">
+                5. What size businesses do you work with?
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                style="
+                  user-select: none;
+                  width: 20px;
+                  height: 20px;
+                  display: inline-block;
+                  fill: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  color: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  weight="regular"
+                >
+                  <path
+                    d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                    fill="#fcaf17"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="answerColor">
+              We work with startups, mid-sized companies, and enterprise
+              clients. Whether you’re scaling fast or rebranding, we adapt to
+              your growth stage and vision.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+            style="border-radius: 10px"
+          >
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-white">
+                6. How much does it cost to work with STRATMEDIA?
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                style="
+                  user-select: none;
+                  width: 20px;
+                  height: 20px;
+                  display: inline-block;
+                  fill: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  color: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  weight="regular"
+                >
+                  <path
+                    d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                    fill="#fcaf17"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="answerColor">
+              We build tailored growth packages based on your goals and
+              industry. Our retainers typically start at $3,000/month for
+              content-only partnerships and $6,000–$7,000/month for full-service
+              content + ads growth systems
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+            style="border-radius: 10px"
+          >
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-white">7. Is there a minimum commitment?</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                style="
+                  user-select: none;
+                  width: 20px;
+                  height: 20px;
+                  display: inline-block;
+                  fill: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  color: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  weight="regular"
+                >
+                  <path
+                    d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                    fill="#fcaf17"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="answerColor">
+              Yes, most of our retainers run on 6–12 month partnerships. This
+              ensures enough runway to execute, optimize, and compound results.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+            style="border-radius: 10px"
+          >
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-white">
+                8. Do you manage ad spend or is that separate?
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                style="
+                  user-select: none;
+                  width: 20px;
+                  height: 20px;
+                  display: inline-block;
+                  fill: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  color: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  weight="regular"
+                >
+                  <path
+                    d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                    fill="#fcaf17"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="answerColor">
+              Ad spend is billed directly to Meta, Google, TikTok, or LinkedIn.
+              Our retainers cover creative, strategy, management, and reporting.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+            style="border-radius: 10px"
+          >
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-white">
+                9. Do you work with businesses outside Detroit/Michigan?
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                style="
+                  user-select: none;
+                  width: 20px;
+                  height: 20px;
+                  display: inline-block;
+                  fill: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  color: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  weight="regular"
+                >
+                  <path
+                    d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                    fill="#fcaf17"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="answerColor">
+              Yes. While we’re based in Michigan, we work with businesses
+              nationwide.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
+            style="border-radius: 10px"
+          >
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-white">10. How do you measure success?</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
+                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                style="
+                  user-select: none;
+                  width: 20px;
+                  height: 20px;
+                  display: inline-block;
+                  fill: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  color: var(
+                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
+                    rgb(213, 219, 230)
+                  );
+                  flex-shrink: 0;
+                "
+              >
+                <g
+                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  weight="regular"
+                >
+                  <path
+                    d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                    fill="#fcaf17"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="answerColor">
+              Every engagement comes with reporting dashboards and measurable
+              KPIs — not vanity metrics. We track ROI, leads, and real growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-row items-center justify-center"
+      style="margin-top: 60px"
+    >
+      <div
+        class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-start justify-center gap-[20px] px-3"
+        style="padding-bottom: 40px; width: 80%; padding: 30px"
+      >
+        <div
+          class="flex flex-row items-center justify-between w-full mt-[30px] ContactFooterSection"
+        >
+          <a href="#" class="text-2xl text-[#fcaf17] font-bold">
+            <img
+              src="./src/assets/Startmedia Vector-02.svg"
+              alt=""
+              style="width: 100%; height: 30px"
+            />
+          </a>
+          <div class="flex flex-row items-center" style="gap: 20px">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+              style="
+                user-select: none;
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                fill: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                color: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                weight="regular"
+              >
+                <path
+                  d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                ></path>
+              </g>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+              style="
+                user-select: none;
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                fill: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                color: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                weight="regular"
+              >
+                <path
+                  d="M224,72a48.05,48.05,0,0,1-48-48,8,8,0,0,0-8-8H128a8,8,0,0,0-8,8V156a20,20,0,1,1-28.57-18.08A8,8,0,0,0,96,130.69V88a8,8,0,0,0-9.4-7.88C50.91,86.48,24,119.1,24,156a76,76,0,0,0,152,0V116.29A103.25,103.25,0,0,0,224,128a8,8,0,0,0,8-8V80A8,8,0,0,0,224,72Zm-8,39.64a87.19,87.19,0,0,1-43.33-16.15A8,8,0,0,0,160,102v54a60,60,0,0,1-120,0c0-25.9,16.64-49.13,40-57.6v27.67A36,36,0,1,0,136,156V32h24.5A64.14,64.14,0,0,0,216,87.5Z"
+                ></path>
+              </g>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+              style="
+                user-select: none;
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                fill: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                color: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                weight="regular"
+              >
+                <path
+                  d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                ></path>
+              </g>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+              style="
+                user-select: none;
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                fill: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                color: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                weight="regular"
+              >
+                <path
+                  d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"
+                ></path>
+              </g>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+              style="
+                user-select: none;
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                fill: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                color: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                weight="regular"
+              >
+                <path
+                  d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <button
+          class="w-[30%] relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group mt-[20px] hover:cursor-pointer getInTouch"
+        >
+          <span class="relative z-10 flex items-center gap-2">
+            <a href="/contact.html"> Get in touch with us </a>
+            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+          </span>
+          <!-- white glow highlight at the bottom -->
+          <div
+            class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
+          ></div>
+        </button>
+        <p class="w-full" style="height: 1.5px; background-color: #13171d"></p>
+        <div
+          class="flex flex-row items-center justify-between w-full ContactUsLastSection"
+        >
+          <p class="text-white">
+            © 2025 Dark Ocean Marketing®, All Rights Reserved.
+          </p>
+          <p class="text-white">
+            Designed & Developed By Neff Industries, LLC.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Event delegation: works for existing and future .faqBox items
+      document.addEventListener("click", (e) => {
+        const box = e.target.closest(".faqBox");
+        if (!box) return;
+
+        // If you click inside the answer text, do nothing (optional)
+        if (e.target.closest(".answerColor")) return;
+
+        // Toggle this one
+        box.classList.toggle("open");
+
+        // If you want accordion behavior (only one open), uncomment below:
+        // document.querySelectorAll(".faqBox.open").forEach(b => {
+        //   if (b !== box) b.classList.remove("open");
+        // });
+      });
+    </script>
+  </body>
+</html>
