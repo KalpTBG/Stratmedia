@@ -1,3 +1,214 @@
+/* Scroll to Top Button Styles */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px 0 rgba(30, 41, 59, 0.18);
+  border-radius: 50%;
+  padding: 0;
+  transition: opacity 0.2s;
+  opacity: 0.85;
+}
+.scroll-to-top-btn:hover {
+  opacity: 1;
+  box-shadow: 0 6px 24px 0 rgba(252, 175, 23, 0.18);
+}
+@media (max-width: 700px) {
+  .scroll-to-top-btn {
+    bottom: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+  }
+}
+/* Responsive for FREE ASSESSMENT section */
+.assessment-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.assessment-btn {
+  min-width: 220px;
+}
+@media (max-width: 700px) {
+  .assessment-btns {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+  .assessment-btn {
+    width: 100%;
+    min-width: 0;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+/* Marquee logo uniform size, grayscale, and hover effect */
+/* 3. Space from left and right side */
+.marquee {
+  overflow: hidden;
+  padding: 20px 0;
+  margin: 0 40px; /* Adjust this value for more/less side spacing */
+  position: relative;
+
+  /* 4. Disappearing/Appearing effect using a mask gradient */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  /* 1. Reduced speed: increased from 130s to 180s (higher = slower) */
+  /* 2. Improved infinite scroll: Ensure this matches the width logic */
+  animation: marquee-scroll 180s linear infinite;
+  gap: 40px; /* Matches the UL gap for seamless transition */
+}
+
+/* Ensure the ULs don't have extra padding/margin interfering with the gap */
+.marquee-content ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Moves exactly half of the total content width */
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-logo {
+  width: 140px;
+  height: 90px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition:
+    filter 0.4s,
+    background 0.4s;
+  background: transparent;
+  border-radius: 8px;
+  display: block;
+}
+
+.marquee-logo:hover {
+  filter: grayscale(0%) brightness(1.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 450px; /* Increased height for content */
+  overflow: hidden;
+}
+
+.item {
+  position: absolute;
+  width: 250px; /* Slightly wider */
+  height: 380px;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 0; /* Changed to 0 to let image cover top */
+  transition: 0.5s;
+  left: calc(50% - 125px);
+  top: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.item h2 {
+  font-size: 1.1rem;
+  margin: 15px 15px 5px;
+  color: #333;
+}
+
+.item p {
+  font-size: 0.85rem;
+  padding: 0 15px;
+  color: #666;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.metrics {
+  background: #f8f9fa;
+  padding: 10px 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metrics span {
+  font-weight: bold;
+  color: #8b5cf6;
+  font-size: 0.85rem;
+}
+
+#prev,
+#next {
+  position: absolute;
+  top: 40%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.3s;
+}
+
+#next {
+  right: 50px;
+}
+#prev {
+  left: 50px;
+}
+
+#prev:hover,
+#next:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   width: 100%;
   background: #07090a;
@@ -30,7 +241,7 @@
   padding: 8px 16px;
   border: 2px solid #16191b;
   border-radius: 50px;
-  margin-left: 120px;
+  margin-left: 0px;
 }
 
 .navbar-links ul li a {
@@ -41,7 +252,10 @@
 }
 
 .navbar-links ul li a:hover {
-  color: #fff;
+  color: #12161f;
+  background-color: #fcaf17;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
 }
 
 /* CTA */
@@ -64,7 +278,7 @@
 }
 
 .navbar-cta a:hover {
-  color: #fff;
+  color: #fcaf17;
 }
 
 .navbar-cta svg {
@@ -218,7 +432,7 @@
 .card-section {
   position: relative;
   width: 990px;
-  height: 450px;
+  height: 500px;
 }
 
 .card {
@@ -229,8 +443,11 @@
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: transform 0.4s ease, z-index 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    z-index 0.4s ease;
   padding-bottom: 130px;
+  margin-bottom: 30px;
 }
 .CardOneImage {
   width: 400px;
@@ -259,7 +476,7 @@
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 10fr);
   gap: 20px;
 }
 .comparisonSection {
@@ -292,7 +509,7 @@
 }
 .ContactForm {
   width: 516px;
-  height: 668px;
+  height: 800px;
   background: linear-gradient(to right, #04070d, #05080e, #0c0f16);
   display: flex;
   flex-direction: column;
@@ -345,8 +562,46 @@
   width: 368px;
   height: 300px;
 }
+.contactUsStillHaveQuestionSection {
+  width: 368px;
+  height: 252px;
+  padding: 0px 10px 0px 10px;
+}
+
+.stairCase {
+  gap: 20px;
+  width: 60%;
+}
 
 @media (max-width: 480px) {
+  .stairCase {
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .getInTouch {
+    width: 100%;
+    text-align: center;
+  }
+  #automotiveDealershipPerformance {
+    display: flex;
+    flex-direction: column;
+  }
+  #stairText {
+    font-size: 15px;
+  }
+  #stairSection {
+    display: flex;
+    flex-direction: column;
+  }
+  #paidAdImg {
+    width: 100%;
+    height: 100%;
+  }
+  .icons {
+    width: 100%;
+    height: 100%;
+  }
   .navbar-links,
   .navbar-cta {
     display: none; /* hidden by default */
@@ -357,16 +612,27 @@
     right: 0;
     width: 100%;
     text-align: center;
-    padding: 20px 0;
+    padding: 0px 0;
     z-index: 1000; /* make sure it's above other elements */
   }
 
-  .navbar-links ul {
+  /* .navbar-links ul {
     flex-direction: column;
     gap: 20px;
     border: none;
+  } */
+  .navbar-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    border: none;
+    /* padding: 8px 16px; */
+    /* border: 2px solid #16191b; */
+    /* border-radius: 50px; */
+    /* margin-left: 120px; */
   }
-
   .navbar-cta {
     margin-top: 20px;
     border-radius: 0;
@@ -383,7 +649,7 @@
   }
   .navbar-cta.active {
     display: flex !important;
-    margin-top: 160px;
+    margin-top: 200px;
     width: 100%;
     flex-direction: row;
     gap: 7px;
@@ -405,9 +671,9 @@
     width: 80%;
   }
   .heroSectionPara {
-    text-align: center;
+    text-align: left;
     font-size: 17px;
-    padding: 40px;
+    padding: 20px;
   }
   .heroSectionPara2 {
     font-size: 25px;
@@ -485,7 +751,9 @@
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: transform 0.4s ease, z-index 0.4s ease;
+    transition:
+      transform 0.4s ease,
+      z-index 0.4s ease;
     padding-bottom: 130px;
   }
   #card3 {
@@ -535,6 +803,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    width: 100%;
   }
   .ApproachSection {
     gap: 20px;
@@ -597,7 +866,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
   }
   .ContactForm {
     width: 100%;
@@ -611,7 +880,7 @@
     width: 90%;
   }
   .ContactRespPara {
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
   }
   .ContactUsQuestions {
@@ -729,6 +998,18 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+  .stairCase {
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .getInTouch {
+    width: 100%;
+    text-align: center;
+  }
+  #stairText {
+    font-size: 18px;
+  }
   .navbar-links,
   .navbar-cta {
     display: none; /* hidden by default */
@@ -743,10 +1024,22 @@
     z-index: 1000; /* make sure it's above other elements */
   }
 
-  .navbar-links ul {
+  /* .navbar-links ul {
     flex-direction: column;
     gap: 20px;
     border: none;
+  } */
+  .navbar-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    border: none;
+    /* padding: 8px 16px; */
+    /* border: 2px solid #16191b; */
+    /* border-radius: 50px; */
+    /* margin-left: 120px; */
   }
 
   .navbar-cta {
@@ -765,7 +1058,7 @@
   }
   .navbar-cta.active {
     display: flex !important;
-    margin-top: 160px;
+    margin-top: 200px;
     width: 100%;
     flex-direction: row;
     gap: 7px;
@@ -867,7 +1160,9 @@
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: transform 0.4s ease, z-index 0.4s ease;
+    transition:
+      transform 0.4s ease,
+      z-index 0.4s ease;
     padding-bottom: 130px;
   }
   #card3 {
@@ -981,7 +1276,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     margin-bottom: 30px;
   }
   .autoShow {
@@ -1065,6 +1360,13 @@
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
+  .getInTouch {
+    width: 100%;
+    text-align: center;
+  }
+  #stairText {
+    font-size: 18px;
+  }
   .navbar-links,
   .navbar-cta {
     display: none; /* hidden by default */
@@ -1080,9 +1382,16 @@
   }
 
   .navbar-links ul {
+    display: flex;
     flex-direction: column;
     gap: 20px;
+    list-style: none;
+    margin: 0;
     border: none;
+    /* padding: 8px 16px; */
+    /* border: 2px solid #16191b; */
+    /* border-radius: 50px; */
+    /* margin-left: 120px; */
   }
 
   .navbar-cta {
@@ -1101,7 +1410,7 @@
   }
   .navbar-cta.active {
     display: flex !important;
-    margin-top: 160px;
+    margin-top: 200px;
     width: 100%;
     flex-direction: row;
     gap: 7px;
@@ -1202,7 +1511,9 @@
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: transform 0.4s ease, z-index 0.4s ease;
+    transition:
+      transform 0.4s ease,
+      z-index 0.4s ease;
     padding-bottom: 130px;
   }
   #card3 {
@@ -1316,7 +1627,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     margin-bottom: 30px;
   }
   .autoShow {
@@ -1459,3 +1770,171 @@ To achieve a transparent track, we're effectively styling the thumb. */
   padding: 20px;
   background-color: white;
 }
+
+/* --- Responsive for Services Section (How Stratmedia Can Help You) --- */
+@media (max-width: 992px) {
+  .services-cards-row {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+  .services-card {
+    width: 100% !important;
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-cards-row {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  .services-card {
+    width: 100% !important;
+    padding: 16px !important;
+  }
+  .services-card img {
+    height: 120px !important;
+  }
+  .services-card p {
+    font-size: 0.98rem !important;
+  }
+}
+
+.blog-container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #04070d;
+}
+
+.blog-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fcaf17;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.blog-card {
+  background: #04070d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border: 1px solid #293039;
+}
+
+.blog-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.blog-content {
+  margin-top: 15px;
+}
+
+.blog-post-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fcaf17;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.blog-full-content {
+  font-size: 1rem;
+  color: #5e6773;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Success Stories Cards Responsive */
+  .case-study-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 24px !important;
+  }
+  .case-study-card > div:last-child {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 180px !important;
+  }
+  .case-study-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+  .case-study-card {
+    padding: 18px !important;
+    gap: 18px !important;
+  }
+  .case-study-card h3 {
+    font-size: 1.1rem !important;
+  }
+  .case-study-card p {
+    font-size: 0.95rem !important;
+  }
+  .case-study-card .metric-box {
+    min-width: 80px !important;
+    padding: 8px 10px !important;
+  }
+  .case-study-card > div:last-child {
+    height: 120px !important;
+  }
+}
+.linkColor a:hover {
+  color: #fcaf17;
+}
+
+@font-face {
+  font-family: "Vaulto";
+  src: url("./src/assets/fonts/Vaulto-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+#heading1 {
+  font-family: "Vaulto", sans-serif;
+}
+
+/* .marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+} */

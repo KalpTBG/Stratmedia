@@ -1,22 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stratmedia</title>
+
+    <meta
+      name="title"
+      content="Stratmedia – Creative Marketing That Drives Real Momentum"
+    />
     <meta
       name="description"
-      content="CREATIVE THAT WORKS. STRATEGY THAT CONVERTS!"
+      content="Stratmedia builds strategic marketing campaigns designed to generate real momentum, not just impressions. We create impactful creative and performance-driven media strategies for modern brands."
     />
+    <meta
+      name="keywords"
+      content="Stratmedia, digital marketing agency, creative marketing, brand growth, performance marketing, strategic campaigns, media strategy"
+    />
+    <meta name="author" content="Stratmedia" />
+    <meta name="robots" content="index, follow" />
+
+    <meta
+      property="og:title"
+      content="Stratmedia – Marketing Built for Real Momentum"
+    />
+    <meta
+      property="og:description"
+      content="At Stratmedia, every campaign is designed to generate momentum, not vanity metrics. Strategic creative and performance marketing for ambitious brands."
+    />
+    <meta property="og:type" content="website" />
+
     <!-- <link rel="stylesheet" href="./src/output.css" /> -->
-    <link rel="icon" type="image/png" href="./src/assets/favicon.png" />
+    <!-- <link rel="icon" type="image/png" href="./src/assets/favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./style.css" />
-    <script defer src="./app.js"></script>
+    <script defer src="./app.js"></script> -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/src/assets/favicon.png" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Theme Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Theme Script -->
+    <script defer src="/app.js"></script>
+    <title>Stratmedia</title>
     <!-- <script type="importmap">
       {
         "imports": {
@@ -118,23 +157,18 @@
         display: block;
         color: #fff;
       }
-      /* .card-section {
-        position: relative;
-        width: 990px;
-        height: 450px;
-      }
 
-      .card {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: transform 0.4s ease, z-index 0.4s ease;
-        padding-bottom: 130px;
-      } */
+      /* .card {
+  position: relative;
+  transition: all 0.4s ease;
+} */
+
+      .card-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
 
       #card1 {
         /* background: linear-gradient(135deg, #ff5f6d, #ffc371); */
@@ -163,6 +197,30 @@
         border-bottom: 1px solid #191e26;
       }
 
+      #card4 {
+        /* background: linear-gradient(135deg, #f7971e, #ffd200); */
+        background: #04070d;
+        border-top: 2px solid #38404a;
+        border-left: 1px solid #191e26;
+        border-right: 1px solid #191e26;
+        border-bottom: 1px solid #191e26;
+      }
+      #card5 {
+        /* background: linear-gradient(135deg, #f7971e, #ffd200); */
+        background: #04070d;
+        border-top: 2px solid #38404a;
+        border-left: 1px solid #191e26;
+        border-right: 1px solid #191e26;
+        border-bottom: 1px solid #191e26;
+      }
+      #card6 {
+        /* background: linear-gradient(135deg, #f7971e, #ffd200); */
+        background: #04070d;
+        border-top: 2px solid #38404a;
+        border-left: 1px solid #191e26;
+        border-right: 1px solid #191e26;
+        border-bottom: 1px solid #191e26;
+      }
       /* Default stair stacking */
       .card:nth-child(1) {
         transform: translateY(-170px);
@@ -173,31 +231,28 @@
         z-index: 2;
       }
       .card:nth-child(3) {
-        transform: translateY(-100px);
+        transform: translateY(-110px);
         z-index: 3;
+      }
+      .card:nth-child(4) {
+        transform: translateY(-80px);
+        z-index: 4;
+      }
+      .card:nth-child(5) {
+        transform: translateY(-50px);
+        z-index: 5;
+      }
+      .card:nth-child(6) {
+        transform: translateY(-20px);
+        z-index: 6;
       }
 
       /* Active card on top */
       .card.active {
         transform: translateY(-60px) scale(1.05);
-        z-index: 10;
+        z-index: 999;
       }
 
-      /* .cardOnePara {
-        font-size: 16px;
-        width: 70%;
-        color: #727680;
-      } */
-      /* .CardOneImage {
-        width: 400px;
-        height: 300px;
-        border-radius: 10px;
-        object-fit: cover;
-      } */
-      /* .cardOneGradient {
-        background: linear-gradient(#06090f, #0c1016);
-        border-radius: 10px;
-      } */
       .VisitiorsCard {
         background: linear-gradient(#06090f, #0c1016);
       }
@@ -246,42 +301,34 @@
       .COMPARISON {
         width: 85%;
       }
-      .faq {
-        background: linear-gradient(#06090f, #0c1016);
-      }
-      .faqBox {
-        background: linear-gradient(to right, #10131c, #13171d, #12151c);
-        border-radius: 6px;
-        margin-top: 10px;
-      }
-
-      /* .questions {
-        width: 45%;
-      } */
-      .answerColor {
-        color: #7e828c;
-        max-height: 0;
+      .fit-card {
+        position: relative;
         overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
       }
-      .faqBox.open .answerColor {
-        max-height: 500px; /* big enough to fit your longest answer */
-        opacity: 1;
+      .fit-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.9;
+        pointer-events: none;
       }
-
-      /* optional: rotate the chevron when open */
-      .faqBox svg {
-        transition: transform 0.2s ease;
+      .fit-card--negative::before {
+        background: radial-gradient(
+          circle at top left,
+          rgba(252, 175, 23, 0.08),
+          transparent 42%
+        );
       }
-      .faqBox.open svg {
-        transform: rotate(180deg);
+      .fit-card--positive::before {
+        background: radial-gradient(
+          circle at top right,
+          rgba(61, 214, 140, 0.1),
+          transparent 45%
+        );
       }
-
-      /* optional: make the header look clickable */
-      .faqBox > .flex {
-        cursor: pointer;
-        user-select: none;
+      .fit-card-content {
+        position: relative;
+        z-index: 1;
       }
       .divider {
         display: flex;
@@ -343,7 +390,39 @@
         margin-top: 10px;
         padding-top: 40px;
       }
+
+      .marquee {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .marquee-content {
+        display: flex;
+        width: max-content;
+        animation: scroll 25s linear infinite;
+      }
+
+      @keyframes scroll {
+        from {
+          transform: translateX(10%);
+        }
+        to {
+          transform: translateX(-80%);
+        }
+      }
+      #listLogo {
+        width: 100%;
+        height: 200px;
+      }
+      @media (max-width: 480px) {
+        #listLogo {
+          width: 100%;
+          height: 100px;
+        }
+      }
     </style>
+    <!-- <?php wp_head(); ?> -->
   </head>
 
   <body class="flex-1 h-full flex-col bg-[#07090a]">
@@ -384,13 +463,8 @@
                 Services
               </a>
             </li>
-            <li>
-              <a
-                href="/contact.html"
-                class="text-[#c1c3c3] font-medium hover:text-white"
-              >
-                Contact
-              </a>
+             <li><a href="<?php echo home_url('/contact'); ?>">Contact</a></li>
+    <li><a href="<?php echo home_url('/blogs'); ?>">Blog</a></li>>
             </li>
           </ul>
         </div>
@@ -437,14 +511,52 @@
           </div>
         </div>
       </div>
-    </div> -->
+      <!-- Scroll to Top Button -->
+    <button
+      id="scrollToTopBtn"
+      aria-label="Scroll to top"
+      class="scroll-to-top-btn"
+      style="display: none"
+    >
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="12" cy="12" r="12" fill="#23272f" />
+        <path
+          d="M12 16V8M12 8L8 12M12 8L16 12"
+          stroke="#fcaf17"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <script>
+      // Show/hide scroll-to-top button
+      const scrollBtn = document.getElementById("scrollToTopBtn");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollBtn.style.display = "block";
+        } else {
+          scrollBtn.style.display = "none";
+        }
+      });
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+    <!-- </div> -->
     <div class="navbar">
       <div class="navbar-container">
         <!-- Logo -->
         <div class="logo">
-          <a href="#">
+          <a href="/index.html">
             <img
-              src="./src/assets/Startmedia Vector-02.svg"
+              src="/src/assets/Startmedia Vector-02.svg"
               alt="logo"
               style="height: 30px"
             />
@@ -456,20 +568,23 @@
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
+          <!-- <span class="bar"></span> -->
         </button>
 
         <!-- Links -->
         <div class="navbar-links" id="menu">
           <ul>
-            <li><a href="#">Process</a></li>
-            <li><a href="#">Services</a></li>
+            <li class="linkColor"><a href="#Process">Process</a></li>
+            <li><a href="#Services">Services</a></li>
+            <!-- <li><a href="/contact.php">Contact</a></li> -->
             <li><a href="/contact.html">Contact</a></li>
+            <!-- <li><a href="/blogs.html">Blog</a></li> -->
           </ul>
         </div>
 
         <!-- CTA Button -->
         <div class="navbar-cta" id="menu-btn2">
-          <a href="#">BOOK YOUR FREE DISCOVERY CALL</a>
+          <a href="/contact.html">Apply To Work With Us</a>
           <div class="icon">
             <!-- your SVG -->
             <svg
@@ -509,7 +624,7 @@
     <div class="relative w-full h-screen overflow-hidden">
       <video
         class="absolute top-0 left-0 w-full h-[90%] object-cover z-0 filter brightness-100 bg-[#000]"
-        src="./src/assets/abstract-black-and-white-fractal-formation-backgro-2024-07-05-06-26-35-utc3.mov"
+        src="/src/assets/abstract-black-and-white-fractal-formation-backgro-2024-07-05-06-26-35-utc3.mov"
         autoplay
         muted
         loop
@@ -604,14 +719,14 @@
         </div> -->
         <div id="viewer"></div>
         <h1
+          id="heading1"
           class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-b from-[#565a62] via-[#fff] to-[#686d75] bg-clip-text text-transparent pb-4 mt-[10px]"
         >
-          Creation that works. <br />
-          Strategythat scales.
+          STRATEGY IN MOTION
         </h1>
 
         <p
-          class="text-lg md:text-xl mt-2 bg-gradient-to-r from-[#565a62] via-[#FFF] to-[#686d75] bg-clip-text text-transparent"
+          class="text-lg md:text-xl mt-2 text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]"
         >
           We help ambitious brands cut through the noise with high-end content
           and paid media that drives measurable growth
@@ -623,202 +738,338 @@
           BOOK YOUR FREE DISCOVERY CALL
           <i class="fa-solid fa-arrow-right -rotate-45"></i>
         </a> -->
-        <button
-          class="relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group mt-[50px] hover:cursor-pointer"
-        >
-          <span class="relative z-10 flex items-center gap-2">
-            Book Your Free Strategy Call
-            <i class="fa-solid fa-arrow-right -rotate-45"></i>
-          </span>
-          <!-- white glow highlight at the bottom -->
-          <div
-            class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
-          ></div>
-        </button>
-        <div class="flex items-center justify-center gap-[30px]">
-          <!-- <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 256 256"
-            focusable="false"
-            color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
-            class="hover:cursor-pointer"
-            style="
-              user-select: none;
-              width: 12%;
-              height: 20%;
-              display: inline-block;
-              fill: var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #9398a2);
-              color: var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca);
-              flex-shrink: 0;
-            "
+        <div class="flex flex-row gap-4 mt-[50px]">
+          <button
+            class="relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group hover:cursor-pointer"
           >
-            <g
-              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
-              weight="regular"
-            >
-              <path
-                d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"
-              ></path>
-            </g>
-          </svg> -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 256 256"
-            focusable="false"
-            color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-            style="
-              user-select: none;
-              width: 12%;
-              height: 20%;
-              display: inline-block;
-              fill: var(
-                --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                rgb(255, 255, 255)
-              );
-              color: var(
-                --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                rgb(255, 255, 255)
-              );
-              flex-shrink: 0;
-            "
+            <span class="relative z-10 flex items-center gap-2">
+              <a href="/contact.html">Apply To Work With Us</a>
+              <i class="fa-solid fa-arrow-right -rotate-45"></i>
+            </span>
+            <!-- white glow highlight at the bottom -->
+            <div
+              class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
+            ></div>
+          </button>
+          <button
+            class="relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group hover:cursor-pointer"
           >
-            <g
+            <span class="relative z-10 flex items-center gap-2">
+              <a href="#">Check Your Growth Score</a>
+              <i class="fa-solid fa-arrow-right -rotate-45"></i>
+            </span>
+            <!-- white glow highlight at the bottom -->
+            <div
+              class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
+            ></div>
+          </button>
+        </div>
+
+        <div class="flex items-center justify-center gap-[30px] mt-[30px]">
+          <a
+            href="https://www.linkedin.com/company/stratmedia-co"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
               color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-              weight="regular"
+              style="
+                user-select: none;
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                fill: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                color: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                flex-shrink: 0;
+              "
             >
-              <path
-                d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
-              ></path>
-            </g>
-          </svg>
+              <g
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                weight="regular"
+              >
+                <path
+                  d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                ></path>
+              </g>
+            </svg>
+          </a>
 
           <div class="h-[30px] w-[2px] bg-[#222429]"></div>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 256 256"
-            focusable="false"
-            class="hover:cursor-pointer"
-            color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
-            style="
-              user-select: none;
-              width: 12%;
-              height: 20%;
-              display: inline-block;
-              fill: var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #9398a2);
-              color: var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca);
-              flex-shrink: 0;
-            "
-          >
-            <g
-              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
-              weight="regular"
+          <a href="https://www.instagram.com/stratmedia.co/" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+              style="
+                user-select: none;
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                fill: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                color: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                flex-shrink: 0;
+              "
             >
-              <path
-                d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
-              ></path>
-            </g>
-          </svg>
-
-          <div class="h-[30px] w-[2px] bg-[#222429]"></div>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 256 256"
-            focusable="false"
-            color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
-            class="hover:cursor-pointer"
-            style="
-              user-select: none;
-              width: 12%;
-              height: 20%;
-              display: inline-block;
-              fill: var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #9398a2);
-              color: var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca);
-              flex-shrink: 0;
-            "
-          >
-            <g
-              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
-              weight="regular"
-            >
-              <path
-                d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
-              ></path>
-            </g>
-          </svg>
+              <g
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                weight="regular"
+              >
+                <path
+                  d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                ></path>
+              </g>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="flex items-center justify-center w-full">
-      <div class="w-[80%]">
-        <marquee behavior="" direction="" scrollamount="10" loop="infinite">
-          <ul class="flex flex-row item-center gap-[70px] blur-s filter">
-            <li>
-              <img
-                src="./src/assets/m1.svg"
-                alt=""
-                class="w-full h-[60px] object-contain"
-              />
-            </li>
-            <li>
-              <img
-                src="./src/assets/m2.svg"
-                alt=""
-                class="w-full h-[60px] object-contain"
-              />
-            </li>
-            <li>
-              <img
-                src="./src/assets/m3.svg"
-                alt=""
-                class="w-full h-[60px] object-contain"
-              />
-            </li>
-            <li>
-              <img
-                src="./src/assets/m4.svg"
-                alt=""
-                class="w-full h-[60px] object-contain"
-              />
-            </li>
-            <li>
-              <img
-                src="./src/assets/m5.svg"
-                alt=""
-                class="w-full h-[60px] object-contain"
-              />
-            </li>
-            <li>
-              <img
-                src="./src/assets/m6.svg"
-                alt=""
-                class="w-full h-[60px] object-contain"
-              />
-            </li>
-            <li>
-              <img
-                src="./src/assets/m7.svg"
-                alt=""
-                class="w-full h-[60px] object-contain"
-              />
-            </li>
-          </ul>
-        </marquee>
+    <!-- Horizontal line and heading above marquee -->
+    <div
+      class="my-6 h-[1px] w-full bg-gradient-to-r from-transparent via-gray-400 to-transparent"
+    ></div>
+
+    <div class="w-full flex flex-col items-center mt-16">
+      <p class="text-[#aeb3bd] text-xl uppercase text-center mb-6">
+        Trusted by Growth-Focused Brands
+      </p>
+    </div>
+    <div class="marquee mt-2">
+      <div class="marquee-content">
+        <ul class="flex flex-row items-center gap-[40px] flex-nowrap">
+          <li>
+            <img
+              src="/src/assets/Put these logos First/Barbat.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/courtyard.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/DCC all white logo.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/DIl-Mil.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/Gilly_s_wordmark-white.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/mhc-white.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/New-Era.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/Prime-29.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/saks-logo.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/sexy-steak.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/white Hour_Detroit_logo (1).png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/all whitee Perfect Harvest.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/all Whote Vlasic Labs.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/cookie-white.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+        </ul>
+
+        <!-- Duplicate the same list for infinite effect -->
+        <ul class="flex flex-row items-center gap-[40px] flex-nowrap">
+          <li>
+            <img
+              src="/src/assets/Put these logos First/Barbat.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/courtyard.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/DCC all white logo.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/DIl-Mil.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/Gilly_s_wordmark-white.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/mhc-white.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/New-Era.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/Prime-29.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/saks-logo.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/sexy-steak.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/Put these logos First/white Hour_Detroit_logo (1).png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/all whitee Perfect Harvest.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/all Whote Vlasic Labs.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img
+              src="/src/assets/cookie-white.png"
+              alt=""
+              class="marquee-logo"
+            />
+          </li>
+          <li>
+            <img src="/src/assets/herbology.png" alt="" class="marquee-logo" />
+          </li>
+          <li>
+            <img src="/src/assets/Jars.png" alt="" class="marquee-logo" />
+          </li>
+          <li>
+            <img src="/src/assets/Tical.png" alt="" class="marquee-logo" />
+          </li>
+          <li>
+            <img src="/src/assets/URB.png" alt="" class="marquee-logo" />
+          </li>
+        </ul>
       </div>
     </div>
-    <div
-      class="flex flex-row items-center justify-center gap-3 mt-[90px] autoShow"
-    >
-      <div
-        class="flex flex-row items-center justify-center gap-3 border-2 border-[#0d1117] rounded-full px-3 py-1 heroSection"
-      >
+    <div>
+      <div>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 256 256"
-          focusable="false"
-          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
           style="
             user-select: none;
             width: 17px;
@@ -844,15 +1095,15 @@
             ></path>
           </g>
         </svg>
-        <p class="text-[#bcc1cc] text-center text-xs">
-          From the Founders of STRATMEDIA.
+        <p class="text-[#bcc1cc] text-center text-xl">
+          From the Founders of <span style="color: #fcaf17">STRATMEDIA.</span>
         </p>
       </div>
     </div>
     <div
       class="opacity-0 translate-y-10 transition-all duration-1000 ease-out flex items-center justify-center w-full mt-[30px] autoShow"
     >
-      <div class="w-[60%]">
+      <div class="w-[100%]">
         <p
           class="text-[#5e6773] text-center text-2xl font-medium heroSectionPara"
         >
@@ -868,17 +1119,18 @@
           <br />
           momentum — not just impressions.
         </p>
-        <p
+        <!-- <p
           class="text-[#5e6773] text-center text-2xl font-medium mt-4 heroSectionPara"
         >
-          We’re strategists, filmmakers, and marketers who believe <br />
-          performance and creativity don’t compete — they compound. That’s
+          We built <span style="color: #fcaf17"> STRATMEDIA </span> because too many brands settle for content <br> that looks good but doesn’t move the needle.
           <br />
-          why our clients don’t just see views; they see pipelines filled,
+          Everything we make — every campaign, every dollar — is built to drive real growth, <br> not vanity metrics.
           <br />
-          communities engaged, and businesses scaled.
+          We’re filmmakers, strategists, and operators who care about one thing: results.
           <br />
-          unlocking a force that reshapes markets.
+          Our clients don’t hire us for views. They hire us to build systems that bring in customers, <br> build trust, and scale their business.
+          <br />
+          If you’re serious about growth, we’re the team you call when you’re done playing small.
         </p>
         <p
           class="text-[#5e6773] text-center text-2xl font-medium mt-4 heroSectionPara"
@@ -886,7 +1138,7 @@
           If you’re looking for a partner who pushes for measurable growth
           <br />
           while staying rooted in culture and creativity, that’s who we are.
-        </p>
+        </p> -->
       </div>
     </div>
     <!-- <p
@@ -900,7 +1152,7 @@
       >
         <div class="border-2 border-white rounded-full">
           <img
-            src="./src/assets/p16HnSkuAySU99Ijqk6zeif9Yg8.avif"
+            src="/src/assets/p16HnSkuAySU99Ijqk6zeif9Yg8.avif"
             alt=""
             class="w-[30px] h-[30px] rounded-full responsiveImg"
           />
@@ -909,7 +1161,10 @@
       </div>
     </div>
 
-    <div class="flex flex-row items-center justify-center autoShow">
+    <div
+      class="flex flex-row items-center justify-center autoShow"
+      id="Process"
+    >
       <div
         class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] w-[90%] returnsSection"
       >
@@ -946,25 +1201,23 @@
               ></path>
             </g>
           </svg>
-          <p class="text-[#aeb3bd]">OUR SIMPLE 3 STEP PROCESS</p>
+          <p class="text-[#aeb3bd]">OUR SIMPLE 4 STEP PROCESS</p>
         </div>
 
         <h2
           class="text-[#d5dbe6] text-4xl font-semibold returnSectionPara"
           style="line-height: 0"
         >
-          Here At
-          <span class="text-[#fcaf17]">Stratmedia</span>, We
+          Built for
+          <span class="text-[#fcaf17]">Performance</span>,
         </h2>
         <span
           class="text-[#d5dbe6] text-4xl text-center font-semibold returnSectionPara"
-          >Focus On <span class="italic text-[#fcaf17]">Returns.</span></span
+          >Powered by <span class="italic text-[#fcaf17]">Strategy.</span></span
         >
         <p class="text-[#aeb3bd] text-center w-[50%] returnSectionPara2">
-          We're dedicated to scaling your brand with paid ads, with over 700M+
-          spent on paid traffic and billions in revenue generated across our
-          portfolio of companies…you're in <br />
-          good hands.
+          We’ve built systems proven to scale brands through strategy, content,
+          and performance — trusted by companies driving millions in revenue.
         </p>
         <div
           class="flex flex-row items-center justify-between gap-[20px] mb-[30px] returnSectionBoxes"
@@ -980,64 +1233,18 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-search-icon lucide-search"
                 >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
-                    ></path>
-                  </g>
-                </svg>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
-                >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
-                    ></path>
-                  </g>
+                  <path d="m21 21-4.34-4.34" />
+                  <circle cx="11" cy="11" r="8" />
                 </svg>
               </div>
             </div>
@@ -1049,7 +1256,7 @@
               </h2>
               <p class="text-[#81868f] text-center">
                 We start with a deep-dive intake to uncover what’s draining your
-                time and where the gaps are. No fluff — just clarity.
+                time and where the gaps are.
               </p>
             </div>
           </div>
@@ -1064,36 +1271,22 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-target-icon lucide-target"
                 >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
-                    ></path>
-                  </g>
+                  <circle cx="12" cy="12" r="10" />
+                  <circle cx="12" cy="12" r="6" />
+                  <circle cx="12" cy="12" r="2" />
                 </svg>
 
-                <svg
+                <!-- <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256"
                   focusable="false"
@@ -1122,7 +1315,7 @@
                       d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
                     ></path>
                   </g>
-                </svg>
+                </svg> -->
               </div>
             </div>
             <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
@@ -1148,36 +1341,33 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-cog-icon lucide-cog"
                 >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
-                    ></path>
-                  </g>
+                  <path d="M11 10.27 7 3.34" />
+                  <path d="m11 13.73-4 6.93" />
+                  <path d="M12 22v-2" />
+                  <path d="M12 2v2" />
+                  <path d="M14 12h8" />
+                  <path d="m17 20.66-1-1.73" />
+                  <path d="m17 3.34-1 1.73" />
+                  <path d="M2 12h2" />
+                  <path d="m20.66 17-1.73-1" />
+                  <path d="m20.66 7-1.73 1" />
+                  <path d="m3.34 17 1.73-1" />
+                  <path d="m3.34 7 1.73 1" />
+                  <circle cx="12" cy="12" r="2" />
+                  <circle cx="12" cy="12" r="8" />
                 </svg>
 
-                <svg
+                <!-- <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256"
                   focusable="false"
@@ -1206,7 +1396,7 @@
                       d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
                     ></path>
                   </g>
-                </svg>
+                </svg> -->
               </div>
             </div>
             <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
@@ -1232,36 +1422,27 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-rocket-icon lucide-rocket"
                 >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
-                    ></path>
-                  </g>
+                  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                  <path
+                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"
+                  />
+                  <path
+                    d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"
+                  />
+                  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" />
                 </svg>
 
-                <svg
+                <!-- <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256"
                   focusable="false"
@@ -1290,7 +1471,7 @@
                       d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
                     ></path>
                   </g>
-                </svg>
+                </svg> -->
               </div>
             </div>
             <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
@@ -1365,6 +1546,7 @@
         </p>
         <div
           class="flex flex-row items-center justify-center gap-[20px] mt-[40px] benifitsBoxes"
+          id="Services"
         >
           <div
             class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] transition-shadow duration-300 returnBoxOne fadeUp"
@@ -1377,37 +1559,21 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-clock-icon lucide-clock"
                 >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
-                      fill="#fff"
-                    ></path>
-                  </g>
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
                 </svg>
 
-                <svg
+                <!-- <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256"
                   focusable="false"
@@ -1437,7 +1603,7 @@
                       fill="#fff"
                     ></path>
                   </g>
-                </svg>
+                </svg> -->
               </div>
             </div>
             <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
@@ -1447,8 +1613,8 @@
                 Time Back
               </h2>
               <p class="text-[#81868f] text-center">
-                We build systems that cut out wasted effort, so you can focus on
-                running your business — not chasing marketing
+                We build systems that remove wasted effort so you can focus on
+                running your business — not managing marketing.
               </p>
             </div>
           </div>
@@ -1463,37 +1629,25 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-sparkles-icon lucide-sparkles"
                 >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"
-                      fill="#fff"
-                    ></path>
-                  </g>
+                  <path
+                    d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"
+                  />
+                  <path d="M20 2v4" />
+                  <path d="M22 4h-4" />
+                  <circle cx="4" cy="20" r="2" />
                 </svg>
 
-                <svg
+                <!-- <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256"
                   focusable="false"
@@ -1523,7 +1677,7 @@
                       fill="#fff"
                     ></path>
                   </g>
-                </svg>
+                </svg> -->
               </div>
             </div>
             <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
@@ -1533,8 +1687,8 @@
                 Modern Execution
               </h2>
               <p class="text-[#81868f] text-center">
-                From content to paid ads, everything we deliver is designed to
-                match today’s platforms and your audience’s attention.
+                Everything we create is built for how attention works today —
+                across content, ads, and platforms.
               </p>
             </div>
           </div>
@@ -1549,37 +1703,27 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined"
                 >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M239.76,158.06,217.28,68.12A16,16,0,0,0,201.75,56H136V40a16,16,0,0,0-16-16H80A16,16,0,0,0,64,40V56H54.25A16,16,0,0,0,38.72,68.12L16.24,158.06A7.93,7.93,0,0,0,16,160v32a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V160A7.93,7.93,0,0,0,239.76,158.06ZM80,40h40V56H80ZM54.25,72h147.5l20,80H34.25ZM32,192V168H224v24ZM64,96a8,8,0,0,1,8-8H88a8,8,0,0,1,0,16H72A8,8,0,0,1,64,96Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H120A8,8,0,0,1,112,96Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H168A8,8,0,0,1,160,96ZM64,128a8,8,0,0,1,8-8H88a8,8,0,0,1,0,16H72A8,8,0,0,1,64,128Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H120A8,8,0,0,1,112,128Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H168A8,8,0,0,1,160,128Z"
-                      fill="#fff"
-                    ></path>
-                  </g>
+                  <path d="M12 16v5" />
+                  <path d="M16 14v7" />
+                  <path d="M20 10v11" />
+                  <path
+                    d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"
+                  />
+                  <path d="M4 18v3" />
+                  <path d="M8 14v7" />
                 </svg>
 
-                <svg
+                <!-- <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256"
                   focusable="false"
@@ -1609,18 +1753,18 @@
                       fill="#fff"
                     ></path>
                   </g>
-                </svg>
+                </svg> -->
               </div>
             </div>
             <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
               <h2
                 class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
               >
-                Proven Growth
+                Measurable Results
               </h2>
               <p class="text-[#81868f] text-center">
-                Proven Growth Our process isn’t theory — it’s tested across
-                industries, built to create measurable results you can track.
+                Our work is designed to produce outcomes you can track — not
+                vanity metrics.
               </p>
             </div>
           </div>
@@ -1635,37 +1779,26 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-handshake-icon lucide-handshake"
                 >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M239.76,158.06,217.28,68.12A16,16,0,0,0,201.75,56H136V40a16,16,0,0,0-16-16H80A16,16,0,0,0,64,40V56H54.25A16,16,0,0,0,38.72,68.12L16.24,158.06A7.93,7.93,0,0,0,16,160v32a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V160A7.93,7.93,0,0,0,239.76,158.06ZM80,40h40V56H80ZM54.25,72h147.5l20,80H34.25ZM32,192V168H224v24ZM64,96a8,8,0,0,1,8-8H88a8,8,0,0,1,0,16H72A8,8,0,0,1,64,96Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H120A8,8,0,0,1,112,96Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H168A8,8,0,0,1,160,96ZM64,128a8,8,0,0,1,8-8H88a8,8,0,0,1,0,16H72A8,8,0,0,1,64,128Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H120A8,8,0,0,1,112,128Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H168A8,8,0,0,1,160,128Z"
-                      fill="#fff"
-                    ></path>
-                  </g>
+                  <path d="m11 17 2 2a1 1 0 1 0 3-3" />
+                  <path
+                    d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"
+                  />
+                  <path d="m21 3 1 11h-2" />
+                  <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
+                  <path d="M3 4h8" />
                 </svg>
 
-                <svg
+                <!-- <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256"
                   focusable="false"
@@ -1695,7 +1828,7 @@
                       fill="#fff"
                     ></path>
                   </g>
-                </svg>
+                </svg> -->
               </div>
             </div>
             <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
@@ -1705,267 +1838,12 @@
                 Partnership First
               </h2>
               <p class="text-[#81868f] text-center">
-                We don’t just deliver assets. We integrate with your team, close
-                gaps, and act as your long-term growth partner.
+                We integrate into your business, close gaps, and operate as a
+                long-term growth partner.
               </p>
             </div>
           </div>
         </div>
-
-        <!-- <div
-          class="flex flex-row items-center justify-center gap-[20px] mt-[60px] benifitsBoxes"
-        >
-          <div
-            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] transition-shadow duration-300 returnBoxOne fadeUp2"
-          >
-            <div
-              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
-            >
-              <div
-                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
-                >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M83.19,174.4a8,8,0,0,0,11.21-1.6,52,52,0,0,1,83.2,0,8,8,0,1,0,12.8-9.6A67.88,67.88,0,0,0,163,141.51a40,40,0,1,0-53.94,0A67.88,67.88,0,0,0,81.6,163.2,8,8,0,0,0,83.19,174.4ZM112,112a24,24,0,1,1,24,24A24,24,0,0,1,112,112Zm96-88H64A16,16,0,0,0,48,40V64H32a8,8,0,0,0,0,16H48v40H32a8,8,0,0,0,0,16H48v40H32a8,8,0,0,0,0,16H48v24a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V40A16,16,0,0,0,208,24Zm0,192H64V40H208Z"
-                      fill="#fff"
-                    ></path>
-                  </g>
-                </svg>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
-                >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"
-                      fill="#fff"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
-              <h2
-                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
-              >
-                Client-Centric Partnership
-              </h2>
-              <p class="text-[#81868f] text-center">
-                We work with, not for. True collaboration means shared ambition
-                and shared wins.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] transition-shadow duration-300 returnBoxOne fadeUp2"
-          >
-            <div
-              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
-            >
-              <div
-                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
-                >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z"
-                      fill="#fff"
-                    ></path>
-                  </g>
-                </svg>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
-                >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="regular"
-                  >
-                    <path
-                      d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm109.94-52.79a8,8,0,0,0-3.89-5.4l-29.83-17-.12-33.62a8,8,0,0,0-2.83-6.08,111.91,111.91,0,0,0-36.72-20.67,8,8,0,0,0-6.46.59L128,41.85,97.88,25a8,8,0,0,0-6.47-.6A112.1,112.1,0,0,0,54.73,45.15a8,8,0,0,0-2.83,6.07l-.15,33.65-29.83,17a8,8,0,0,0-3.89,5.4,106.47,106.47,0,0,0,0,41.56,8,8,0,0,0,3.89,5.4l29.83,17,.12,33.62a8,8,0,0,0,2.83,6.08,111.91,111.91,0,0,0,36.72,20.67,8,8,0,0,0,6.46-.59L128,214.15,158.12,231a7.91,7.91,0,0,0,3.9,1,8.09,8.09,0,0,0,2.57-.42,112.1,112.1,0,0,0,36.68-20.73,8,8,0,0,0,2.83-6.07l.15-33.65,29.83-17a8,8,0,0,0,3.89-5.4A106.47,106.47,0,0,0,237.94,107.21Zm-15,34.91-28.57,16.25a8,8,0,0,0-3,3c-.58,1-1.19,2.06-1.81,3.06a7.94,7.94,0,0,0-1.22,4.21l-.15,32.25a95.89,95.89,0,0,1-25.37,14.3L134,199.13a8,8,0,0,0-3.91-1h-.19c-1.21,0-2.43,0-3.64,0a8.08,8.08,0,0,0-4.1,1l-28.84,16.1A96,96,0,0,1,67.88,201l-.11-32.2a8,8,0,0,0-1.22-4.22c-.62-1-1.23-2-1.8-3.06a8.09,8.09,0,0,0-3-3.06l-28.6-16.29a90.49,90.49,0,0,1,0-28.26L61.67,97.63a8,8,0,0,0,3-3c.58-1,1.19-2.06,1.81-3.06a7.94,7.94,0,0,0,1.22-4.21l.15-32.25a95.89,95.89,0,0,1,25.37-14.3L122,56.87a8,8,0,0,0,4.1,1c1.21,0,2.43,0,3.64,0a8.08,8.08,0,0,0,4.1-1l28.84-16.1A96,96,0,0,1,188.12,55l.11,32.2a8,8,0,0,0,1.22,4.22c.62,1,1.23,2,1.8,3.06a8.09,8.09,0,0,0,3,3.06l28.6,16.29A90.49,90.49,0,0,1,222.9,142.12Z"
-                      fill="#fff"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
-              <h2
-                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
-              >
-                Relentless Execution
-              </h2>
-              <p class="text-[#81868f] text-center">
-                Ideas are cheap. What sets us apart is how we show up and
-                deliver - every time
-              </p>
-            </div>
-          </div>
-          <div
-            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] transition-shadow duration-300 returnBoxOne fadeUp2"
-          >
-            <div
-              class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
-            >
-              <div
-                class="flex flex-row items-center justify-center w-[50%] gap-[20px] py-2.5 bg-[#12161f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color=" rgb(213, 219, 230)"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
-                >
-                  <g color=" rgb(213, 219, 230)" weight="regular">
-                    <path
-                      d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z"
-                      fill="#fff"
-                    ></path>
-                  </g>
-                </svg>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="rgb(213, 219, 230)"
-                  style="
-                    user-select: none;
-                    width: 30%;
-                    height: 20%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(rgb(213, 219, 230));
-                    flex-shrink: 0;
-                  "
-                >
-                  <g color="rgb(213, 219, 230)" weight="regular">
-                    <path
-                      d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm109.94-52.79a8,8,0,0,0-3.89-5.4l-29.83-17-.12-33.62a8,8,0,0,0-2.83-6.08,111.91,111.91,0,0,0-36.72-20.67,8,8,0,0,0-6.46.59L128,41.85,97.88,25a8,8,0,0,0-6.47-.6A112.1,112.1,0,0,0,54.73,45.15a8,8,0,0,0-2.83,6.07l-.15,33.65-29.83,17a8,8,0,0,0-3.89,5.4,106.47,106.47,0,0,0,0,41.56,8,8,0,0,0,3.89,5.4l29.83,17,.12,33.62a8,8,0,0,0,2.83,6.08,111.91,111.91,0,0,0,36.72,20.67,8,8,0,0,0,6.46-.59L128,214.15,158.12,231a7.91,7.91,0,0,0,3.9,1,8.09,8.09,0,0,0,2.57-.42,112.1,112.1,0,0,0,36.68-20.73,8,8,0,0,0,2.83-6.07l.15-33.65,29.83-17a8,8,0,0,0,3.89-5.4A106.47,106.47,0,0,0,237.94,107.21Zm-15,34.91-28.57,16.25a8,8,0,0,0-3,3c-.58,1-1.19,2.06-1.81,3.06a7.94,7.94,0,0,0-1.22,4.21l-.15,32.25a95.89,95.89,0,0,1-25.37,14.3L134,199.13a8,8,0,0,0-3.91-1h-.19c-1.21,0-2.43,0-3.64,0a8.08,8.08,0,0,0-4.1,1l-28.84,16.1A96,96,0,0,1,67.88,201l-.11-32.2a8,8,0,0,0-1.22-4.22c-.62-1-1.23-2-1.8-3.06a8.09,8.09,0,0,0-3-3.06l-28.6-16.29a90.49,90.49,0,0,1,0-28.26L61.67,97.63a8,8,0,0,0,3-3c.58-1,1.19-2.06,1.81-3.06a7.94,7.94,0,0,0,1.22-4.21l.15-32.25a95.89,95.89,0,0,1,25.37-14.3L122,56.87a8,8,0,0,0,4.1,1c1.21,0,2.43,0,3.64,0a8.08,8.08,0,0,0,4.1-1l28.84-16.1A96,96,0,0,1,188.12,55l.11,32.2a8,8,0,0,0,1.22,4.22c.62,1,1.23,2,1.8,3.06a8.09,8.09,0,0,0,3,3.06l28.6,16.29A90.49,90.49,0,0,1,222.9,142.12Z"
-                      fill="#fff"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-            <div class="flex flex-col items-center px-2 gap-3 mb-[30px]">
-              <h2
-                class="text-2xl text-[#fcaf17] text-center font-medium mt-[20px]"
-              >
-                Relentless Execution
-              </h2>
-              <p class="text-[#81868f] text-center">
-                Ideas are cheap. What sets us apart is how we show up and
-                deliver - every time
-              </p>
-            </div>
-          </div>
-        </div> -->
 
         <div
           class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] paraAnimation"
@@ -2005,7 +1883,7 @@
                   ></path>
                 </g>
               </svg>
-              <p class="text-[#d5dbe6]">PROCESS</p>
+              <p class="text-[#d5dbe6]">SERVICES</p>
             </div>
           </div>
           <h1 class="text-white text-5xl font-semibold returnSectionPara">
@@ -2015,477 +1893,413 @@
             </span>
           </h1>
           <p class="text-center" style="color: #d2d8e3">
-            Maximize ROI with elite paid traffic strategies engineered to
-            convert, scale, and <br />
-            dominate your market.
+            We help brands grow through paid ads, automation, and high-impact
+            content that drives attention, trust, and measurable results.
           </p>
 
           <div
-            class="shadow-[0_4px_20px_rgba(252,175,23,0.2)] border-t-2 border-[#38404a] border-l border-[#191e25] border-r border-[#191e25] w-[90%] rounded-3xl px-3"
+            class="shadow-[0_4px_20px_rgba(252,175,23,0.2)] border-t-2 border-[#38404a] border-l border-[#191e25] border-r border-[#191e25] w-[90%] rounded-3xl px-3 py-5"
           >
             <div
-              class="flex flex-row items-center justify-center gap-[20px] py-[20px] processSection"
+              class="services-cards-row flex flex-row items-center justify-center gap-[40px] mt-10"
             >
-              <button
-                onclick="showPara(1)"
-                class="bg-[#12161f] text-center px-[20px] py-1.5 PaidAidsBox"
-              >
-                Paid Ads
-              </button>
-              <button
-                onclick="showPara(2)"
-                class="bg-[#12161f] text-center px-[20px] py-1.5 PaidAidsBox"
-              >
-                AI & Automation Systems
-              </button>
-              <button
-                onclick="showPara(3)"
-                class="bg-[#12161f] text-center px-[20px] py-1.5 PaidAidsBox"
-              >
-                Email & SMS Marketing
-              </button>
-            </div>
-
-            <div
-              id="para1"
-              class="tab-para active-tab"
-              style="margin-top: 50px"
-            >
+              <!-- Card 1 -->
               <div
-                class="flex flex-row itmes-center justify-center gap-[30px] processSectionActive"
+                class="services-card w-[48%] bg-[#12161f] rounded-2xl shadow-lg p-8 flex flex-col items-start gap-4"
               >
                 <img
-                  src="./src/assets/b0ruEz3spIHTSi4xCfbfwoX2koM.avif"
-                  alt=""
-                  class="w-[50%] h-[60%]"
+                  src="/src/assets/b0ruEz3spIHTSi4xCfbfwoX2koM.avif"
+                  alt="Paid Ads"
+                  class="w-full h-[180px] object-cover rounded-xl mb-4"
                 />
-                <div class="flex flex-col items-start gap-2.5">
-                  <p class="text-[#5c6470]" style="color: #fcaf17">01</p>
-                  <p class="text-white font-semibold text-2xl">
-                    Paid Advertising (Meta, Google, TikTok, LinkedIn)
-                  </p>
-                  <p style="color: #7a7f88; font-size: 18px" class="leading-5">
-                    At STRATMEDIA, we don’t just launch ads we build systems
-                    that compound. Our paid media strategies are engineered for
-                    ROI, combining proven frameworks with a team that adapts as
-                    quickly as the platforms evolve. From cold traffic campaigns
-                    to full-funnel retargeting, we design and optimize across
-                    Meta, Google, TikTok, and LinkedIn blending creative with
-                    data to drive measurable growth. With top talent and systems
-                    behind every campaign, your brand doesn’t just compete in
-                    the market it dominates it
-                  </p>
-                </div>
+                <p class="text-[#fcaf17] font-bold text-lg">
+                  Content Production , Social Media , Brand Positioning
+                </p>
+                <p class="text-[#d5dbe6] text-base">
+                  We create high-quality content systems designed to help your
+                  brand stay visible, build authority, and show up at a higher
+                  level online. From short-form video to social content and
+                  brand positioning, every asset is built to strengthen trust
+                  and drive attention.
+                </p>
               </div>
-            </div>
-            <div id="para2" class="tab-para" style="margin-top: 50px">
+              <!-- Card 2 -->
               <div
-                class="flex flex-row itmes-center justify-center gap-[30px] processSectionActive"
+                class="services-card w-[48%] bg-[#12161f] rounded-2xl shadow-lg p-8 flex flex-col items-start gap-4"
               >
                 <img
-                  src="./src/assets/EPErbkkqsOxh8MmRFjfhCGP08 (1).avif"
-                  alt=""
-                  class="w-[50%] h-[60%]"
+                  src="/src/assets/AiImage.png"
+                  alt="AI & Automation"
+                  class="w-full h-[180px] object-cover rounded-xl mb-4"
                 />
-                <div class="flex flex-col items-start gap-2.5">
-                  <p class="text-[#5c6470]" style="color: #fcaf17">02</p>
-                  <p class="text-white font-semibold text-2xl">
-                    AI & Automation Systems
-                  </p>
-                  <p style="color: #7a7f88; font-size: 18px" class="leading-5">
-                    At STRATMEDIA, we design systems that work while you don’t.
-                    Our AI solutions sharpen decision-making and campaign
-                    performance, while our automation frameworks handle the
-                    repetitive workflows that slow teams down. From onboarding
-                    sequences to lead nurturing to reporting, every process is
-                    built to save time and unlock scale. By combining
-                    intelligence with efficiency, we give businesses the ability
-                    to move faster, reduce costs, and compound ROI without
-                    adding complexity.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div id="para3" class="tab-para" style="margin-top: 50px">
-              <div
-                class="flex flex-row itmes-center justify-center gap-[30px] processSectionActive"
-              >
-                <img
-                  src="./src/assets/EPErbkkqsOxh8MmRFjfhCGP08 (1).avif"
-                  alt=""
-                  class="w-[50%] h-[60%]"
-                />
-                <div class="flex flex-col items-start gap-2.5">
-                  <p class="text-[#5c6470]" style="color: #fcaf17">03</p>
-                  <p class="text-white font-semibold text-2xl">
-                    Email & SMS Marketing
-                  </p>
-                  <p style="color: #7a7f88; font-size: 18px" class="leading-5">
-                    At STRATMEDIA, we make sure your follow-up works as hard as
-                    your ads. Using automated email and SMS campaigns through
-                    GoHighLevel, we help you stay in front of leads, nurture
-                    relationships, and turn prospects into paying customers.
-                    From welcome sequences to reminders and promotions, our
-                    messaging is built to save you time and increase conversions
-                    so every lead has a clear path to becoming a client
-                  </p>
-                </div>
+                <p class="text-[#fcaf17] font-bold text-lg">
+                  Paid Advertising , Retargeting , SEO & AI Search
+                </p>
+                <p class="text-[#d5dbe6] text-base">
+                  We turn attention into pipeline through paid media and search
+                  strategy built for measurable growth. Our focus is on bringing
+                  in qualified demand, improving conversion opportunities, and
+                  helping brands scale with more consistency.
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div
-          class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] border-b-2 border-[#1f2329] autoShow"
-        >
+        <!-- new section added here -->
+
+        <section class="w-full flex flex-col items-center justify-center py-20">
+          <h2
+            class="text-4xl md:text-5xl font-bold text-white mb-2"
+            style="
+              font-family:
+                &quot;Montserrat&quot;, &quot;Inter&quot;, sans-serif;
+            "
+          >
+            What We Create
+          </h2>
+          <p
+            class="text-[#bfc6d1] text-lg md:text-xl mb-10 text-center max-w-xl"
+          >
+            Content built to perform — not just look good.
+          </p>
           <div
-            class="flex items-center justify-center border border-[#1f2329] rounded-full OurClientsSection"
+            class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-8 w-[90%] max-w-5xl"
+          >
+            <!-- Video 1 -->
+            <div
+              class="relative group rounded-2xl overflow-hidden shadow-lg bg-[#181a1b] border border-[#23272f]"
+            >
+              <video
+                class="w-full h-56 object-cover transition-all duration-300 group-hover:scale-105"
+                src="/src/assets/video1.mp4"
+                muted
+                loop
+                preload="metadata"
+              ></video>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                onclick="openVideoModal('/src/assets/video1.mp4')"
+              >
+                <svg width="60" height="60" fill="#fcaf17" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <!-- Video 2 -->
+            <div
+              class="relative group rounded-2xl overflow-hidden shadow-lg bg-[#181a1b] border border-[#23272f]"
+            >
+              <video
+                class="w-full h-56 object-cover transition-all duration-300 group-hover:scale-105"
+                src="/src/assets/video2.mp4"
+                muted
+                loop
+                preload="metadata"
+              ></video>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                onclick="openVideoModal('/src/assets/video2.mp4')"
+              >
+                <svg width="60" height="60" fill="#fcaf17" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <!-- Video 3 -->
+            <div
+              class="relative group rounded-2xl overflow-hidden shadow-lg bg-[#181a1b] border border-[#23272f]"
+            >
+              <video
+                class="w-full h-56 object-cover transition-all duration-300 group-hover:scale-105"
+                src="/src/assets/video3.mp4"
+                muted
+                loop
+                preload="metadata"
+              ></video>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                onclick="openVideoModal('/src/assets/video3.mp4')"
+              >
+                <svg width="60" height="60" fill="#fcaf17" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <!-- Video 4 -->
+            <div
+              class="relative group rounded-2xl overflow-hidden shadow-lg bg-[#181a1b] border border-[#23272f]"
+            >
+              <video
+                class="w-full h-56 object-cover transition-all duration-300 group-hover:scale-105"
+                src="/src/assets/video4.mp4"
+                muted
+                loop
+                preload="metadata"
+              ></video>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                onclick="openVideoModal('/src/assets/video4.mp4')"
+              >
+                <svg width="60" height="60" fill="#fcaf17" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <!-- Video 5 -->
+            <div
+              class="relative group rounded-2xl overflow-hidden shadow-lg bg-[#181a1b] border border-[#23272f]"
+            >
+              <video
+                class="w-full h-56 object-cover transition-all duration-300 group-hover:scale-105"
+                src="/src/assets/video5.mp4"
+                muted
+                loop
+                preload="metadata"
+              ></video>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                onclick="openVideoModal('/src/assets/video5.mp4')"
+              >
+                <svg width="60" height="60" fill="#fcaf17" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <!-- Video 6 -->
+            <div
+              class="relative group rounded-2xl overflow-hidden shadow-lg bg-[#181a1b] border border-[#23272f]"
+            >
+              <video
+                class="w-full h-56 object-cover transition-all duration-300 group-hover:scale-105"
+                src="/src/assets/video6.mp4"
+                muted
+                loop
+                preload="metadata"
+              ></video>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                onclick="openVideoModal('/src/assets/video6.mp4')"
+              >
+                <svg width="60" height="60" fill="#fcaf17" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <!-- Add more videos as needed -->
+          </div>
+        </section>
+
+        <div
+          id="videoModal"
+          style="
+            display: none;
+            position: fixed;
+            z-index: 99999;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <div style="position: relative; max-width: 90vw; max-height: 80vh">
+            <button
+              onclick="closeVideoModal()"
+              style="
+                position: absolute;
+                top: -40px;
+                right: 0;
+                background: none;
+                border: none;
+                color: #fff;
+                font-size: 2rem;
+                cursor: pointer;
+              "
+            >
+              &times;
+            </button>
+            <video
+              id="modalVideo"
+              controls
+              autoplay
+              style="
+                max-width: 90vw;
+                max-height: 80vh;
+                border-radius: 16px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+                background: #000;
+              "
+            ></video>
+          </div>
+        </div>
+
+        <!-- SUCCESS STORIES SECTION -->
+        <div
+          class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] border-b-2 border-[#1f2329] autoShow px-6 pb-20"
+        >
+          <!-- Section Header -->
+          <div
+            class="flex items-center justify-center border border-[#1f2329] rounded-full OurClientsSection mt-10"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
-              focusable="false"
-              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
               style="
                 user-select: none;
                 width: 20px;
                 height: 20px;
                 display: inline-block;
-                fill: var(
-                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                  rgb(213, 219, 230)
-                );
-                color: var(
-                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                  rgb(213, 219, 230)
-                );
+                fill: rgb(213, 219, 230);
                 flex-shrink: 0;
               "
             >
-              <g
-                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                weight="fill"
-              >
+              <g weight="fill">
                 <path
                   d="M253.66,133.66l-32,32a8,8,0,0,1-11.32,0l-16-16a8,8,0,0,1,11.32-11.32L216,148.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM144,157.68a68,68,0,1,0-71.9,0c-20.65,6.76-39.23,19.39-54.17,37.17A8,8,0,0,0,24,208H192a8,8,0,0,0,6.13-13.15C183.18,177.07,164.6,164.44,144,157.68Z"
-                ></path>
+                />
               </g>
             </svg>
             <p class="text-[#d5dbe6]">Success Stories</p>
           </div>
-          <h2 class="text-white text-5xl returnSectionPara">
-            Success Stories to
-            <span class="italic" style="color: #fcaf17">Inspire</span>
-          </h2>
-          <p class="text-white">See how we help our clients WIN</p>
-          <section class="card-section" style="margin-top: 190px">
-            <div class="card" id="card1" data-target="para1">
-              <div
-                class="flex flex-row items-center justify-between border-b border-[#191e26] w-full px-4 py-2.5"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 3%;
-                    height: 3%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
-                >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="duotone"
-                  >
-                    <path
-                      d="M168,100a60,60,0,1,1-60-60A60,60,0,0,1,168,100Z"
-                      opacity="0.2"
-                    ></path>
-                    <path
-                      d="M144,157.68a68,68,0,1,0-71.9,0c-20.65,6.76-39.23,19.39-54.17,37.17a8,8,0,0,0,12.25,10.3C50.25,181.19,77.91,168,108,168s57.75,13.19,77.87,37.15a8,8,0,0,0,12.25-10.3C183.18,177.07,164.6,164.44,144,157.68ZM56,100a52,52,0,1,1,52,52A52.06,52.06,0,0,1,56,100Zm197.66,33.66-32,32a8,8,0,0,1-11.32,0l-16-16a8,8,0,0,1,11.32-11.32L216,148.69l26.34-26.35a8,8,0,0,1,11.32,11.32Z"
-                    ></path>
-                  </g>
-                </svg>
-                <i class="fa-solid fa-ellipsis" style="color: #fcaf17"></i>
-              </div>
-              <div
-                class="flex flex-row justify-between px-6"
-                style="margin-top: 30px"
-              >
-                <div
-                  class="flex flex-col items-start"
-                  style="gap: 20px; width: 60%"
-                >
-                  <h3 class="text-white">Justin's Credit Repair Empire</h3>
-                  <p class="cardOnePara">
-                    Justin partnered with Stratmedia to transform his credit
-                    repair agency through elite funnel optimization,
-                    laser-targeted paid traffic, and irresistible offers. The
-                    result? A 22x revenue explosion and a brand that now
-                    dominates its niche.
-                  </p>
-                  <div
-                    class="flex flex-row items-center gap-[20px] carasoulSectionBoxes"
-                  >
-                    <div
-                      class="flex flex-col items-center justify-center h-[109px] py-2.5 bg-gradient-to-b from-[#06090f] to-[#0c1016] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] px-3 cardOneGradient"
-                    >
-                      <p class="text-white">60%</p>
-                      <p class="text-white">increase in ROI</p>
-                    </div>
-                    <div
-                      class="flex flex-col items-center justify-center h-[109px] py-2.5 bg-[#06090f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] px-3 cardOneGradient"
-                    >
-                      <p class="text-white">45%</p>
-                      <p class="text-white">boost in revenue</p>
-                    </div>
-                  </div>
-                </div>
 
-                <img
-                  src="./src/assets/UIvIiOgvanSbz4B7kTc9ykLWDOk.avif"
-                  alt=""
-                  class="CardOneImage"
-                />
+          <h2 class="text-white text-5xl returnSectionPara text-center">
+            Result's That Speaks for
+            <span class="italic" style="color: #fcaf17">Themselves</span>
+          </h2>
+          <p class="text-white mb-10">See how we help our clients WIN</p>
+
+          <!-- Case Studies Grid -->
+          <div class="slider">
+            <div class="item">
+              <img
+                src="/src/assets/How-to-Compare-Your-Car-Dealerships-Performance-to-Market-Benchmarks.jpg"
+                alt="Automotive"
+              />
+              <h2>Automotive Dealership</h2>
+              <p>
+                Modernized marketing systems, localized ads, and SMS follow-ups.
+              </p>
+              <div class="metrics">
+                <span>70% ROI Growth</span>
+                <span>40+ Cars in 90 Days</span>
               </div>
             </div>
-            <div class="card" id="card2" data-target="para2">
-              <div
-                class="flex flex-row items-center justify-between border-b border-[#191e26] w-full px-4 py-2.5"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 3%;
-                    height: 3%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
-                >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="duotone"
-                  >
-                    <path
-                      d="M168,100a60,60,0,1,1-60-60A60,60,0,0,1,168,100Z"
-                      opacity="0.2"
-                    ></path>
-                    <path
-                      d="M144,157.68a68,68,0,1,0-71.9,0c-20.65,6.76-39.23,19.39-54.17,37.17a8,8,0,0,0,12.25,10.3C50.25,181.19,77.91,168,108,168s57.75,13.19,77.87,37.15a8,8,0,0,0,12.25-10.3C183.18,177.07,164.6,164.44,144,157.68ZM56,100a52,52,0,1,1,52,52A52.06,52.06,0,0,1,56,100Zm197.66,33.66-32,32a8,8,0,0,1-11.32,0l-16-16a8,8,0,0,1,11.32-11.32L216,148.69l26.34-26.35a8,8,0,0,1,11.32,11.32Z"
-                    ></path>
-                  </g>
-                </svg>
-                <i class="fa-solid fa-ellipsis" style="color: #fcaf17"></i>
-              </div>
-              <div
-                class="flex flex-row justify-between px-6"
-                style="margin-top: 30px"
-              >
-                <div
-                  class="flex flex-col items-start"
-                  style="gap: 20px; width: 60%"
-                >
-                  <h3 class="text-white">
-                    Paul Gruber – Miracle Pronunciation Academy
-                  </h3>
-                  <p class="cardOnePara">
-                    8X ROAS & Millions Generated Teaching English With our
-                    advanced media buying strategy and creative testing
-                    framework, Paul scaled his pronunciation course globally.
-                    Maintaining an 8X ROAS while spending aggressively, he built
-                    a multi-million dollar online academy that impacts lives
-                    around the world..
-                  </p>
-                  <div
-                    class="flex flex-row items-center gap-[20px] carasoulSectionBoxes"
-                  >
-                    <div
-                      class="flex flex-col items-center justify-center h-[109px] py-2.5 bg-gradient-to-b from-[#06090f] to-[#0c1016] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] px-3 cardOneGradient"
-                    >
-                      <p class="text-white">70%</p>
-                      <p class="text-white">growth in sales</p>
-                    </div>
-                    <div
-                      class="flex flex-col items-center justify-center h-[109px] py-2.5 bg-[#06090f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] px-3 cardOneGradient"
-                    >
-                      <p class="text-white">50%</p>
-                      <p class="text-white">rise in engagement</p>
-                    </div>
-                  </div>
-                </div>
-                <div style="border-radius: 20px">
-                  <img
-                    src="./src/assets/lhMw0Urj78jKOnVEY6QfOousbs.avif"
-                    alt=""
-                    class="CardOneImage"
-                  />
-                </div>
+
+            <div class="item">
+              <img
+                src="/src/assets/shutterstock_361324433.jpg.webp"
+                alt="Healthcare"
+              />
+              <h2>Healthcare Clinic</h2>
+              <p>
+                Improved patient flow using content strategy and SMS
+                reactivation.
+              </p>
+              <div class="metrics">
+                <span>5x Patient Volume</span>
+                <span>42% Revenue Increase</span>
               </div>
             </div>
-            <div class="card" id="card3" data-target="para3">
-              <div
-                class="flex flex-row items-center justify-between border-b border-[#191e26] w-full px-4 py-2.5"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 3%;
-                    height: 3%;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
-                >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="duotone"
-                  >
-                    <path
-                      d="M168,100a60,60,0,1,1-60-60A60,60,0,0,1,168,100Z"
-                      opacity="0.2"
-                    ></path>
-                    <path
-                      d="M144,157.68a68,68,0,1,0-71.9,0c-20.65,6.76-39.23,19.39-54.17,37.17a8,8,0,0,0,12.25,10.3C50.25,181.19,77.91,168,108,168s57.75,13.19,77.87,37.15a8,8,0,0,0,12.25-10.3C183.18,177.07,164.6,164.44,144,157.68ZM56,100a52,52,0,1,1,52,52A52.06,52.06,0,0,1,56,100Zm197.66,33.66-32,32a8,8,0,0,1-11.32,0l-16-16a8,8,0,0,1,11.32-11.32L216,148.69l26.34-26.35a8,8,0,0,1,11.32,11.32Z"
-                    ></path>
-                  </g>
-                </svg>
-                <i class="fa-solid fa-ellipsis" style="color: #fcaf17"></i>
-              </div>
-              <div
-                class="flex flex-row justify-between px-6"
-                style="margin-top: 30px"
-              >
-                <div
-                  class="flex flex-col items-start"
-                  style="gap: 20px; width: 60%"
-                >
-                  <h3 class="text-white">
-                    Project 369 – Spiritual Enlightenment Powerhouse
-                  </h3>
-                  <p class="cardOnePara">
-                    $0 to $10M+ in D2C Revenue Project 369 came to us with a
-                    bold vision and strong mission. We engineered a
-                    high-converting ad ecosystem across Meta and Google,
-                    resulting in viral growth and $10M+ in sales. This spiritual
-                    lifestyle brand became a cult phenomenon — fast.
-                  </p>
-                  <div
-                    class="flex flex-row items-center gap-[20px] carasoulSectionBoxes"
-                  >
-                    <div
-                      class="flex flex-col items-center justify-center h-[109px] py-2.5 bg-gradient-to-b from-[#06090f] to-[#0c1016] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] px-3 cardOneGradient"
-                    >
-                      <p class="text-white">40%</p>
-                      <p class="text-white">gain in retention</p>
-                    </div>
-                    <div
-                      class="flex flex-col items-center justify-center h-[109px] py-2.5 bg-[#06090f] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] px-3 cardOneGradient"
-                    >
-                      <p class="text-white">50%</p>
-                      <p class="text-white">surge in profits</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- <div style="border-radius: 20px"> -->
-                <img
-                  src="./src/assets/6sL0omFGfxhr9QQi3ENJAEZ0.avif"
-                  alt=""
-                  class="CardOneImage"
-                />
-                <!-- </div> -->
+
+            <div class="item">
+              <img
+                src="/src/assets/commercial-real-estate-investment-strategies-building-wealth-through-properties.webp"
+                alt="Real Estate"
+              />
+              <h2>Commercial Real Estate</h2>
+              <p>Boosted tenant demand through paid ads and video tours.</p>
+              <div class="metrics">
+                <span>130% Lead Increase</span>
+                <span>22% NOI Uplift</span>
               </div>
             </div>
-          </section>
+
+            <div class="item">
+              <img
+                src="/src/assets/male-worker-puts-laminate-flooring-floor_169016-17792.jpg"
+                alt="Flooring"
+              />
+              <h2>Flooring & Home</h2>
+              <p>Rebuilt digital presence and automated lead response.</p>
+              <div class="metrics">
+                <span>10x Revenue Growth</span>
+                <span>35+ Leads/Month</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="/src/assets/dentist chair.webp" alt="Dental" />
+              <h2>Dental Practice</h2>
+              <p>Scaled patient acquisition using Nuera Flow automation.</p>
+              <div class="metrics">
+                <span>400% Patient Growth</span>
+                <span>61% ROI Improvement</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <img
+                src="/src/assets/01-6-ways-to-revitalize-your-med-spas-growth-and-success.avif"
+                alt="MedSpa"
+              />
+              <h2>MedSpa Growth</h2>
+              <p>Revamped offers and launched reactivation campaigns.</p>
+              <div class="metrics">
+                <span>3x Appointments</span>
+                <span>47% Revenue Lift</span>
+              </div>
+            </div>
+
+            <button id="next">></button>
+            <button id="prev"><</button>
+          </div>
         </div>
 
         <div
-          class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] autoShow"
+          class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#0d1117] flex flex-col items-center justify-center gap-[20px] autoShow px-6 py-12"
+          style="
+            box-shadow: 0 4px 32px 0 rgba(30, 41, 59, 0.18);
+            border: 1.5px solid #1f2329;
+          "
         >
-          <div
-            class="flex items-center justify-center border border-[#1f2329] rounded-full ApproachSection"
+          <p class="text-[#fcaf17] tracking-widest text-sm font-semibold mb-2">
+            FREE ASSESSMENT
+          </p>
+
+          <h2
+            class="text-white text-3xl md:text-4xl font-bold text-center mb-2"
+            style="
+              font-family:
+                &quot;Montserrat&quot;, &quot;Inter&quot;, sans-serif;
+            "
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false"
-              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-              style="
-                user-select: none;
-                width: 20px;
-                height: 20px;
-                display: inline-block;
-                fill: var(
-                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                  rgb(213, 219, 230)
-                );
-                color: var(
-                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                  rgb(213, 219, 230)
-                );
-                flex-shrink: 0;
-              "
+            See What’s Holding Your Growth Back
+          </h2>
+
+          <p class="text-[#bfc6d1] text-center max-w-xl mb-6">
+            Get a quick breakdown of your marketing performance and where you're
+            losing revenue.
+          </p>
+
+          <div
+            class="assessment-btns flex flex-row gap-4 items-center justify-center w-full mt-2"
+          >
+            <a
+              href="/contact.html"
+              class="assessment-btn bg-[#23272f] hover:bg-[#23272f]/80 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-md transition-all duration-200 text-center border border-[#2d3748]"
+              style="min-width: 220px"
+              >Check Your Growth Score</a
             >
-              <g
-                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                weight="fill"
-              >
-                <path
-                  d="M220,169.09l-92,53.65L36,169.09A8,8,0,0,0,28,182.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,169.09Z"
-                ></path>
-                <path
-                  d="M220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09Z"
-                ></path>
-                <path
-                  d="M28,86.91l96,56a8,8,0,0,0,8.06,0l96-56a8,8,0,0,0,0-13.82l-96-56a8,8,0,0,0-8.06,0l-96,56a8,8,0,0,0,0,13.82Z"
-                ></path>
-              </g>
-            </svg>
-            <p class="text-[#d5dbe6]">Stay Informed</p>
+
+            <a
+              href="/contact.html"
+              class="assessment-btn bg-[#23272f] hover:bg-[#23272f]/80 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-md transition-all duration-200 text-center border border-[#2d3748]"
+              style="min-width: 220px"
+              >Apply To Work With Us</a
+            >
           </div>
-          <p class="text-5xl text-white text-center returnSectionPara">
-            Join our
-            <span class="italic" style="color: #fcaf17">Newsletter </span>
-          </p>
-          <p style="color: #c3c8d3" class="text-center">
-            Stay informed on newest trends and news. <br />
-            STRATMEDIA keeps you informed via our weekly newsletter.
-          </p>
-          <button class="newsLetterbtn">Enter your e-mail address</button>
         </div>
+
         <div
           class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] border-b-2 border-[#1f2329] autoShow"
         >
@@ -2543,11 +2357,6 @@
                   class="px-3 py-3 flex flex-row gap-2.5 border-t-2 w-full border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
                   style="padding-left: 30px; border-radius: 15px"
                 >
-                  <img
-                    src="./src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
-                    alt=""
-                    class="w-[50px] h-[50px]"
-                  />
                   <div>
                     <p class="text-white">Adam Attallah</p>
                     <!-- <p style="color: #62666e">Credit Repair</p> -->
@@ -2568,11 +2377,11 @@
                   class="px-3 py-3 flex flex-row gap-2.5 border-t-2 w-full border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
                   style="padding-left: 30px; border-radius: 15px"
                 >
-                  <img
-                    src="./src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
+                  <!-- <img
+                    src="/src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
                     alt=""
                     class="w-[50px] h-[50px]"
-                  />
+                  /> -->
                   <div>
                     <p class="text-white">Amrith Bhaskaran</p>
                     <!-- <p style="color: #62666e">Credit Repair</p> -->
@@ -2592,11 +2401,11 @@
                   class="px-3 py-3 flex flex-row gap-2.5 border-t-2 w-full border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
                   style="padding-left: 30px; border-radius: 15px"
                 >
-                  <img
-                    src="./src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
+                  <!-- <img
+                    src="/src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
                     alt=""
                     class="w-[50px] h-[50px]"
-                  />
+                  /> -->
                   <div>
                     <p class="text-white">Zeeshan Tariq</p>
                     <!-- <p style="color: #62666e">Credit Repair</p> -->
@@ -2916,622 +2725,256 @@
                 </div>
               </div>
             </div>
-            <div
-              class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] autoShow"
+            <section
+              class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] autoShow px-4 py-10 md:px-8 md:py-14"
             >
               <div
-                class="flex items-center justify-center border border-[#1f2329] rounded-full faqSection"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                  style="
-                    user-select: none;
-                    width: 20px;
-                    height: 20px;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    flex-shrink: 0;
-                  "
-                >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                    weight="fill"
-                  >
-                    <path
-                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm-4,48a12,12,0,1,1-12,12A12,12,0,0,1,124,72Zm12,112a16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40a8,8,0,0,1,0,16Z"
-                    ></path>
-                  </g>
-                </svg>
-                <p class="text-[#d5dbe6]">FAQ'S</p>
-              </div>
-              <p class="text-5xl text-white text-center returnSectionPara">
-                Frequently Asked
-                <span class="italic" style="color: #fcaf17"> Question </span>
-              </p>
-              <p class="text-center text-white">
-                Find quick answers to the most common questions about our
-                platform
-              </p>
-              <div
-                class="flex flex-row items-center justify-center w-full questionSection"
-                style="gap: 30px"
+                class="mx-auto flex max-w-[1120px] flex-col items-center gap-5"
               >
                 <div
-                  class="faq border-t-2 border-[#1f2329] border border-[#1c2229] rounded-3xl flex flex-col items-center gap-3 px-3"
-                  style="width: 368px; height: 252px"
+                  class="fitSectionBadge flex items-center justify-center gap-2 rounded-full border border-[#1f2329] bg-[#0a0e15] px-4 py-2"
                 >
-                  <div class="faqBox px-3 py-3 border-t-2 border-[#1f2329]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 256 256"
-                      focusable="false"
-                      color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                      style="
-                        user-select: none;
-                        width: 32px;
-                        height: 32px;
-                        display: inline-block;
-                        fill: var(
-                          --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                          rgb(213, 219, 230)
-                        );
-                        color: var(
-                          --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                          rgb(213, 219, 230)
-                        );
-                        flex-shrink: 0;
-                      "
-                    >
-                      <g
-                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                        weight="regular"
-                      >
-                        <path
-                          d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
-                        ></path>
-                      </g>
-                    </svg>
-                  </div>
-                  <p class="text-2xl text-center" style="color: #d5dbe6">
-                    Still Have Questions?
-                  </p>
-                  <p class="text-center" style="color: #6e727b">
-                    Still have questions? Speak with a marketing expert on our
-                    team today.
-                  </p>
-                  <div
-                    class="flex flex-row items-center gap-2 px-2 py-1.5 border border-[#1f2329] faqBox"
+                  <span
+                    class="inline-flex h-2.5 w-2.5 rounded-full bg-[#fcaf17] shadow-[0_0_12px_rgba(252,175,23,0.55)]"
+                  ></span>
+                  <p
+                    class="text-[13px] font-semibold uppercase tracking-[0.24em] text-[#d5dbe6]"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 256 256"
-                      focusable="false"
-                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                      style="
-                        user-select: none;
-                        width: 18px;
-                        height: 20px;
-                        display: inline-block;
-                        fill: var(
-                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                          rgb(255, 255, 255)
-                        );
-                        color: var(
-                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                          rgb(255, 255, 255)
-                        );
-                        flex-shrink: 0;
-                      "
-                    >
-                      <g
-                        color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                        weight="regular"
-                      >
-                        <path
-                          d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <p style="color: #d5dbe6" class="font-medium">
-                      BOOK YOUR FREE DISCOVERY CALL
-                    </p>
-                  </div>
+                    Client Fit
+                  </p>
                 </div>
+                <p
+                  class="text-center text-4xl leading-tight text-white md:text-5xl returnSectionPara"
+                >
+                  We&apos;re Not For
+                  <span class="italic" style="color: #fcaf17"> Everyone </span>
+                </p>
+                <p
+                  class="max-w-[760px] text-center text-[15px] leading-7 text-[#8d93a1] md:text-[17px]"
+                >
+                  We&apos;d rather be clear up front than force a partnership
+                  that wastes your time, budget, or momentum.
+                </p>
 
-                <div class="questions">
-                  <div
-                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
-                    style="border-radius: 10px"
+                <div
+                  class="notForGrid mt-6 grid w-full max-w-[1040px] gap-6 lg:grid-cols-2"
+                >
+                  <article
+                    class="fit-card fit-card--negative rounded-[28px] border border-[#442224] bg-[linear-gradient(180deg,#14090b_0%,#11080a_45%,#0d090b_100%)] p-6 md:p-8"
                   >
-                    <div
-                      class="flex flex-row items-center justify-between w-full"
-                    >
-                      <p class="text-white">
-                        1. What services does Stratmedia provide?
-                      </p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 256 256"
-                        focusable="false"
-                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                        style="
-                          user-select: none;
-                          width: 20px;
-                          height: 20px;
-                          display: inline-block;
-                          fill: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          color: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          flex-shrink: 0;
-                        "
-                      >
-                        <g
-                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                          weight="regular"
+                    <div class="fit-card-content flex flex-col gap-8">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="flex h-11 w-11 items-center justify-center rounded-full border border-[#5e2626] bg-[#2a1113]"
                         >
-                          <path
-                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
-                            fill="#fcaf17"
-                          ></path>
-                        </g>
-                      </svg>
+                          <i class="fa-solid fa-xmark text-[#ff6b57]"></i>
+                        </div>
+                        <div>
+                          <p
+                            class="text-[13px] uppercase tracking-[0.24em] text-[#a85d57]"
+                          >
+                            Not A Fit
+                          </p>
+                          <h3 class="text-[28px] font-semibold text-white">
+                            If...
+                          </h3>
+                        </div>
+                      </div>
+
+                      <div class="space-y-6">
+                        <div class="border-b border-[#2c1719] pb-6">
+                          <div class="mb-2 flex items-start gap-3">
+                            <i
+                              class="fa-solid fa-xmark mt-1 text-[13px] text-[#ff6b57]"
+                            ></i>
+                            <p class="text-[18px] font-semibold text-[#f2d5cf]">
+                              You&apos;re shopping for the cheapest agency in
+                              the room
+                            </p>
+                          </div>
+                          <p class="pl-6 text-[15px] leading-7 text-[#a48d89]">
+                            If price is the first filter, we probably are not a
+                            match. Our approach costs real money because it is
+                            built to produce real revenue.
+                          </p>
+                        </div>
+
+                        <div class="border-b border-[#2c1719] pb-6">
+                          <div class="mb-2 flex items-start gap-3">
+                            <i
+                              class="fa-solid fa-xmark mt-1 text-[13px] text-[#ff6b57]"
+                            ></i>
+                            <p class="text-[18px] font-semibold text-[#f2d5cf]">
+                              You want a vendor who only takes orders
+                            </p>
+                          </div>
+                          <p class="pl-6 text-[15px] leading-7 text-[#a48d89]">
+                            We are strategic partners, not task runners. If you
+                            only need someone to post content or launch random
+                            ads, we are not the right shop.
+                          </p>
+                        </div>
+
+                        <div class="border-b border-[#2c1719] pb-6">
+                          <div class="mb-2 flex items-start gap-3">
+                            <i
+                              class="fa-solid fa-xmark mt-1 text-[13px] text-[#ff6b57]"
+                            ></i>
+                            <p class="text-[18px] font-semibold text-[#f2d5cf]">
+                              You expect a full turnaround in 30 days
+                            </p>
+                          </div>
+                          <p class="pl-6 text-[15px] leading-7 text-[#a48d89]">
+                            The early phase is strategy, creative, systems, and
+                            launch. Real momentum compounds when the foundation
+                            is built correctly.
+                          </p>
+                        </div>
+
+                        <div>
+                          <div class="mb-2 flex items-start gap-3">
+                            <i
+                              class="fa-solid fa-xmark mt-1 text-[13px] text-[#ff6b57]"
+                            ></i>
+                            <p class="text-[18px] font-semibold text-[#f2d5cf]">
+                              You blame every past agency without owning your
+                              side
+                            </p>
+                          </div>
+                          <p class="pl-6 text-[15px] leading-7 text-[#a48d89]">
+                            High churn usually points to mismatched
+                            expectations. We prefer honest alignment before we
+                            ever sign.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <p class="answerColor">
-                      Stratmedia offers full-service marketing solutions,
-                      including brand strategy, digital advertising, social
-                      media management, content creation, SEO, and performance
-                      analytics.
-                    </p>
-                  </div>
-                  <div
-                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
-                    style="border-radius: 10px"
+                  </article>
+
+                  <article
+                    class="fit-card fit-card--positive rounded-[28px] border border-[#183b31] bg-[linear-gradient(180deg,#09120f_0%,#091511_52%,#08100e_100%)] p-6 md:p-8"
                   >
-                    <div
-                      class="flex flex-row items-center justify-between w-full"
-                    >
-                      <p class="text-white">
-                        2. What industries does Stratmedia specialize in?
-                      </p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 256 256"
-                        focusable="false"
-                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                        style="
-                          user-select: none;
-                          width: 20px;
-                          height: 20px;
-                          display: inline-block;
-                          fill: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          color: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          flex-shrink: 0;
-                        "
-                      >
-                        <g
-                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                          weight="regular"
+                    <div class="fit-card-content flex flex-col gap-8">
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="flex h-11 w-11 items-center justify-center rounded-full border border-[#1c5a47] bg-[#0f2a23]"
                         >
-                          <path
-                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
-                            fill="#fcaf17"
-                          ></path>
-                        </g>
-                      </svg>
-                    </div>
-                    <p class="answerColor">
-                      We work with ambitious brands across various sectors,
-                      including tech, lifestyle, sports, e-commerce, and
-                      startups—any industry ready to break through the noise.
-                    </p>
-                  </div>
-                  <div
-                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
-                    style="border-radius: 10px"
-                  >
-                    <div
-                      class="flex flex-row items-center justify-between w-full"
-                    >
-                      <p class="text-white">
-                        3. How does the onboarding process work?
-                      </p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 256 256"
-                        focusable="false"
-                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                        style="
-                          user-select: none;
-                          width: 20px;
-                          height: 20px;
-                          display: inline-block;
-                          fill: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          color: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          flex-shrink: 0;
-                        "
+                          <i class="fa-solid fa-check text-[#3dd68c]"></i>
+                        </div>
+                        <div>
+                          <p
+                            class="text-[13px] uppercase tracking-[0.24em] text-[#48b084]"
+                          >
+                            Built For You
+                          </p>
+                          <h3 class="text-[28px] font-semibold text-white">
+                            If...
+                          </h3>
+                        </div>
+                      </div>
+
+                      <div class="space-y-6">
+                        <div class="border-b border-[#14362d] pb-6">
+                          <div class="mb-2 flex items-start gap-3">
+                            <i
+                              class="fa-solid fa-check mt-1 text-[13px] text-[#3dd68c]"
+                            ></i>
+                            <p class="text-[18px] font-semibold text-[#d9f6ea]">
+                              You&apos;re a growth-stage business ready for the
+                              next level
+                            </p>
+                          </div>
+                          <p class="pl-6 text-[15px] leading-7 text-[#94b3aa]">
+                            Marketing has been inconsistent, and you know the
+                            next phase requires a sharper strategy, stronger
+                            creative, and a partner who can lead.
+                          </p>
+                        </div>
+
+                        <div class="border-b border-[#14362d] pb-6">
+                          <div class="mb-2 flex items-start gap-3">
+                            <i
+                              class="fa-solid fa-check mt-1 text-[13px] text-[#3dd68c]"
+                            ></i>
+                            <p class="text-[18px] font-semibold text-[#d9f6ea]">
+                              You invest in quality across the whole business
+                            </p>
+                          </div>
+                          <p class="pl-6 text-[15px] leading-7 text-[#94b3aa]">
+                            Premium team, premium service, premium execution.
+                            You understand marketing at this level is not a
+                            commodity purchase.
+                          </p>
+                        </div>
+
+                        <div class="border-b border-[#14362d] pb-6">
+                          <div class="mb-2 flex items-start gap-3">
+                            <i
+                              class="fa-solid fa-check mt-1 text-[13px] text-[#3dd68c]"
+                            ></i>
+                            <p class="text-[18px] font-semibold text-[#d9f6ea]">
+                              You have decision-making authority and a real
+                              budget
+                            </p>
+                          </div>
+                          <p class="pl-6 text-[15px] leading-7 text-[#94b3aa]">
+                            Fast decisions create momentum. We do our best work
+                            with teams that are ready to move instead of
+                            endlessly circling.
+                          </p>
+                        </div>
+
+                        <div class="border-b border-[#14362d] pb-6">
+                          <div class="mb-2 flex items-start gap-3">
+                            <i
+                              class="fa-solid fa-check mt-1 text-[13px] text-[#3dd68c]"
+                            ></i>
+                            <p class="text-[18px] font-semibold text-[#d9f6ea]">
+                              You&apos;ve outgrown your current marketing
+                              approach
+                            </p>
+                          </div>
+                          <p class="pl-6 text-[15px] leading-7 text-[#94b3aa]">
+                            Referrals have plateaued, your old agency hit a
+                            ceiling, or your in-house efforts need stronger
+                            systems and better performance reporting.
+                          </p>
+                        </div>
+
+                        <div>
+                          <div class="mb-2 flex items-start gap-3">
+                            <i
+                              class="fa-solid fa-check mt-1 text-[13px] text-[#3dd68c]"
+                            ></i>
+                            <p class="text-[18px] font-semibold text-[#d9f6ea]">
+                              You&apos;re ready for a real 6-month commitment
+                            </p>
+                          </div>
+                          <p class="pl-6 text-[15px] leading-7 text-[#94b3aa]">
+                            Lasting growth takes time. The brands that win are
+                            the ones willing to build with consistency.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="rounded-[18px] border border-[#1a473b] bg-[rgba(7,30,23,0.8)] px-5 py-4"
                       >
-                        <g
-                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                          weight="regular"
+                        <p
+                          class="text-[15px] font-semibold italic leading-7 text-[#59e09e]"
                         >
-                          <path
-                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
-                            fill="#fcaf17"
-                          ></path>
-                        </g>
-                      </svg>
+                          The 95/5 Rule:
+                          <span class="not-italic font-medium text-[#b2d7c8]">
+                            We handle the strategy, creative, and execution. You
+                            provide access, feedback, and the budget to move.
+                          </span>
+                        </p>
+                      </div>
                     </div>
-                    <p class="answerColor">
-                      Once you reach out, we schedule a discovery session to
-                      understand your goals. Then we craft a custom strategy,
-                      align on objectives, and launch with precision.
-                    </p>
-                  </div>
-                  <div
-                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
-                    style="border-radius: 10px"
-                  >
-                    <div
-                      class="flex flex-row items-center justify-between w-full"
-                    >
-                      <p class="text-white">
-                        4. What makes Stratmedia different from other agencies?
-                      </p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 256 256"
-                        focusable="false"
-                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                        style="
-                          user-select: none;
-                          width: 20px;
-                          height: 20px;
-                          display: inline-block;
-                          fill: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          color: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          flex-shrink: 0;
-                        "
-                      >
-                        <g
-                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                          weight="regular"
-                        >
-                          <path
-                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
-                            fill="#fcaf17"
-                          ></path>
-                        </g>
-                      </svg>
-                    </div>
-                    <p class="answerColor">
-                      We don’t do cookie-cutter campaigns. At Stratmedia, we
-                      dive deep into your brand’s DNA to craft bold,
-                      performance-driven strategies that actually move the
-                      needle.
-                    </p>
-                  </div>
-                  <div
-                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
-                    style="border-radius: 10px"
-                  >
-                    <div
-                      class="flex flex-row items-center justify-between w-full"
-                    >
-                      <p class="text-white">
-                        5. What size businesses do you work with?
-                      </p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 256 256"
-                        focusable="false"
-                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                        style="
-                          user-select: none;
-                          width: 20px;
-                          height: 20px;
-                          display: inline-block;
-                          fill: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          color: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          flex-shrink: 0;
-                        "
-                      >
-                        <g
-                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                          weight="regular"
-                        >
-                          <path
-                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
-                            fill="#fcaf17"
-                          ></path>
-                        </g>
-                      </svg>
-                    </div>
-                    <p class="answerColor">
-                      We work with startups, mid-sized companies, and enterprise
-                      clients. Whether you’re scaling fast or rebranding, we
-                      adapt to your growth stage and vision.
-                    </p>
-                  </div>
-                  <div
-                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
-                    style="border-radius: 10px"
-                  >
-                    <div
-                      class="flex flex-row items-center justify-between w-full"
-                    >
-                      <p class="text-white">
-                        6. How much does it cost to work with STRATMEDIA?
-                      </p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 256 256"
-                        focusable="false"
-                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                        style="
-                          user-select: none;
-                          width: 20px;
-                          height: 20px;
-                          display: inline-block;
-                          fill: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          color: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          flex-shrink: 0;
-                        "
-                      >
-                        <g
-                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                          weight="regular"
-                        >
-                          <path
-                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
-                            fill="#fcaf17"
-                          ></path>
-                        </g>
-                      </svg>
-                    </div>
-                    <p class="answerColor">
-                      We build tailored growth packages based on your goals and
-                      industry. Our retainers typically start at $3,000/month
-                      for content-only partnerships and $6,000–$7,000/month for
-                      full-service content + ads growth systems
-                    </p>
-                  </div>
-                  <div
-                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
-                    style="border-radius: 10px"
-                  >
-                    <div
-                      class="flex flex-row items-center justify-between w-full"
-                    >
-                      <p class="text-white">
-                        7. Is there a minimum commitment?
-                      </p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 256 256"
-                        focusable="false"
-                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                        style="
-                          user-select: none;
-                          width: 20px;
-                          height: 20px;
-                          display: inline-block;
-                          fill: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          color: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          flex-shrink: 0;
-                        "
-                      >
-                        <g
-                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                          weight="regular"
-                        >
-                          <path
-                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
-                            fill="#fcaf17"
-                          ></path>
-                        </g>
-                      </svg>
-                    </div>
-                    <p class="answerColor">
-                      Yes, most of our retainers run on 6–12 month partnerships.
-                      This ensures enough runway to execute, optimize, and
-                      compound results.
-                    </p>
-                  </div>
-                  <div
-                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
-                    style="border-radius: 10px"
-                  >
-                    <div
-                      class="flex flex-row items-center justify-between w-full"
-                    >
-                      <p class="text-white">
-                        8. Do you manage ad spend or is that separate?
-                      </p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 256 256"
-                        focusable="false"
-                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                        style="
-                          user-select: none;
-                          width: 20px;
-                          height: 20px;
-                          display: inline-block;
-                          fill: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          color: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          flex-shrink: 0;
-                        "
-                      >
-                        <g
-                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                          weight="regular"
-                        >
-                          <path
-                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
-                            fill="#fcaf17"
-                          ></path>
-                        </g>
-                      </svg>
-                    </div>
-                    <p class="answerColor">
-                      Ad spend is billed directly to Meta, Google, TikTok, or
-                      LinkedIn. Our retainers cover creative, strategy,
-                      management, and reporting.
-                    </p>
-                  </div>
-                  <div
-                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
-                    style="border-radius: 10px"
-                  >
-                    <div
-                      class="flex flex-row items-center justify-between w-full"
-                    >
-                      <p class="text-white">
-                        9. Do you work with businesses outside Detroit/Michigan?
-                      </p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 256 256"
-                        focusable="false"
-                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                        style="
-                          user-select: none;
-                          width: 20px;
-                          height: 20px;
-                          display: inline-block;
-                          fill: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          color: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          flex-shrink: 0;
-                        "
-                      >
-                        <g
-                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                          weight="regular"
-                        >
-                          <path
-                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
-                            fill="#fcaf17"
-                          ></path>
-                        </g>
-                      </svg>
-                    </div>
-                    <p class="answerColor">
-                      Yes. While we’re based in Michigan, we work with
-                      businesses nationwide.
-                    </p>
-                  </div>
-                  <div
-                    class="flex flex-col items-start gap-2 border-t-2 border-[#1f2329] border border-[#1c2229] w-full px-3 py-2 faqBox"
-                    style="border-radius: 10px"
-                  >
-                    <div
-                      class="flex flex-row items-center justify-between w-full"
-                    >
-                      <p class="text-white">10. How do you measure success?</p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 256 256"
-                        focusable="false"
-                        color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                        style="
-                          user-select: none;
-                          width: 20px;
-                          height: 20px;
-                          display: inline-block;
-                          fill: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          color: var(
-                            --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                            rgb(213, 219, 230)
-                          );
-                          flex-shrink: 0;
-                        "
-                      >
-                        <g
-                          color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
-                          weight="regular"
-                        >
-                          <path
-                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
-                            fill="#fcaf17"
-                          ></path>
-                        </g>
-                      </svg>
-                    </div>
-                    <p class="answerColor">
-                      Every engagement comes with reporting dashboards and
-                      measurable KPIs — not vanity metrics. We track ROI, leads,
-                      and real growth.
-                    </p>
-                  </div>
+                  </article>
                 </div>
               </div>
-            </div>
+            </section>
             <div
               class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] autoShow"
             >
@@ -3540,131 +2983,114 @@
                 class="text-[#fcaf17] text-5xl text-center returnSectionPara paraAnimation"
               >
                 Achieve More Than Ever <br />
-                Before with <span class="italic"> STRATMEDIA </span>
+                with <span class="italic"> STRATMEDIA </span>
               </p>
               <p class="text-white text-center paraAnimation">
                 We don’t ride waves — we create them.
               </p>
-              <p class="text-white text-center paraAnimation">
-                No obligation. Just clarity on how to scale faster.
-              </p>
-              <button
-                class="relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group mt-[20px] hover:cursor-pointer paraAnimation"
-              >
-                <span class="relative z-10 flex items-center gap-2">
-                  BOOK YOUR FREE DISCOVERY CALL
-                  <i class="fa-solid fa-arrow-right -rotate-45"></i>
-                </span>
 
-                <!-- white glow highlight at the bottom -->
-                <div
-                  class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
-                ></div>
-              </button>
+              <div
+                class="flex flex-row gap-4 items-center justify-center w-full mt-[20px] paraAnimation"
+              >
+                <a
+                  href="/contact.html"
+                  class="relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group hover:cursor-pointer flex items-center gap-2"
+                >
+                  Apply To Work With Us
+                  <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                  <div
+                    class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
+                  ></div>
+                </a>
+                <a
+                  href="/contact.html"
+                  class="relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group hover:cursor-pointer flex items-center gap-2"
+                >
+                  Check Your Growth Score
+                  <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                  <div
+                    class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
+                  ></div>
+                </a>
+              </div>
               <p class="text-white text-[12px] font-medium">
                 Takes less than 30 seconds to schedule.
               </p>
               <div
                 class="flex items-center justify-center gap-[30px] paraAnimation"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                  style="
-                    user-select: none;
-                    width: 24px;
-                    height: 24px;
-                    display: inline-block;
-                    fill: var(
-                      --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                      rgb(255, 255, 255)
-                    );
-                    color: var(
-                      --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                      rgb(255, 255, 255)
-                    );
-                    flex-shrink: 0;
-                  "
+                <a
+                  href="https://www.linkedin.com/company/stratmedia-co"
+                  target="_blank"
                 >
-                  <g
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 256"
+                    focusable="false"
                     color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                    weight="regular"
+                    style="
+                      user-select: none;
+                      width: 24px;
+                      height: 24px;
+                      display: inline-block;
+                      fill: var(
+                        --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                        rgb(255, 255, 255)
+                      );
+                      color: var(
+                        --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                        rgb(255, 255, 255)
+                      );
+                      flex-shrink: 0;
+                    "
                   >
-                    <path
-                      d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
-                    ></path>
-                  </g>
-                </svg>
+                    <g
+                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                      weight="regular"
+                    >
+                      <path
+                        d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
 
                 <div class="h-[30px] w-[2px] bg-[#222429]"></div>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  class="hover:cursor-pointer"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
-                  style="
-                    user-select: none;
-                    width: 24px;
-                    height: 24px;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      #9398a2
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      #bac0ca
-                    );
-                    flex-shrink: 0;
-                  "
+                <a
+                  href="https://www.instagram.com/stratmedia.co/"
+                  target="_blank"
                 >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
-                    weight="regular"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 256"
+                    focusable="false"
+                    color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                    style="
+                      user-select: none;
+                      width: 24px;
+                      height: 24px;
+                      display: inline-block;
+                      fill: var(
+                        --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                        rgb(255, 255, 255)
+                      );
+                      color: var(
+                        --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                        rgb(255, 255, 255)
+                      );
+                      flex-shrink: 0;
+                    "
                   >
-                    <path
-                      d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
-                    ></path>
-                  </g>
-                </svg>
-
-                <div class="h-[30px] w-[2px] bg-[#222429]"></div>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
-                  class="hover:cursor-pointer"
-                  style="
-                    user-select: none;
-                    width: 24px;
-                    height: 24px;
-                    display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      #9398a2
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      #bac0ca
-                    );
-                    flex-shrink: 0;
-                  "
-                >
-                  <g
-                    color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, #bac0ca)"
-                    weight="regular"
-                  >
-                    <path
-                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
-                    ></path>
-                  </g>
-                </svg>
+                    <g
+                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                      weight="regular"
+                    >
+                      <path
+                        d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
               </div>
             </div>
             <div class="mainFooterDiv">
@@ -3677,162 +3103,82 @@
                 >
                   <a href="#" class="text-2xl text-[#fcaf17] font-bold">
                     <img
-                      src="./src/assets/Startmedia Vector-02.svg"
+                      src="/src/assets/Startmedia Vector-02.svg"
                       alt=""
                       style="width: 100%; height: 30px"
                     />
                   </a>
                   <div class="flex flex-row items-center" style="gap: 20px">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 256 256"
-                      focusable="false"
-                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                      style="
-                        user-select: none;
-                        width: 24px;
-                        height: 24px;
-                        display: inline-block;
-                        fill: var(
-                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                          rgb(255, 255, 255)
-                        );
-                        color: var(
-                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                          rgb(255, 255, 255)
-                        );
-                        flex-shrink: 0;
-                      "
+                    <a
+                      href="https://www.instagram.com/stratmedia.co/"
+                      target="_blank"
                     >
-                      <g
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        focusable="false"
                         color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                        weight="regular"
+                        style="
+                          user-select: none;
+                          width: 24px;
+                          height: 24px;
+                          display: inline-block;
+                          fill: var(
+                            --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                            rgb(255, 255, 255)
+                          );
+                          color: var(
+                            --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                            rgb(255, 255, 255)
+                          );
+                          flex-shrink: 0;
+                        "
                       >
-                        <path
-                          d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 256 256"
-                      focusable="false"
-                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                      style="
-                        user-select: none;
-                        width: 24px;
-                        height: 24px;
-                        display: inline-block;
-                        fill: var(
-                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                          rgb(255, 255, 255)
-                        );
-                        color: var(
-                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                          rgb(255, 255, 255)
-                        );
-                        flex-shrink: 0;
-                      "
+                        <g
+                          color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                          weight="regular"
+                        >
+                          <path
+                            d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/company/stratmedia-co"
+                      target="_blank"
                     >
-                      <g
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        focusable="false"
                         color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                        weight="regular"
+                        style="
+                          user-select: none;
+                          width: 24px;
+                          height: 24px;
+                          display: inline-block;
+                          fill: var(
+                            --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                            rgb(255, 255, 255)
+                          );
+                          color: var(
+                            --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                            rgb(255, 255, 255)
+                          );
+                          flex-shrink: 0;
+                        "
                       >
-                        <path
-                          d="M224,72a48.05,48.05,0,0,1-48-48,8,8,0,0,0-8-8H128a8,8,0,0,0-8,8V156a20,20,0,1,1-28.57-18.08A8,8,0,0,0,96,130.69V88a8,8,0,0,0-9.4-7.88C50.91,86.48,24,119.1,24,156a76,76,0,0,0,152,0V116.29A103.25,103.25,0,0,0,224,128a8,8,0,0,0,8-8V80A8,8,0,0,0,224,72Zm-8,39.64a87.19,87.19,0,0,1-43.33-16.15A8,8,0,0,0,160,102v54a60,60,0,0,1-120,0c0-25.9,16.64-49.13,40-57.6v27.67A36,36,0,1,0,136,156V32h24.5A64.14,64.14,0,0,0,216,87.5Z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 256 256"
-                      focusable="false"
-                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                      style="
-                        user-select: none;
-                        width: 24px;
-                        height: 24px;
-                        display: inline-block;
-                        fill: var(
-                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                          rgb(255, 255, 255)
-                        );
-                        color: var(
-                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                          rgb(255, 255, 255)
-                        );
-                        flex-shrink: 0;
-                      "
-                    >
-                      <g
-                        color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                        weight="regular"
-                      >
-                        <path
-                          d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 256 256"
-                      focusable="false"
-                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                      style="
-                        user-select: none;
-                        width: 24px;
-                        height: 24px;
-                        display: inline-block;
-                        fill: var(
-                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                          rgb(255, 255, 255)
-                        );
-                        color: var(
-                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                          rgb(255, 255, 255)
-                        );
-                        flex-shrink: 0;
-                      "
-                    >
-                      <g
-                        color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                        weight="regular"
-                      >
-                        <path
-                          d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 256 256"
-                      focusable="false"
-                      color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                      style="
-                        user-select: none;
-                        width: 24px;
-                        height: 24px;
-                        display: inline-block;
-                        fill: var(
-                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                          rgb(255, 255, 255)
-                        );
-                        color: var(
-                          --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                          rgb(255, 255, 255)
-                        );
-                        flex-shrink: 0;
-                      "
-                    >
-                      <g
-                        color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                        weight="regular"
-                      >
-                        <path
-                          d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
-                        ></path>
-                      </g>
-                    </svg>
+                        <g
+                          color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                          weight="regular"
+                        >
+                          <path
+                            d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </a>
                   </div>
                 </div>
                 <!-- <a
@@ -3843,8 +3189,12 @@
                 <button
                   class="w-[30%] relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group mt-[20px] hover:cursor-pointer getInTouch"
                 >
-                  <span class="relative z-10 flex items-center gap-2">
-                    <a href="/contact.html"> Get in touch with us </a>
+                  <span
+                    class="relative z-10 flex items-center justify-center gap-2"
+                  >
+                    <a href="<?php echo site_url('/contact'); ?>">
+                      Apply in 2 Minutes
+                    </a>
                     <i class="fa-solid fa-arrow-right -rotate-45"></i>
                   </span>
                   <!-- white glow highlight at the bottom -->
@@ -3860,10 +3210,7 @@
                   class="flex flex-row items-center justify-between w-full footerSection"
                 >
                   <p class="text-white">
-                    © 2025 Stratmedia Marketing®, All Rights Reserved.
-                  </p>
-                  <p class="text-white">
-                    Designed & Developed By Neff Industries, LLC.
+                    © 2026 Stratmedia, All Rights Reserved.
                   </p>
                 </div>
               </div>
@@ -3918,9 +3265,16 @@
 
       cards.forEach((card) => {
         card.addEventListener("click", () => {
-          // Remove active class from all cards
+          // If the clicked card is already active → deactivate it
+          if (card.classList.contains("active")) {
+            card.classList.remove("active");
+            paras.forEach((p) => p.classList.remove("active"));
+            return; // Exit here — don’t activate again
+          }
+
+          // Otherwise, remove active from all other cards
           cards.forEach((c) => c.classList.remove("active"));
-          // Add active to clicked card
+          // Add active to the clicked card
           card.classList.add("active");
 
           // Hide all paragraphs
@@ -3931,114 +3285,6 @@
         });
       });
     </script>
-    <script>
-      // Event delegation: works for existing and future .faqBox items
-      document.addEventListener("click", (e) => {
-        const box = e.target.closest(".faqBox");
-        if (!box) return;
-
-        // If you click inside the answer text, do nothing (optional)
-        if (e.target.closest(".answerColor")) return;
-
-        // Toggle this one
-        box.classList.toggle("open");
-
-        // If you want accordion behavior (only one open), uncomment below:
-        // document.querySelectorAll(".faqBox.open").forEach(b => {
-        //   if (b !== box) b.classList.remove("open");
-        // });
-      });
-    </script>
-    <!-- <script>
-      const btn = document.getElementById("menu-btn");
-      const menu = document.getElementById("mobile-menu");
-
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    </script> -->
-
-    <!-- <script type="module">
-      import * as THREE from "three";
-      import { OrbitControls } from "three/controls/OrbitControls.js";
-      import { GLTFLoader } from "three/loaders/GLTFLoader.js";
-
-      const container = document.getElementById("viewer");
-
-      
-      const renderer = new THREE.WebGLRenderer({
-        antialias: true,
-        alpha: true,
-      });
-      renderer.setSize(container.clientWidth, container.clientHeight);
-      container.appendChild(renderer.domElement);
-
-    
-      const scene = new THREE.Scene();
-      scene.background = new THREE.Color(0x0b1220);
-      scene.background = null;
-
-      
-      const camera = new THREE.PerspectiveCamera(
-        60,
-        container.clientWidth / container.clientHeight,
-        0.01,
-        2000
-      );
-      camera.position.set(4, 2, 4);
-
-      
-      const controls = new OrbitControls(camera, renderer.domElement);
-      controls.enableDamping = true;
-
-      
-      const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1);
-      scene.add(hemiLight);
-      const dirLight = new THREE.DirectionalLight(0xffffff, 1);
-      dirLight.position.set(5, 10, 7.5);
-      scene.add(dirLight);
-
-      
-      const loader = new GLTFLoader();
-      loader.load(
-        "./src/assets/final-logo.glb", 
-        (gltf) => {
-          const model = gltf.scene;
-          scene.add(model);
-
-          
-          const box = new THREE.Box3().setFromObject(model);
-          const size = box.getSize(new THREE.Vector3()).length();
-          const center = box.getCenter(new THREE.Vector3());
-
-          controls.reset();
-          model.position.sub(center); 
-          camera.position.set(size, size, size);
-          model.scale.set(1, 1, 2);
-          controls.update();
-        },
-        undefined,
-        (error) => {
-          console.error("Error loading GLB:", error);
-        }
-      );
-
-      
-      window.addEventListener("resize", () => {
-        camera.aspect = container.clientWidth / container.clientHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(container.clientWidth, container.clientHeight);
-      });
-
-      
-      function animate() {
-        requestAnimationFrame(animate);
-
-        controls.update();
-        renderer.render(scene, camera);
-      }
-      animate();
-    </script> -->
 
     <script type="module">
       // import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
@@ -4065,7 +3311,7 @@
         60,
         container.clientWidth / container.clientHeight,
         0.01,
-        2000
+        2000,
       );
       camera.position.set(2, 2, 4);
 
@@ -4106,7 +3352,7 @@
       let model;
       const loader = new GLTFLoader();
       loader.load(
-        "./src/assets/final-logo.glb", // adjust path if needed
+        "/src/assets/final-logo.glb", // adjust path if needed
         (gltf) => {
           model = gltf.scene;
           scene.add(model);
@@ -4124,7 +3370,7 @@
         undefined,
         (error) => {
           console.error("Error loading GLB:", error);
-        }
+        },
       );
 
       // Resize
@@ -4147,5 +3393,148 @@
       }
       animate();
     </script>
+
+    <script>
+      function openVideoModal(src) {
+        var modal = document.getElementById("videoModal");
+        var video = document.getElementById("modalVideo");
+        video.src = src;
+        modal.style.display = "flex";
+        video.play();
+      }
+      function closeVideoModal() {
+        var modal = document.getElementById("videoModal");
+        var video = document.getElementById("modalVideo");
+        video.pause();
+        video.src = "";
+        modal.style.display = "none";
+      }
+      // Optional: close modal on background click
+      document.getElementById("videoModal").onclick = function (e) {
+        if (e.target === this) closeVideoModal();
+      };
+    </script>
+    <?php wp_footer(); ?>
+
+    <!-- Marketing Popup -->
+    <div
+      id="marketing-popup"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 99999;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div
+        style="
+          background: #181a1b;
+          color: #fff;
+          border-radius: 16px;
+          max-width: 350px;
+          margin: auto;
+          padding: 32px 24px 16px 24px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+          text-align: center;
+          position: relative;
+        "
+      >
+        <button
+          id="popup-close"
+          style="
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: none;
+            border: none;
+            color: #aaa;
+            font-size: 22px;
+            cursor: pointer;
+          "
+        >
+          &times;
+        </button>
+        <div
+          style="
+            color: #db9b02;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+          "
+        >
+          BEFORE YOU GO
+        </div>
+        <div style="font-size: 1.3rem; font-weight: 700; margin-bottom: 10px">
+          Is Your Marketing<br />Actually Working?
+        </div>
+        <div style="font-size: 1rem; color: #c1c3c3; margin-bottom: 18px">
+          Take our free 2-minute assessment and get a personalized report with
+          industry benchmarks, quick wins, and a 90-day action plan.
+        </div>
+        <div style="font-size: 0.9rem; color: #aaa; margin-bottom: 18px">
+          250+ businesses scored · Free &amp; instant · No sales call
+        </div>
+        <a
+          href="https://your-link-here.com"
+          target="_blank"
+          style="
+            display: block;
+            background: #db9b02;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 8px;
+            padding: 12px 0;
+            margin-bottom: 10px;
+            text-decoration: none;
+            transition: background 0.2s;
+          "
+          >Check Your Growth Score</a
+        >
+        <div
+          style="font-size: 0.9rem; color: #888; cursor: pointer"
+          id="popup-no-thanks"
+        >
+          Apply To Work With Us
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let popup = document.getElementById("marketing-popup");
+
+      // Show popup function
+      function showPopup() {
+        popup.style.display = "flex";
+      }
+
+      // Hide popup function
+      function hidePopup() {
+        popup.style.display = "none";
+      }
+
+      // Exit intent logic (mouse leaves top of viewport)
+      document.addEventListener("mousemove", function (e) {
+        if (e.clientY <= 0) {
+          showPopup();
+        }
+      });
+
+      // Close button logic
+      document.getElementById("popup-close").onclick = hidePopup;
+      document.getElementById("popup-no-thanks").onclick = hidePopup;
+      // Optional: Hide popup if user clicks outside the dialog
+      popup.onclick = function (e) {
+        if (e.target === popup) hidePopup();
+      };
+    </script>
+
+    <script src="./scripts/card.js"></script>
   </body>
 </html>

@@ -1,0 +1,334 @@
+<!doctype html>
+<?php /* Template Name: Blogs */ ?>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="title"
+      content="Stratmedia – Creative Marketing That Drives Real Momentum"
+    />
+    <meta
+      name="description"
+      content="Stratmedia builds strategic marketing campaigns designed to generate real momentum, not just impressions. We create impactful creative and performance-driven media strategies for modern brands."
+    />
+    <meta
+      name="keywords"
+      content="Stratmedia, digital marketing agency, creative marketing, brand growth, performance marketing, strategic campaigns, media strategy"
+    />
+    <meta name="author" content="Stratmedia" />
+    <meta name="robots" content="index, follow" />
+
+    <meta
+      property="og:title"
+      content="Stratmedia – Marketing Built for Real Momentum"
+    />
+    <meta
+      property="og:description"
+      content="At Stratmedia, every campaign is designed to generate momentum, not vanity metrics. Strategic creative and performance marketing for ambitious brands."
+    />
+    <meta property="og:type" content="website" />
+    <title>Contact Us</title>
+    <!-- <link rel="stylesheet" href="/src/output.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/png" href="/src/assets/favicon.png" />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/app.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        /* background-color: #04070d; */
+      }
+      body {
+        background-color: #04070d;
+        /* width:100vw; */
+        /* height:100vh */
+      }
+      .contactSection {
+        gap: 10px;
+        padding: 5px 10px 5px 10px;
+        font-size: 12px;
+        border-radius: 20px;
+        border-color: #16191b;
+      }
+
+      .Contactbox {
+        background: linear-gradient(to right, #10131c, #13171d, #12151c);
+        padding: 4px;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+      }
+      .Contactpara {
+        color: #a6acb6;
+        text-align: center;
+      }
+      .ContactLink {
+        color: #aeb3bd;
+        text-decoration: underline;
+      }
+
+      .form-container {
+        background: #1a1f25;
+        padding: 30px;
+        border-radius: 10px;
+        width: 100%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .form-container h2 {
+        text-align: center;
+        color: #d5dbe6;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        color: #d5dbe6;
+        font-size: 14px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #191e26;
+        border-radius: 6px;
+        background: #111418;
+        color: #fff;
+        font-size: 14px;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: #4a90e2;
+        outline: none;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        background: #4a90e2;
+        border: none;
+        padding: 12px;
+        border-radius: 6px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background: #357ab8;
+      }
+      /* .faq {
+        background: linear-gradient(#06090f, #0c1016);
+      } */
+      .faqBox {
+        background: linear-gradient(to right, #0c1016, #04070d, #04070d);
+        border-radius: 6px;
+        margin-top: 10px;
+        padding: 10px 20px 10px 20px;
+      }
+
+      /* .questions {
+        width: 45%;
+      } */
+      .answerColor {
+        color: #7e828c;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition:
+          max-height 0.4s ease,
+          opacity 0.4s ease;
+      }
+      .faqBox.open .answerColor {
+        max-height: 500px;
+        opacity: 1;
+      }
+
+      .faqBox svg {
+        transition: transform 0.2s ease;
+      }
+      .faqBox.open svg {
+        transform: rotate(180deg);
+      }
+
+      .faqBox > .flex {
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .topGap {
+        margin-top: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="/index.html">
+            <img
+              src="/src/assets/Startmedia Vector-02.svg"
+              alt="logo"
+              style="height: 30px"
+            />
+          </a>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="navbar-toggle" id="menu-btn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="navbar-links" id="menu">
+          <ul>
+            <li><a href="/index.html">Process</a></li>
+            <li><a href="/index.html">Services</a></li>
+            <!-- <li><a href="/contact.php">Contact</a></li> -->
+            <li><a href="/contact.html">Contact</a></li>
+            <!-- <li><a href="/blogs.html">Blog</a></li> -->
+          </ul>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="navbar-cta" id="menu-btn2">
+          <a href="/contact.html">Work with US</a>
+          <div class="icon">
+            <!-- your SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              focusable="false"
+              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+              style="
+                user-select: none;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                fill: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                color: var(
+                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                  rgb(255, 255, 255)
+                );
+                flex-shrink: 0;
+              "
+            >
+              <g
+                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                weight="regular"
+              >
+                <path
+                  d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="blog-container">
+      <h1 class="blog-title">Our Blogs</h1>
+
+      <div class="blog-grid hidden!">
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://via.placeholder.com/600x400" alt="Blog Image" />
+          </div>
+
+          <div class="blog-content">
+            <h2 class="blog-post-title">
+              How Modern Web Development is Changing
+            </h2>
+            <p class="blog-meta">Posted on March 16, 2026 | John Doe</p>
+            <div class="blog-full-content">
+              <p>
+                Modern web development has evolved significantly in the past few
+                years. Frameworks like React, Vue, and Next.js have made it
+                easier to build scalable and maintainable applications.
+              </p>
+              <p>
+                Developers today focus not only on functionality but also on
+                performance, accessibility, and user experience.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://via.placeholder.com/600x400" alt="Blog Image" />
+          </div>
+
+          <div class="blog-content">
+            <h2 class="blog-post-title">
+              The Rise of AI in Software Development
+            </h2>
+            <p class="blog-meta">Posted on March 12, 2026 | Sarah Smith</p>
+            <div class="blog-full-content">
+              <p>
+                Artificial Intelligence is transforming the way developers build
+                applications. From automated code generation to smart debugging
+                tools, AI is becoming an integral part of modern development.
+              </p>
+              <p>
+                As AI continues to evolve, developers are expected to integrate
+                intelligent systems into everyday applications.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://via.placeholder.com/600x400" alt="Blog Image" />
+          </div>
+
+          <div class="blog-content">
+            <h2 class="blog-post-title">
+              Why Learning JavaScript is Still Important
+            </h2>
+            <p class="blog-meta">Posted on March 5, 2026 | Michael Brown</p>
+            <div class="blog-full-content">
+              <p>
+                JavaScript remains one of the most important programming
+                languages for web development. With the growth of frameworks and
+                full-stack tools, JavaScript now powers both frontend and
+                backend systems.
+              </p>
+              <p>
+                Developers who master JavaScript can build complete web
+                applications and mobile apps using modern frameworks.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

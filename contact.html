@@ -1,21 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="title"
+      content="Stratmedia – Creative Marketing That Drives Real Momentum"
+    />
+    <meta
+      name="description"
+      content="Stratmedia builds strategic marketing campaigns designed to generate real momentum, not just impressions. We create impactful creative and performance-driven media strategies for modern brands."
+    />
+    <meta
+      name="keywords"
+      content="Stratmedia, digital marketing agency, creative marketing, brand growth, performance marketing, strategic campaigns, media strategy"
+    />
+    <meta name="author" content="Stratmedia" />
+    <meta name="robots" content="index, follow" />
+
+    <meta
+      property="og:title"
+      content="Stratmedia – Marketing Built for Real Momentum"
+    />
+    <meta
+      property="og:description"
+      content="At Stratmedia, every campaign is designed to generate momentum, not vanity metrics. Strategic creative and performance marketing for ambitious brands."
+    />
+    <meta property="og:type" content="website" />
     <title>Contact Us</title>
-    <link rel="stylesheet" href="./src/output.css" />
+    <!-- <link rel="stylesheet" href="/src/output.css" /> -->
+    <link rel="stylesheet" href="/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/png" href="/src/assets/favicon.png" />
+    <!-- <link rel="stylesheet" href="/style.css" /> -->
+    <script defer src="/app.js"></script>
+    <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
     <style>
       * {
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
+      }
+      body {
+        background-color: #04070d;
+        /* width:100vw; */
+        /* height:100vh */
       }
       .contactSection {
         gap: 10px;
@@ -24,25 +58,7 @@
         border-radius: 20px;
         border-color: #16191b;
       }
-      /* .ContactEmailUs {
-        background: linear-gradient(to right, #04070d, #05080e, #0c0f16);
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        padding-left: 20px;
-        padding-top: 25px;
-        border-top: 2px solid #2f363f;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border-left: 1px solid #1d222b;
-        border-right: 1px solid #1d222b;
-        border-bottom: 1px solid #0a0d13;
-        width: 452px;
-        height: 204px;
-        gap: 20px;
-      } */
+
       .Contactbox {
         background: linear-gradient(to right, #10131c, #13171d, #12151c);
         padding: 4px;
@@ -61,25 +77,7 @@
         color: #aeb3bd;
         text-decoration: underline;
       }
-      /* .ContactForm {
-        width: 516px;
-        height: 668px;
-        background: linear-gradient(to right, #04070d, #05080e, #0c0f16);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding-left: 20px;
-        padding-top: 25px;
-        border-top: 2px solid #2f363f;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border-left: 1px solid #1d222b;
-        border-right: 1px solid #1d222b;
-        border-bottom: 1px solid #0a0d13;
-      } */
+
       .form-container {
         background: #1a1f25;
         padding: 30px;
@@ -157,8 +155,11 @@
         max-height: 0;
         overflow: hidden;
         opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
+        transition:
+          max-height 0.4s ease,
+          opacity 0.4s ease;
       }
+
       .faqBox.open .answerColor {
         max-height: 500px;
         opacity: 1;
@@ -167,11 +168,12 @@
       .faqBox svg {
         transition: transform 0.2s ease;
       }
+
       .faqBox.open svg {
         transform: rotate(180deg);
       }
 
-      .faqBox > .flex {
+      .faqBox > .faqHeader {
         cursor: pointer;
         user-select: none;
       }
@@ -179,69 +181,59 @@
       .topGap {
         margin-top: 90px;
       }
+      #business {
+        width: 50%;
+        padding: 8px;
+        font-size: 16px;
+        /* border: 1px solid #ccc; */
+        border-radius: 4px;
+      }
+
+      /* Placeholder style */
+      #business::placeholder {
+        color: #888; /* text color */
+        font-style: italic; /* italic text */
+        opacity: 1; /* ensure visibility in all browsers */
+      }
     </style>
   </head>
   <body class="flex-1 h-full flex-col bg-[#07090a]">
-    <div
-      class="w-full flex flex-row items-center justify-center bg-[#07090a] h-16 text-white"
-    >
-      <div
-        class="w-[90%] flex flex-row items-center justify-between gap-[100px]"
-      >
-        <div>
-          <a href="/index.html" class="text-2xl text-[#fcaf17] font-bold">
+    <div class="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="/index.html">
             <img
-              src="./src/assets/Startmedia Vector-02.svg"
-              alt=""
-              style="width: 100%; height: 30px"
+              src="/src/assets/Startmedia Vector-02.svg"
+              alt="logo"
+              style="height: 30px"
             />
           </a>
         </div>
-        <button id="menu-btn">
-          <i class="fa-solid fa-bars fa-2x hamburgerIcon"></i>
+
+        <!-- Hamburger -->
+        <button class="navbar-toggle" id="menu-btn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </button>
-        <div class="ml-[80px] desktopNavbar">
-          <ul
-            class="flex flex-row gap-[50px] border-[#16191b] border-2 px-6 py-1 rounded-full"
-            style="padding: 5px 10px 5px 10px"
-          >
-            <li>
-              <a
-                href="/index.html"
-                class="text-[#c1c3c3] font-medium hover:text-white"
-              >
-                Process
-              </a>
-            </li>
-            <li>
-              <a
-                href="/index.html"
-                class="text-[#c1c3c3] font-medium hover:text-white"
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="/contact.html"
-                class="text-[#c1c3c3] font-medium hover:text-white"
-              >
-                Contact
-              </a>
-            </li>
+
+        <!-- Links -->
+        <div class="navbar-links" id="menu">
+          <ul>
+            <li><a href="/index.html">Process</a></li>
+            <li><a href="/index.html">Services</a></li>
+            <!-- <li><a href="/contact.php">Contact</a></li> -->
+            <li><a href="/contact.html">Contact</a></li>
+            <!-- <li><a href="/blogs.html">Blog</a></li> -->
           </ul>
         </div>
-        <div
-          class="flex items-center justify-center space-x-2 border-[#1d2027] rounded-[8px] border-2 px-3 bg-[#14171b] desktopNavbar2"
-        >
-          <a
-            href="#"
-            class="text-[#c1c3c3] px-4 py-2 font-semibold hover:text-white navbutton"
-            style="padding: 5px 10px 5px 10px"
-          >
-            BOOK YOUR FREE DISCOVERY CALL
-          </a>
-          <div class="h-[20px] mb-[10px]" style="margin-bottom: 10px">
+
+        <!-- CTA Button -->
+        <div class="navbar-cta" id="menu-btn2">
+          <a href="#">Work with US</a>
+          <div class="icon">
+            <!-- your SVG -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
@@ -249,8 +241,8 @@
               color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
               style="
                 user-select: none;
-                width: 100%;
-                height: 100%;
+                width: 20px;
+                height: 20px;
                 display: inline-block;
                 fill: var(
                   --token-a85af9cb-7834-4006-a277-2dd1295ae376,
@@ -278,7 +270,7 @@
     </div>
 
     <div
-      class="flex flex-col items-center justify-center"
+      class="flex flex-col items-center justify-center bg-[#07090a]"
       style="margin-top: 70px; gap: 20px"
     >
       <div class="flex flex-row items-center contactSection">
@@ -315,7 +307,7 @@
         <p class="text-white">CONTACT</p>
       </div>
       <p class="text-5xl text-white ContactRespPara">
-        React Us <span class="italic">Anytime</span>
+        Contact <span class="italic" style="color: #fcaf17">Us</span>
       </p>
       <p class="text-white ContactRespPara">
         Have questions or need help? We’re here for you
@@ -363,10 +355,8 @@
             </div>
             <p class="text-2xl text-white">Email Us</p>
           </div>
-          <p class="Contactpara">
-            Looking To Build A Strategic Referall Partnership?
-          </p>
-          <a href="" class="ContactLink">paul@Stratmediamarketing.com</a>
+
+          <a href="" class="ContactLink">info@stratmedia.co</a>
         </div>
         <div class="ContactEmailUs" style="margin-top: 40px">
           <div class="flex flex-row items-center" style="gap: 20px">
@@ -402,12 +392,18 @@
                 </g>
               </svg>
             </div>
-            <p class="text-2xl text-white">Contact Sales</p>
+            <p class="text-2xl text-white">Address</p>
           </div>
           <p class="Contactpara">
-            Ready to Make Waves? Let’s Chart Your Course Together.
+            <a
+              href="https://www.google.com/maps?q=100+E+Big+Beaver+Rd+Troy,+MI+48083"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: none; color: inherit"
+            >
+              100 E Big Beaver Rd Troy, MI 48083
+            </a>
           </p>
-          <a href="" class="ContactLink">Book Your Free Discovery Call</a>
         </div>
       </div>
       <div class="ContactForm">
@@ -446,7 +442,7 @@
         <p class="text-white text-center font-semibold text-[20px]">
           We’d love to help! Let us know how
         </p>
-        <form style="width: 90%">
+        <form id="contactForm" style="width: 90%">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required />
 
@@ -454,26 +450,69 @@
           <input type="email" id="email" name="email" required />
 
           <label for="business">Type of Business</label>
-          <input type="text" id="business" name="business" required />
+          <input
+            type="text"
+            id="business"
+            name="business"
+            required
+            style="width: 50%"
+            placeholder="Eg: Real Estate"
+          />
 
-          <label for="message">How May We Assist You?</label>
-          <textarea id="message" name="message" required></textarea>
+          <label for="services">What are you interested in?</label>
+          <select
+            id="services"
+            name="services"
+            required
+            style="
+              width: 100%;
+              padding: 8px;
+              font-size: 16px;
+              border-radius: 4px;
+              border: 1px solid #191e26;
+              background-color: #111418;
+              margin-bottom: 30px;
+              color: #fff;
+            "
+          >
+            <option value="" disabled selected style="color: #fff">
+              Select an option
+            </option>
+            <option value="content_creation" style="color: #fff">
+              Content Creation (Photo/Video)
+            </option>
+            <option value="paid_ads" style="color: #fff">
+              Paid Ads & Growth Systems
+            </option>
+            <option value="ai_automation" style="color: #fff">
+              AI & Automation Setup
+            </option>
+            <option value="website_funnel" style="color: #fff">
+              Website / Funnel Build
+            </option>
+            <option value="consultation" style="color: #fff">
+              Consultation or Partnership Inquiry
+            </option>
+            <option value="others" style="color: #fff">Others</option>
+          </select>
+
           <div class="flex items-center justify-center">
             <button
+              type="submit"
               class="relative bg-[#0d1117] text-white flex items-center justify-center font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group mt-[20px] hover:cursor-pointer"
-              style="width: 100%; padding: 10px 0px 10px 0px"
+              style="width: 100%; padding: 10px 0px"
             >
               <span class="relative z-10 flex items-center text-centers gap-2">
-                Send Your Message
+                Submit Inquiry
                 <i class="fa-solid fa-arrow-right -rotate-45"></i>
               </span>
-              <!-- white glow highlight at the bottom -->
               <div
                 class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
               ></div>
             </button>
           </div>
         </form>
+        <!-- <?php echo do_shortcode('[wpforms id="60"]'); ?> -->
       </div>
     </div>
     <div
@@ -526,8 +565,7 @@
         style="gap: 30px"
       >
         <div
-          class="faq border-t-2 border-[#1f2329] border border-[#1c2229] rounded-3xl flex flex-col items-center gap-3 px-3"
-          style="width: 368px; height: 252px"
+          class="faq border-t-2 border-[#1f2329] border border-[#1c2229] rounded-3xl flex flex-col items-center gap-3 px-3 contactUsStillHaveQuestionSection"
         >
           <div class="faqBox px-3 py-3 border-t-2 border-[#1f2329]">
             <svg
@@ -601,9 +639,7 @@
                 ></path>
               </g>
             </svg>
-            <p style="color: #d5dbe6" class="font-medium">
-              BOOK YOUR FREE DISCOVERY CALL
-            </p>
+            <p style="color: #d5dbe6" class="font-medium">Contact Us</p>
           </div>
         </div>
 
@@ -695,9 +731,10 @@
               </svg>
             </div>
             <p class="answerColor">
-              We work with ambitious brands across various sectors, including
-              tech, lifestyle, sports, e-commerce, and startups—any industry
-              ready to break through the noise.
+              We work with growth-focused brands across home services, medical,
+              construction, hospitality, and industrial sectors—as well as
+              e-commerce, tech, and startups. If you’re ready to scale with
+              strategy and creative that performs, you’re in the right place.
             </p>
           </div>
           <div
@@ -877,10 +914,13 @@
               </svg>
             </div>
             <p class="answerColor">
-              We build tailored growth packages based on your goals and
-              industry. Our retainers typically start at $3,000/month for
-              content-only partnerships and $6,000–$7,000/month for full-service
-              content + ads growth systems
+              Every engagement is tailored to the client’s goals and scope. Our
+              partnerships range from one-off brand or campaign builds to
+              long-term retainers that manage full-scale growth systems. <br />
+              Pricing varies based on deliverables, strategy depth, and
+              industry—most retainers begin around $3,000–$7,000/month, but
+              larger scopes and full- service engagements may extend beyond
+              that.
             </p>
           </div>
           <div
@@ -922,8 +962,11 @@
               </svg>
             </div>
             <p class="answerColor">
-              Yes, most of our retainers run on 6–12 month partnerships. This
-              ensures enough runway to execute, optimize, and compound results.
+              For retainer clients, we typically recommend a 6–12 month
+              partnership to allow enough runway for strategy, optimization, and
+              measurable results. <br />
+              For one-off or campaign projects, timelines and deliverables are
+              defined during onboarding to match your goals.
             </p>
           </div>
           <div
@@ -1062,6 +1105,7 @@
         </div>
       </div>
     </div>
+
     <div
       class="flex flex-row items-center justify-center"
       style="margin-top: 60px"
@@ -1075,169 +1119,88 @@
         >
           <a href="#" class="text-2xl text-[#fcaf17] font-bold">
             <img
-              src="./src/assets/Startmedia Vector-02.svg"
+              src="/src/assets/Startmedia Vector-02.svg"
               alt=""
               style="width: 100%; height: 30px"
             />
           </a>
           <div class="flex flex-row items-center" style="gap: 20px">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false"
-              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-              style="
-                user-select: none;
-                width: 24px;
-                height: 24px;
-                display: inline-block;
-                fill: var(
-                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                  rgb(255, 255, 255)
-                );
-                color: var(
-                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                  rgb(255, 255, 255)
-                );
-                flex-shrink: 0;
-              "
-            >
-              <g
+            <a href="https://www.instagram.com/stratmedia.co/" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
                 color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                weight="regular"
+                style="
+                  user-select: none;
+                  width: 24px;
+                  height: 24px;
+                  display: inline-block;
+                  fill: var(
+                    --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                    rgb(255, 255, 255)
+                  );
+                  color: var(
+                    --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                    rgb(255, 255, 255)
+                  );
+                  flex-shrink: 0;
+                "
               >
-                <path
-                  d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
-                ></path>
-              </g>
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false"
-              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-              style="
-                user-select: none;
-                width: 24px;
-                height: 24px;
-                display: inline-block;
-                fill: var(
-                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                  rgb(255, 255, 255)
-                );
-                color: var(
-                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                  rgb(255, 255, 255)
-                );
-                flex-shrink: 0;
-              "
+                <g
+                  color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                  weight="regular"
+                >
+                  <path
+                    d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/stratmedia-co"
+              target="_blank"
             >
-              <g
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+                focusable="false"
                 color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                weight="regular"
+                style="
+                  user-select: none;
+                  width: 24px;
+                  height: 24px;
+                  display: inline-block;
+                  fill: var(
+                    --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                    rgb(255, 255, 255)
+                  );
+                  color: var(
+                    --token-a85af9cb-7834-4006-a277-2dd1295ae376,
+                    rgb(255, 255, 255)
+                  );
+                  flex-shrink: 0;
+                "
               >
-                <path
-                  d="M224,72a48.05,48.05,0,0,1-48-48,8,8,0,0,0-8-8H128a8,8,0,0,0-8,8V156a20,20,0,1,1-28.57-18.08A8,8,0,0,0,96,130.69V88a8,8,0,0,0-9.4-7.88C50.91,86.48,24,119.1,24,156a76,76,0,0,0,152,0V116.29A103.25,103.25,0,0,0,224,128a8,8,0,0,0,8-8V80A8,8,0,0,0,224,72Zm-8,39.64a87.19,87.19,0,0,1-43.33-16.15A8,8,0,0,0,160,102v54a60,60,0,0,1-120,0c0-25.9,16.64-49.13,40-57.6v27.67A36,36,0,1,0,136,156V32h24.5A64.14,64.14,0,0,0,216,87.5Z"
-                ></path>
-              </g>
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false"
-              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-              style="
-                user-select: none;
-                width: 24px;
-                height: 24px;
-                display: inline-block;
-                fill: var(
-                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                  rgb(255, 255, 255)
-                );
-                color: var(
-                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                  rgb(255, 255, 255)
-                );
-                flex-shrink: 0;
-              "
-            >
-              <g
-                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                weight="regular"
-              >
-                <path
-                  d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
-                ></path>
-              </g>
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false"
-              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-              style="
-                user-select: none;
-                width: 24px;
-                height: 24px;
-                display: inline-block;
-                fill: var(
-                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                  rgb(255, 255, 255)
-                );
-                color: var(
-                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                  rgb(255, 255, 255)
-                );
-                flex-shrink: 0;
-              "
-            >
-              <g
-                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                weight="regular"
-              >
-                <path
-                  d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"
-                ></path>
-              </g>
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              focusable="false"
-              color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-              style="
-                user-select: none;
-                width: 24px;
-                height: 24px;
-                display: inline-block;
-                fill: var(
-                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                  rgb(255, 255, 255)
-                );
-                color: var(
-                  --token-a85af9cb-7834-4006-a277-2dd1295ae376,
-                  rgb(255, 255, 255)
-                );
-                flex-shrink: 0;
-              "
-            >
-              <g
-                color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
-                weight="regular"
-              >
-                <path
-                  d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
-                ></path>
-              </g>
-            </svg>
+                <g
+                  color="var(--token-a85af9cb-7834-4006-a277-2dd1295ae376, rgb(255, 255, 255))"
+                  weight="regular"
+                >
+                  <path
+                    d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
         <button
-          class="w-[30%] relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group mt-[20px] hover:cursor-pointer getInTouch"
+          class="w-[30%] relative bg-[#0d1117] text-white font-bold px-6 py-8 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group mt-[20px] hover:cursor-pointer getInTouch"
         >
-          <span class="relative z-10 flex items-center gap-2">
-            <a href="/contact.html"> Get in touch with us </a>
+          <span class="relative z-10 flex items-center justify-center gap-2">
+            <a href="<?php echo site_url('/contact'); ?>">
+              Apply in 2 minutes
+            </a>
             <i class="fa-solid fa-arrow-right -rotate-45"></i>
           </span>
           <!-- white glow highlight at the bottom -->
@@ -1249,12 +1212,7 @@
         <div
           class="flex flex-row items-center justify-between w-full ContactUsLastSection"
         >
-          <p class="text-white">
-            © 2025 Dark Ocean Marketing®, All Rights Reserved.
-          </p>
-          <p class="text-white">
-            Designed & Developed By Neff Industries, LLC.
-          </p>
+          <p class="text-white">© 2026 Stratmedia, All Rights Reserved.</p>
         </div>
       </div>
     </div>
@@ -1275,6 +1233,167 @@
         //   if (b !== box) b.classList.remove("open");
         // });
       });
+    </script>
+
+    <script>
+      function showPara(num) {
+        // hide all paras
+        document
+          .querySelectorAll(".tab-para")
+          .forEach((p) => (p.style.display = "none"));
+
+        // remove highlight from all buttons
+        document
+          .querySelectorAll(".PaidAidsBox")
+          .forEach((btn) => btn.classList.remove("activeBtn"));
+
+        // show the correct para
+        document.getElementById("para" + num).style.display = "block";
+
+        // highlight the clicked button
+        document
+          .querySelectorAll(".PaidAidsBox")
+          [num - 1].classList.add("activeBtn");
+      }
+
+      // Show first para by default
+      showPara(1);
+    </script>
+
+    <script>
+      const cards = document.querySelectorAll(".card");
+      const paras = document.querySelectorAll(".outside-para");
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          // Remove active class from all cards
+          cards.forEach((c) => c.classList.remove("active"));
+          // Add active to clicked card
+          card.classList.add("active");
+
+          // Hide all paragraphs
+          paras.forEach((p) => p.classList.remove("active"));
+          // Show the target paragraph
+          const targetId = card.getAttribute("data-target");
+          document.getElementById(targetId).classList.add("active");
+        });
+      });
+    </script>
+    <script>
+      document.querySelectorAll(".faqHeader").forEach((header) => {
+        header.addEventListener("click", () => {
+          const box = header.parentElement;
+          box.classList.toggle("open");
+        });
+      });
+    </script>
+
+    <script type="module">
+      // import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+      // import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js";
+      // import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js";
+      import * as THREE from "three";
+      import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+      import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+      const container = document.getElementById("viewer");
+
+      // Renderer
+      const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true,
+      });
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      container.appendChild(renderer.domElement);
+
+      // Scene
+      const scene = new THREE.Scene();
+
+      // Camera
+      const camera = new THREE.PerspectiveCamera(
+        60,
+        container.clientWidth / container.clientHeight,
+        0.01,
+        2000,
+      );
+      camera.position.set(2, 2, 4);
+
+      // Controls
+      const controls = new OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.enableRotate = true; // disable manual rotation if only auto-spin needed
+      controls.enableZoom = false;
+      controls.minPolarAngle = Math.PI / 2; // lock vertical angle
+      controls.maxPolarAngle = Math.PI / 2; // lock vertical angle
+      controls.autoRotate = true; // auto spin
+      controls.autoRotateSpeed = 8.0;
+      // Lights
+      const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1);
+      scene.add(hemiLight);
+      const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+      dirLight.position.set(5, 10, 7.5);
+      scene.add(dirLight);
+
+      const spotLight = new THREE.SpotLight(0xffffff, 2); // color, intensity
+      spotLight.position.set(0, 10, 0); // directly above the model
+      spotLight.angle = Math.PI / 6; // spotlight cone angle
+      spotLight.penumbra = 0.3; // softer edges
+      spotLight.decay = 2; // realistic falloff
+      spotLight.distance = 50; // how far the light reaches
+
+      // make shadows work
+      spotLight.castShadow = true;
+      renderer.shadowMap.enabled = true;
+
+      // optional: add helper to visualize spotlight
+      // const spotHelper = new THREE.SpotLightHelper(spotLight);
+      // scene.add(spotHelper);
+
+      scene.add(spotLight);
+
+      // Loader
+      let model;
+      const loader = new GLTFLoader();
+      loader.load(
+        "/src/assets/final-logo.glb", // adjust path if needed
+        (gltf) => {
+          model = gltf.scene;
+          scene.add(model);
+
+          // Frame & scale model
+          const box = new THREE.Box3().setFromObject(model);
+          const size = box.getSize(new THREE.Vector3()).length();
+          const center = box.getCenter(new THREE.Vector3());
+
+          model.position.sub(center); // center the model
+          camera.position.set(size, size, size);
+          model.scale.set(1.3, 1.5, 1);
+          controls.update();
+        },
+        undefined,
+        (error) => {
+          console.error("Error loading GLB:", error);
+        },
+      );
+
+      // Resize
+      window.addEventListener("resize", () => {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+      });
+
+      // Animate
+      function animate() {
+        requestAnimationFrame(animate);
+
+        // if (model) {
+        //   model.rotation.y += 0.01; // 🔥 only rotate in circle around Y axis
+        // }
+
+        controls.update();
+        renderer.render(scene, camera);
+      }
+      animate();
     </script>
   </body>
 </html>
