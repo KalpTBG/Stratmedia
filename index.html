@@ -391,18 +391,6 @@
         padding-top: 40px;
       }
 
-      .marquee {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-      }
-
-      .marquee-content {
-        display: flex;
-        width: max-content;
-        animation: scroll 25s linear infinite;
-      }
-
       @keyframes scroll {
         from {
           transform: translateX(10%);
@@ -740,29 +728,34 @@
         </a> -->
         <div class="flex flex-row gap-4 mt-[50px]">
           <button
-            class="relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group hover:cursor-pointer"
+            class="relative bg-[#0d1117] text-white font-bold px-9 py-4 rounded-[10px] text-base md:text-lg tracking-widest overflow-hidden group hover:cursor-pointer border border-white/25 hover:border-white/55 shadow-[0_0_0_1px_rgba(255,255,255,0.06),inset_0_1px_0_rgba(255,255,255,0.10)] hover:shadow-[0_0_18px_rgba(255,255,255,0.12),0_0_0_1px_rgba(255,255,255,0.10),inset_0_1px_0_rgba(255,255,255,0.15)] transition-all duration-200"
           >
-            <span class="relative z-10 flex items-center gap-2">
+            <span class="relative z-10 flex items-center gap-2.5">
               <a href="/contact.html">Apply To Work With Us</a>
-              <i class="fa-solid fa-arrow-right -rotate-45"></i>
+              <i class="fa-solid fa-arrow-right -rotate-45 opacity-85"></i>
             </span>
-            <!-- white glow highlight at the bottom -->
+
+            <!-- bottom shimmer -->
             <div
-              class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
+              class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/70 to-transparent"
+            ></div>
+
+            <!-- top edge highlight -->
+            <div
+              class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"
             ></div>
           </button>
-          <button
+          <!-- <button
             class="relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group hover:cursor-pointer"
           >
             <span class="relative z-10 flex items-center gap-2">
               <a href="#">Check Your Growth Score</a>
               <i class="fa-solid fa-arrow-right -rotate-45"></i>
             </span>
-            <!-- white glow highlight at the bottom -->
             <div
               class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
             ></div>
-          </button>
+          </button> -->
         </div>
 
         <div class="flex items-center justify-center gap-[30px] mt-[30px]">
@@ -855,215 +848,176 @@
           <li>
             <img
               src="/src/assets/Put these logos First/Barbat.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/courtyard.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/DCC all white logo.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/DIl-Mil.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/Gilly_s_wordmark-white.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/mhc-white.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/New-Era.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/Prime-29.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/saks-logo.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/sexy-steak.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/white Hour_Detroit_logo (1).png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/all whitee Perfect Harvest.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/all Whote Vlasic Labs.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
-            <img
-              src="/src/assets/cookie-white.png"
-              alt=""
-              class="marquee-logo"
-            />
+            <img src="/src/assets/cookie-white.png" class="marquee-logo" />
           </li>
+          <li><img src="/src/assets/herbology.png" class="marquee-logo" /></li>
+          <li><img src="/src/assets/Jars.png" class="marquee-logo" /></li>
+          <li><img src="/src/assets/Tical.png" class="marquee-logo" /></li>
+          <li><img src="/src/assets/URB.png" class="marquee-logo" /></li>
         </ul>
 
-        <!-- Duplicate the same list for infinite effect -->
         <ul class="flex flex-row items-center gap-[40px] flex-nowrap">
           <li>
             <img
               src="/src/assets/Put these logos First/Barbat.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/courtyard.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/DCC all white logo.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/DIl-Mil.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/Gilly_s_wordmark-white.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/mhc-white.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/New-Era.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/Prime-29.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/saks-logo.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/sexy-steak.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/Put these logos First/white Hour_Detroit_logo (1).png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/all whitee Perfect Harvest.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
             <img
               src="/src/assets/all Whote Vlasic Labs.png"
-              alt=""
               class="marquee-logo"
             />
           </li>
           <li>
-            <img
-              src="/src/assets/cookie-white.png"
-              alt=""
-              class="marquee-logo"
-            />
+            <img src="/src/assets/cookie-white.png" class="marquee-logo" />
           </li>
-          <li>
-            <img src="/src/assets/herbology.png" alt="" class="marquee-logo" />
-          </li>
-          <li>
-            <img src="/src/assets/Jars.png" alt="" class="marquee-logo" />
-          </li>
-          <li>
-            <img src="/src/assets/Tical.png" alt="" class="marquee-logo" />
-          </li>
-          <li>
-            <img src="/src/assets/URB.png" alt="" class="marquee-logo" />
-          </li>
+          <li><img src="/src/assets/herbology.png" class="marquee-logo" /></li>
+          <li><img src="/src/assets/Jars.png" class="marquee-logo" /></li>
+          <li><img src="/src/assets/Tical.png" class="marquee-logo" /></li>
+          <li><img src="/src/assets/URB.png" class="marquee-logo" /></li>
         </ul>
       </div>
     </div>
@@ -1096,7 +1050,8 @@
           </g>
         </svg>
         <p class="text-[#bcc1cc] text-center text-xl">
-          From the Founders of <span style="color: #fcaf17">STRATMEDIA.</span>
+          From the Founders of
+          <span id="heading1" style="color: #fcaf17">STRATMEDIA.</span>
         </p>
       </div>
     </div>
@@ -1105,10 +1060,10 @@
     >
       <div class="w-[100%]">
         <p
-          class="text-[#5e6773] text-center text-2xl font-medium heroSectionPara"
+          class="text-[#E5E7EB] text-center text-2xl font-medium heroSectionPara"
         >
           We built
-          <span class="italic text-[#bcc1cc]" style="color: #fcaf17">
+          <span id="heading1" class="text-[#bcc1cc]" style="color: #fcaf17">
             STRATMEDIA
           </span>
           to prove that brands deserve more than
@@ -1175,20 +1130,14 @@
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 256 256"
             focusable="false"
-            color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+            color="#fcaf17"
             style="
               user-select: none;
-              width: 3%;
-              height: 3%;
+              width: 20px;
+              height: 20px;
               display: inline-block;
-              fill: var(
-                --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                rgb(213, 219, 230)
-              );
-              color: var(
-                --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                rgb(213, 219, 230)
-              );
+              fill: #fcaf17;
+              color: #fcaf17;
               flex-shrink: 0;
             "
           >
@@ -1213,7 +1162,7 @@
         </h2>
         <span
           class="text-[#d5dbe6] text-4xl text-center font-semibold returnSectionPara"
-          >Powered by <span class="italic text-[#fcaf17]">Strategy.</span></span
+          >Powered by <span class="text-[#fcaf17]">Strategy.</span></span
         >
         <p class="text-[#aeb3bd] text-center w-[50%] returnSectionPara2">
           We’ve built systems proven to scale brands through strategy, content,
@@ -1223,7 +1172,7 @@
           class="flex flex-row items-center justify-between gap-[20px] mb-[30px] returnSectionBoxes"
         >
           <div
-            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] ransition-shadow duration-300 returnBoxOne fadeUp"
+            class="m-4 flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] ransition-shadow duration-300 returnBoxOne fadeUp"
           >
             <div
               class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
@@ -1261,7 +1210,7 @@
             </div>
           </div>
           <div
-            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] ransition-shadow duration-300 returnBoxOne fadeUp"
+            class="m-4 flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] ransition-shadow duration-300 returnBoxOne fadeUp"
           >
             <div
               class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
@@ -1331,7 +1280,7 @@
             </div>
           </div>
           <div
-            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] ransition-shadow duration-300 returnBoxOne fadeUp"
+            class="m-4 flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] ransition-shadow duration-300 returnBoxOne fadeUp"
           >
             <div
               class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
@@ -1412,7 +1361,7 @@
             </div>
           </div>
           <div
-            class="flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] ransition-shadow duration-300 returnBoxOne fadeUp"
+            class="m-4 flex flex-col items-center w-[380px] h-[390px] border-t-[3px] border-[#293039] border-l border-[#191e26] border-r border-[#191e26] border-b border-[#191e26] rounded-[15px] ransition-shadow duration-300 returnBoxOne fadeUp"
           >
             <div
               class="w-[316px] h-[160px] border-t-[2px] border-[#293039] border-l border-[#0d1117] border-r border-[#0d1117] rounded-[15px] bg-gradient-to-tr from-[#04070d] to-[#0d1117] flex flex-row items-center justify-center mt-[50px] returnBoxOne"
@@ -1500,20 +1449,14 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
               focusable="false"
-              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+              color="#fcaf17"
               style="
                 user-select: none;
-                width: 14%;
-                height: 14%;
+                width: 20px;
+                height: 20px;
                 display: inline-block;
-                fill: var(
-                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                  rgb(213, 219, 230)
-                );
-                color: var(
-                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                  rgb(213, 219, 230)
-                );
+                fill: #fcaf17;
+                color: #fcaf17;
                 flex-shrink: 0;
               "
             >
@@ -1526,14 +1469,17 @@
                 ></path>
               </g>
             </svg>
-            <p class="text-[#d5dbe6]">BENEFITS</p>
+            <p class="text-[#d5dbe6]">Benefits</p>
           </div>
         </div>
         <p
           class="text-[#d5dbe6] text-4xl text-center font-medium mt-[20px] returnSectionPara"
         >
           Why Choose
-          <span class="italic text-[#a0a5af]" style="color: #fcaf17"
+          <span
+            id="heading1"
+            class="uppercase text-[#a0a5af]"
+            style="color: #fcaf17"
             >Stratmedia ?</span
           >
         </p>
@@ -1857,20 +1803,14 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 256 256"
                 focusable="false"
-                color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                color="#fcaf17"
                 style="
                   user-select: none;
-                  width: 14%;
-                  height: 14%;
+                  width: 20px;
+                  height: 20px;
                   display: inline-block;
-                  fill: var(
-                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                    rgb(213, 219, 230)
-                  );
-                  color: var(
-                    --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                    rgb(213, 219, 230)
-                  );
+                  fill: #fcaf17;
+                  color: #fcaf17;
                   flex-shrink: 0;
                 "
               >
@@ -1883,64 +1823,121 @@
                   ></path>
                 </g>
               </svg>
-              <p class="text-[#d5dbe6]">SERVICES</p>
+              <p class="text-[#d5dbe6]">Services</p>
             </div>
           </div>
           <h1 class="text-white text-5xl font-semibold returnSectionPara">
-            How <span style="color: #fcaf17">Stratmedia</span> Can Help
-            <span class="italic text-[#868b94]" style="color: #fcaf17"
-              >You?
-            </span>
+            How <span id="heading1" style="color: #fcaf17">Stratmedia</span> Can
+            Help
+            <span class="text-[#868b94]" style="color: #fcaf17">You? </span>
           </h1>
           <p class="text-center" style="color: #d2d8e3">
             We help brands grow through paid ads, automation, and high-impact
             content that drives attention, trust, and measurable results.
           </p>
 
-          <div
-            class="shadow-[0_4px_20px_rgba(252,175,23,0.2)] border-t-2 border-[#38404a] border-l border-[#191e25] border-r border-[#191e25] w-[90%] rounded-3xl px-3 py-5"
-          >
-            <div
-              class="services-cards-row flex flex-row items-center justify-center gap-[40px] mt-10"
-            >
-              <!-- Card 1 -->
+          <div class="w-[90%] mx-auto py-10">
+            <div class="max-w-6xl mx-auto px-4 py-12">
               <div
-                class="services-card w-[48%] bg-[#12161f] rounded-2xl shadow-lg p-8 flex flex-col items-start gap-4"
+                class="services-cards-row flex flex-row items-stretch justify-center gap-8"
               >
-                <img
-                  src="/src/assets/b0ruEz3spIHTSi4xCfbfwoX2koM.avif"
-                  alt="Paid Ads"
-                  class="w-full h-[180px] object-cover rounded-xl mb-4"
-                />
-                <p class="text-[#fcaf17] font-bold text-lg">
-                  Content Production , Social Media , Brand Positioning
-                </p>
-                <p class="text-[#d5dbe6] text-base">
-                  We create high-quality content systems designed to help your
-                  brand stay visible, build authority, and show up at a higher
-                  level online. From short-form video to social content and
-                  brand positioning, every asset is built to strengthen trust
-                  and drive attention.
-                </p>
-              </div>
-              <!-- Card 2 -->
-              <div
-                class="services-card w-[48%] bg-[#12161f] rounded-2xl shadow-lg p-8 flex flex-col items-start gap-4"
-              >
-                <img
-                  src="/src/assets/AiImage.png"
-                  alt="AI & Automation"
-                  class="w-full h-[180px] object-cover rounded-xl mb-4"
-                />
-                <p class="text-[#fcaf17] font-bold text-lg">
-                  Paid Advertising , Retargeting , SEO & AI Search
-                </p>
-                <p class="text-[#d5dbe6] text-base">
-                  We turn attention into pipeline through paid media and search
-                  strategy built for measurable growth. Our focus is on bringing
-                  in qualified demand, improving conversion opportunities, and
-                  helping brands scale with more consistency.
-                </p>
+                <div
+                  class="services-card group w-[45%] bg-[#0d0d0d] border border-white/5 rounded-3xl p-8 flex flex-col items-start transition-all duration-500 hover:border-[#fcaf17]/50 hover:shadow-[0_0_30px_-10px_rgba(252,175,23,0.2)]"
+                >
+                  <span
+                    class="text-[#fcaf17] uppercase tracking-[0.2em] text-[10px] font-bold mb-4 opacity-80"
+                    >Brand-Building</span
+                  >
+
+                  <h2
+                    class="text-white text-3xl font-semibold mb-6 tracking-tight leading-tight"
+                  >
+                    Content & Brand Systems
+                  </h2>
+
+                  <ul class="space-y-3 mb-8">
+                    <li class="flex items-center text-slate-400 text-base">
+                      <span
+                        class="w-1 h-1 bg-[#fcaf17] rounded-full mr-3 shadow-[0_0_5px_#fcaf17]"
+                      ></span>
+                      Content Production
+                    </li>
+                    <li class="flex items-center text-slate-400 text-base">
+                      <span
+                        class="w-1 h-1 bg-[#fcaf17] rounded-full mr-3 shadow-[0_0_5px_#fcaf17]"
+                      ></span>
+                      Social Media
+                    </li>
+                    <li class="flex items-center text-slate-400 text-base">
+                      <span
+                        class="w-1 h-1 bg-[#fcaf17] rounded-full mr-3 shadow-[0_0_5px_#fcaf17]"
+                      ></span>
+                      Brand Positioning
+                    </li>
+                  </ul>
+
+                  <p class="text-slate-500 text-sm leading-relaxed mb-10">
+                    We create high-quality content systems designed to help your
+                    brand stay visible, build authority, and show up at a higher
+                    level online.
+                  </p>
+
+                  <div class="mt-auto pt-6 border-t border-white/5 w-full">
+                    <p class="text-[#fcaf17] text-sm font-medium leading-snug">
+                      Strong creative earns attention. Strong distribution turns
+                      it into growth.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="services-card group w-[45%] bg-[#0d0d0d] border border-white/5 rounded-3xl p-8 flex flex-col items-start transition-all duration-500 hover:border-[#fcaf17]/50 hover:shadow-[0_0_30px_-10px_rgba(252,175,23,0.2)]"
+                >
+                  <span
+                    class="text-[#fcaf17] uppercase tracking-[0.2em] text-[10px] font-bold mb-4 opacity-80"
+                    >Demand Generation</span
+                  >
+
+                  <h2
+                    class="text-white text-3xl font-semibold mb-6 tracking-tight leading-tight"
+                  >
+                    Performance Marketing <br />
+                  </h2>
+
+                  <ul class="space-y-3 mb-8">
+                    <li class="flex items-center text-slate-400 text-base">
+                      <span
+                        class="w-1 h-1 bg-[#fcaf17] rounded-full mr-3 shadow-[0_0_5px_#fcaf17]"
+                      ></span>
+                      Paid Advertising
+                    </li>
+                    <li class="flex items-center text-slate-400 text-base">
+                      <span
+                        class="w-1 h-1 bg-[#fcaf17] rounded-full mr-3 shadow-[0_0_5px_#fcaf17]"
+                      ></span>
+                      Retargeting
+                    </li>
+                    <li class="flex items-center text-slate-400 text-base">
+                      <span
+                        class="w-1 h-1 bg-[#fcaf17] rounded-full mr-3 shadow-[0_0_5px_#fcaf17]"
+                      ></span>
+                      SEO & AI Search
+                    </li>
+                  </ul>
+
+                  <p class="text-slate-500 text-sm leading-relaxed mb-10">
+                    Paid media drives immediate attention. Retargeting captures
+                    lost opportunities. Search ensures you’re found by
+                    high-intent buyers.
+                  </p>
+
+                  <div class="mt-auto pt-6 border-t border-white/5 w-full">
+                    <p class="text-[#fcaf17] text-sm font-medium leading-snug">
+                      Strong creative earns attention. Strong distribution turns
+                      it into growth.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1963,130 +1960,142 @@
           >
             Content built to perform — not just look good.
           </p>
-          <div
-            class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-8 w-[90%] max-w-5xl"
-          >
-            <!-- Video 1 -->
+          <div class="bg-[#0b0c10] min-h-screen overflow-hidden py-10">
             <div
-              class="relative group rounded-2xl overflow-hidden shadow-lg bg-[#181a1b] border border-[#23272f]"
+              class="max-w-7xl mx-auto px-4 h-[70vh] sm:h-[75vh] md:h-[80vh] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 relative overflow-hidden group"
             >
-              <video
-                class="w-full h-56 object-cover transition-all duration-300 group-hover:scale-105"
-                src="/src/assets/video1.mp4"
-                muted
-                loop
-                preload="metadata"
-              ></video>
-              <div
-                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-                onclick="openVideoModal('/src/assets/video1.mp4')"
-              >
-                <svg width="60" height="60" fill="#fcaf17" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+              <!-- Column 1 -->
+              <div class="flex flex-col gap-6 md:gap-8 animate-scroll-up">
+                <div class="video-card">
+                  <video
+                    class="rounded-2xl"
+                    src="/src/assets/videos/video1.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
+                <div class="video-card">
+                  <video
+                    class="rounded-2xl"
+                    src="/src/assets/videos/video2.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
+                <div class="video-card">
+                  <video
+                    class="rounded-2xl"
+                    src="/src/assets/videos/video1.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
+                <div class="video-card">
+                  <video
+                    class="rounded-2xl"
+                    src="/src/assets/videos/video2.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
               </div>
-            </div>
-            <!-- Video 2 -->
-            <div
-              class="relative group rounded-2xl overflow-hidden shadow-lg bg-[#181a1b] border border-[#23272f]"
-            >
-              <video
-                class="w-full h-56 object-cover transition-all duration-300 group-hover:scale-105"
-                src="/src/assets/video2.mp4"
-                muted
-                loop
-                preload="metadata"
-              ></video>
+
+              <!-- Column 2 -->
               <div
-                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-                onclick="openVideoModal('/src/assets/video2.mp4')"
+                class="flex flex-col gap-6 md:gap-8 animate-scroll-down md:pt-20 pt-10"
               >
-                <svg width="60" height="60" fill="#fcaf17" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+                <div class="video-card">
+                  <video
+                    class="rounded-2xl"
+                    src="/src/assets/videos/video3.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
+                <div class="video-card">
+                  <video
+                    class="rounded-2xl"
+                    src="/src/assets/videos/video4.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
+                <div class="video-card">
+                  <video
+                    class="rounded-2xl"
+                    src="/src/assets/videos/video3.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
+                <div class="video-card">
+                  <video
+                    class="rounded-2xl"
+                    src="/src/assets/videos/video4.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
               </div>
-            </div>
-            <!-- Video 3 -->
-            <div
-              class="relative group rounded-2xl overflow-hidden shadow-lg bg-[#181a1b] border border-[#23272f]"
-            >
-              <video
-                class="w-full h-56 object-cover transition-all duration-300 group-hover:scale-105"
-                src="/src/assets/video3.mp4"
-                muted
-                loop
-                preload="metadata"
-              ></video>
+
+              <!-- Column 3 -->
               <div
-                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-                onclick="openVideoModal('/src/assets/video3.mp4')"
+                class="flex flex-col gap-6 md:gap-8 animate-scroll-up hidden md:flex"
               >
-                <svg width="60" height="60" fill="#fcaf17" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+                <div class="video-card">
+                  <video
+                    class="rounded-2xl"
+                    src="/src/assets/videos/video5.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
+                <div class="video-card">
+                  <video
+                    class="rounded-2xl"
+                    src="/src/assets/videos/video6.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
+                <div class="video-card">
+                  <video
+                    class="rounded-2xl"
+                    src="/src/assets/videos/video5.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
+                <div class="video-card">
+                  <video
+                    class="rounded-2xl"
+                    src="/src/assets/videos/video6.mp4"
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                </div>
               </div>
-            </div>
-            <!-- Video 4 -->
-            <div
-              class="relative group rounded-2xl overflow-hidden shadow-lg bg-[#181a1b] border border-[#23272f]"
-            >
-              <video
-                class="w-full h-56 object-cover transition-all duration-300 group-hover:scale-105"
-                src="/src/assets/video4.mp4"
-                muted
-                loop
-                preload="metadata"
-              ></video>
+
+              <!-- Gradient overlays -->
               <div
-                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-                onclick="openVideoModal('/src/assets/video4.mp4')"
-              >
-                <svg width="60" height="60" fill="#fcaf17" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-            <!-- Video 5 -->
-            <div
-              class="relative group rounded-2xl overflow-hidden shadow-lg bg-[#181a1b] border border-[#23272f]"
-            >
-              <video
-                class="w-full h-56 object-cover transition-all duration-300 group-hover:scale-105"
-                src="/src/assets/video5.mp4"
-                muted
-                loop
-                preload="metadata"
-              ></video>
+                class="absolute bottom-0 left-0 w-full h-24 md:h-32 bg-gradient-to-t from-[#0b0c10] to-transparent pointer-events-none"
+              ></div>
               <div
-                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-                onclick="openVideoModal('/src/assets/video5.mp4')"
-              >
-                <svg width="60" height="60" fill="#fcaf17" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
+                class="absolute top-0 left-0 w-full h-24 md:h-32 bg-gradient-to-b from-[#0b0c10] to-transparent pointer-events-none"
+              ></div>
             </div>
-            <!-- Video 6 -->
-            <div
-              class="relative group rounded-2xl overflow-hidden shadow-lg bg-[#181a1b] border border-[#23272f]"
-            >
-              <video
-                class="w-full h-56 object-cover transition-all duration-300 group-hover:scale-105"
-                src="/src/assets/video6.mp4"
-                muted
-                loop
-                preload="metadata"
-              ></video>
-              <div
-                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-                onclick="openVideoModal('/src/assets/video6.mp4')"
-              >
-                <svg width="60" height="60" fill="#fcaf17" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-            <!-- Add more videos as needed -->
           </div>
         </section>
 
@@ -2144,12 +2153,14 @@
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
+              color="#fcaf17"
               style="
                 user-select: none;
                 width: 20px;
                 height: 20px;
                 display: inline-block;
-                fill: rgb(213, 219, 230);
+                fill: #fcaf17;
+                color: #fcaf17;
                 flex-shrink: 0;
               "
             >
@@ -2170,88 +2181,121 @@
 
           <!-- Case Studies Grid -->
           <div class="slider">
-            <div class="item">
-              <img
-                src="/src/assets/How-to-Compare-Your-Car-Dealerships-Performance-to-Market-Benchmarks.jpg"
-                alt="Automotive"
-              />
-              <h2>Automotive Dealership</h2>
-              <p>
-                Modernized marketing systems, localized ads, and SMS follow-ups.
-              </p>
-              <div class="metrics">
-                <span>70% ROI Growth</span>
-                <span>40+ Cars in 90 Days</span>
+            <div class="list">
+              <!-- CARD 1 -->
+              <div class="item">
+                <div class="card-img">
+                  <img
+                    src="/src/assets/How-to-Compare-Your-Car-Dealerships-Performance-to-Market-Benchmarks.jpg"
+                  />
+                  <div class="overlay"></div>
+                </div>
+                <div class="card-body">
+                  <h2>Automotive Dealership</h2>
+                  <p>
+                    Modernized marketing systems, localized ads, and SMS
+                    follow-ups.
+                  </p>
+                  <div class="metrics">
+                    <span>70% ROI Growth</span>
+                    <span>40+ Cars in 90 Days</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 2 -->
+              <div class="item">
+                <div class="card-img">
+                  <img src="/src/assets/shutterstock_361324433.jpg.webp" />
+                  <div class="overlay"></div>
+                </div>
+                <div class="card-body">
+                  <h2>Healthcare Clinic</h2>
+                  <p>
+                    Improved patient flow using content strategy and SMS
+                    reactivation.
+                  </p>
+                  <div class="metrics">
+                    <span>5x Patient Volume</span>
+                    <span>42% Revenue Increase</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 3 -->
+              <div class="item">
+                <div class="card-img">
+                  <img
+                    src="/src/assets/commercial-real-estate-investment-strategies-building-wealth-through-properties.webp"
+                  />
+                  <div class="overlay"></div>
+                </div>
+                <div class="card-body">
+                  <h2>Commercial Real Estate</h2>
+                  <p>Boosted tenant demand through paid ads and video tours.</p>
+                  <div class="metrics">
+                    <span>130% Lead Increase</span>
+                    <span>22% NOI Uplift</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 4 -->
+              <div class="item">
+                <div class="card-img">
+                  <img
+                    src="/src/assets/male-worker-puts-laminate-flooring-floor_169016-17792.jpg"
+                  />
+                  <div class="overlay"></div>
+                </div>
+                <div class="card-body">
+                  <h2>Flooring & Home</h2>
+                  <p>Rebuilt digital presence and automated lead response.</p>
+                  <div class="metrics">
+                    <span>10x Revenue Growth</span>
+                    <span>35+ Leads/Month</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 5 -->
+              <div class="item">
+                <div class="card-img">
+                  <img src="/src/assets/dentist chair.webp" />
+                  <div class="overlay"></div>
+                </div>
+                <div class="card-body">
+                  <h2>Dental Practice</h2>
+                  <p>Scaled patient acquisition using automation systems.</p>
+                  <div class="metrics">
+                    <span>400% Patient Growth</span>
+                    <span>61% ROI Improvement</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 6 -->
+              <div class="item">
+                <div class="card-img">
+                  <img
+                    src="/src/assets/01-6-ways-to-revitalize-your-med-spas-growth-and-success.avif"
+                  />
+                  <div class="overlay"></div>
+                </div>
+                <div class="card-body">
+                  <h2>MedSpa Growth</h2>
+                  <p>Revamped offers and launched reactivation campaigns.</p>
+                  <div class="metrics">
+                    <span>3x Appointments</span>
+                    <span>47% Revenue Lift</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="item">
-              <img
-                src="/src/assets/shutterstock_361324433.jpg.webp"
-                alt="Healthcare"
-              />
-              <h2>Healthcare Clinic</h2>
-              <p>
-                Improved patient flow using content strategy and SMS
-                reactivation.
-              </p>
-              <div class="metrics">
-                <span>5x Patient Volume</span>
-                <span>42% Revenue Increase</span>
-              </div>
-            </div>
-
-            <div class="item">
-              <img
-                src="/src/assets/commercial-real-estate-investment-strategies-building-wealth-through-properties.webp"
-                alt="Real Estate"
-              />
-              <h2>Commercial Real Estate</h2>
-              <p>Boosted tenant demand through paid ads and video tours.</p>
-              <div class="metrics">
-                <span>130% Lead Increase</span>
-                <span>22% NOI Uplift</span>
-              </div>
-            </div>
-
-            <div class="item">
-              <img
-                src="/src/assets/male-worker-puts-laminate-flooring-floor_169016-17792.jpg"
-                alt="Flooring"
-              />
-              <h2>Flooring & Home</h2>
-              <p>Rebuilt digital presence and automated lead response.</p>
-              <div class="metrics">
-                <span>10x Revenue Growth</span>
-                <span>35+ Leads/Month</span>
-              </div>
-            </div>
-
-            <div class="item">
-              <img src="/src/assets/dentist chair.webp" alt="Dental" />
-              <h2>Dental Practice</h2>
-              <p>Scaled patient acquisition using Nuera Flow automation.</p>
-              <div class="metrics">
-                <span>400% Patient Growth</span>
-                <span>61% ROI Improvement</span>
-              </div>
-            </div>
-
-            <div class="item">
-              <img
-                src="/src/assets/01-6-ways-to-revitalize-your-med-spas-growth-and-success.avif"
-                alt="MedSpa"
-              />
-              <h2>MedSpa Growth</h2>
-              <p>Revamped offers and launched reactivation campaigns.</p>
-              <div class="metrics">
-                <span>3x Appointments</span>
-                <span>47% Revenue Lift</span>
-              </div>
-            </div>
-
-            <button id="next">></button>
-            <button id="prev"><</button>
+            <!-- CONTROLS -->
+            <button id="prev">‹</button>
+            <button id="next">›</button>
           </div>
         </div>
 
@@ -2284,19 +2328,31 @@
           <div
             class="assessment-btns flex flex-row gap-4 items-center justify-center w-full mt-2"
           >
-            <a
+            <!-- <a
               href="/contact.html"
               class="assessment-btn bg-[#23272f] hover:bg-[#23272f]/80 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-md transition-all duration-200 text-center border border-[#2d3748]"
               style="min-width: 220px"
               >Check Your Growth Score</a
-            >
+            > -->
 
-            <a
-              href="/contact.html"
-              class="assessment-btn bg-[#23272f] hover:bg-[#23272f]/80 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-md transition-all duration-200 text-center border border-[#2d3748]"
-              style="min-width: 220px"
-              >Apply To Work With Us</a
+            <button
+              class="relative bg-[#0d1117] text-white font-bold px-9 py-4 rounded-[10px] text-base md:text-lg tracking-widest overflow-hidden group hover:cursor-pointer border border-white/25 hover:border-white/55 shadow-[0_0_0_1px_rgba(255,255,255,0.06),inset_0_1px_0_rgba(255,255,255,0.10)] hover:shadow-[0_0_18px_rgba(255,255,255,0.12),0_0_0_1px_rgba(255,255,255,0.10),inset_0_1px_0_rgba(255,255,255,0.15)] transition-all duration-200"
             >
+              <span class="relative z-10 flex items-center gap-2.5">
+                <a href="/contact.html">Apply To Work With Us</a>
+                <i class="fa-solid fa-arrow-right -rotate-45 opacity-85"></i>
+              </span>
+
+              <!-- bottom shimmer -->
+              <div
+                class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/70 to-transparent"
+              ></div>
+
+              <!-- top edge highlight -->
+              <div
+                class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              ></div>
+            </button>
           </div>
         </div>
 
@@ -2310,20 +2366,14 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
               focusable="false"
-              color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+              color="#fcaf17"
               style="
                 user-select: none;
                 width: 20px;
                 height: 20px;
                 display: inline-block;
-                fill: var(
-                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                  rgb(213, 219, 230)
-                );
-                color: var(
-                  --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                  rgb(213, 219, 230)
-                );
+                fill: #fcaf17;
+                color: #fcaf17;
                 flex-shrink: 0;
               "
             >
@@ -2336,7 +2386,7 @@
                 ></path>
               </g>
             </svg>
-            <p class="text-[#d5dbe6]">REVIEWS</p>
+            <p class="text-[#d5dbe6]">Reviews</p>
           </div>
           <p class="text-center text-5xl text-white returnSectionPara">
             Trusted by
@@ -2347,148 +2397,179 @@
             advertising efforts.
           </p>
           <div style="width: 100%; padding: 20px">
-            <div class="responsiveGrid">
-              <!-- <div class="grid"> -->
-              <div
-                class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] border-b-2 border-[#1f2329] border-l border-[#1f2329] border-r border-[#1f2329] flex flex-col items-start fadeUp"
-                style="border-radius: 15px; gap: 30px"
-              >
-                <div
-                  class="px-3 py-3 flex flex-row gap-2.5 border-t-2 w-full border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
-                  style="padding-left: 30px; border-radius: 15px"
-                >
-                  <div>
-                    <p class="text-white">Adam Attallah</p>
-                    <!-- <p style="color: #62666e">Credit Repair</p> -->
-                  </div>
-                </div>
-                <p style="color: #a1a7b0; padding: 30px; font-size: 18px">
-                  I discussed with the team a general idea of what I was trying
-                  to accomplish and they went to work. From the time we made
-                  contact, I knew I was in good hands. Words cannot describe how
-                  much I recommend this team.
-                </p>
+            <div>
+              <div class="bg-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
               </div>
-              <div
-                class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] border-b-2 border-[#1f2329] border-l border-[#1f2329] border-r border-[#1f2329] flex flex-col items-start fadeUp"
-                style="border-radius: 15px; gap: 30px"
-              >
-                <div
-                  class="px-3 py-3 flex flex-row gap-2.5 border-t-2 w-full border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
-                  style="padding-left: 30px; border-radius: 15px"
-                >
-                  <!-- <img
-                    src="/src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
-                    alt=""
-                    class="w-[50px] h-[50px]"
-                  /> -->
-                  <div>
-                    <p class="text-white">Amrith Bhaskaran</p>
-                    <!-- <p style="color: #62666e">Credit Repair</p> -->
+
+              <section class="reviews-section">
+                <div class="carousel-outer">
+                  <div class="carousel-track-wrap">
+                    <div class="carousel-track" id="track">
+                      <div class="glass-card active">
+                        <div class="accent-bar bar-purple"></div>
+                        <div class="card-header">
+                          <div>
+                            <div class="card-index">01</div>
+                            <p class="card-name">Adam Attallah</p>
+                            <p class="card-role">Verified Client</p>
+                            <div class="stars">
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="quote-mark">&ldquo;</div>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">
+                            I discussed with the team a general idea of what I
+                            was trying to accomplish and they went to work. From
+                            the time we made contact, I knew I was in good
+                            hands.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="glass-card">
+                        <div class="accent-bar bar-blue"></div>
+                        <div class="card-header">
+                          <div>
+                            <div class="card-index">02</div>
+                            <p class="card-name">Amrith Bhaskaran</p>
+                            <p class="card-role">Verified Client</p>
+                            <div class="stars">
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="quote-mark">&ldquo;</div>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">
+                            I consulted with Strat Media for my business and I
+                            couldn't be happier. They were extremely
+                            knowledgeable and helped me bring my brand to the
+                            next level.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="glass-card">
+                        <div class="accent-bar bar-violet"></div>
+                        <div class="card-header">
+                          <div>
+                            <div class="card-index">03</div>
+                            <p class="card-name">Zeeshan Tariq</p>
+                            <p class="card-role">Verified Client</p>
+                            <div class="stars">
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                              <svg viewBox="0 0 12 12">
+                                <polygon
+                                  points="6,1 7.5,4.5 11.5,4.9 8.7,7.5 9.5,11.5 6,9.5 2.5,11.5 3.3,7.5 0.5,4.9 4.5,4.5"
+                                  fill="#fcbf2d"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="quote-mark">&ldquo;</div>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">
+                            The team did a wonderful job improving our marketing
+                            and website. The implementation was quick and they
+                            were very helpful throughout.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <p style="color: #a1a7b0; padding: 30px; font-size: 18px">
-                  I consulted with strat media for my business and I couldn’t be
-                  happier with their services. They were extremely knowledgeable
-                  and helped me bring my brand to the next level.
-                </p>
-              </div>
-              <div
-                class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] border-b-2 border-[#1f2329] border-l border-[#1f2329] border-r border-[#1f2329] flex flex-col items-start fadeUp"
-                style="border-radius: 15px; gap: 30px"
-              >
-                <div
-                  class="px-3 py-3 flex flex-row gap-2.5 border-t-2 w-full border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
-                  style="padding-left: 30px; border-radius: 15px"
-                >
-                  <!-- <img
-                    src="/src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
-                    alt=""
-                    class="w-[50px] h-[50px]"
-                  /> -->
-                  <div>
-                    <p class="text-white">Zeeshan Tariq</p>
-                    <!-- <p style="color: #62666e">Credit Repair</p> -->
-                  </div>
+
+                <div class="carousel-nav">
+                  <div class="dots" id="dots"></div>
                 </div>
-                <p style="color: #a1a7b0; padding: 30px; font-size: 18px">
-                  The team did a wonderful job improving our marketing and
-                  website. The ideas, feedback and implementation was quick and
-                  they were very helpful.
-                </p>
-              </div>
-              <!-- </div> -->
-              <!-- <div class="grid" style="margin-top: 40px"> -->
-              <!-- <div
-                class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] border-b-2 border-[#1f2329] border-l border-[#1f2329] border-r border-[#1f2329] flex flex-col items-start fadeUp3"
-                style="border-radius: 15px; gap: 30px"
-              >
-                <div
-                  class="px-3 py-3 flex flex-row gap-2.5 border-t-2 border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
-                  style="padding-left: 30px; border-radius: 15px"
-                >
-                  <img
-                    src="/src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
-                    alt=""
-                    class="w-[50px] h-[50px]"
-                  />
-                  <div>
-                    <p class="text-white">Justin S.</p>
-                    <p style="color: #62666e">Credit Repair</p>
-                  </div>
-                </div>
-                <p style="color: #a1a7b0; padding: 30px; font-size: 18px">
-                  "Stratmedia completely changed the game for us. We went from
-                  struggling to scale to doing consistent $400K months."
-                </p>
-              </div>
-              <div
-                class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] border-b-2 border-[#1f2329] border-l border-[#1f2329] border-r border-[#1f2329] flex flex-col items-start fadeUp3"
-                style="border-radius: 15px; gap: 30px"
-              >
-                <div
-                  class="px-3 py-3 flex flex-row gap-2.5 border-t-2 border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
-                  style="padding-left: 30px; border-radius: 15px"
-                >
-                  <img
-                    src="/src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
-                    alt=""
-                    class="w-[50px] h-[50px]"
-                  />
-                  <div>
-                    <p class="text-white">Justin S.</p>
-                    <p style="color: #62666e">Credit Repair</p>
-                  </div>
-                </div>
-                <p style="color: #a1a7b0; padding: 30px; font-size: 18px">
-                  "Stratmedia completely changed the game for us. We went from
-                  struggling to scale to doing consistent $400K months."
-                </p>
-              </div>
-              <div
-                class="border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] border-b-2 border-[#1f2329] border-l border-[#1f2329] border-r border-[#1f2329] flex flex-col items-start fadeUp3"
-                style="border-radius: 15px; gap: 30px"
-              >
-                <div
-                  class="px-3 py-3 flex flex-row gap-2.5 border-t-2 border-[#1f2329] border-b-2 border-[#1f2329] VisitiorsCard"
-                  style="padding-left: 30px; border-radius: 15px"
-                >
-                  <img
-                    src="/src/assets/G1bC6MQnKLl8c7ZyjwpJlVGuw.avif"
-                    alt=""
-                    class="w-[50px] h-[50px]"
-                  />
-                  <div>
-                    <p class="text-white">Justin S.</p>
-                    <p style="color: #62666e">Credit Repair</p>
-                  </div>
-                </div>
-                <p style="color: #a1a7b0; padding: 30px; font-size: 18px">
-                  "Stratmedia completely changed the game for us. We went from
-                  struggling to scale to doing consistent $400K months."
-                </p>
-              </div> -->
-              <!-- </div> -->
+              </section>
             </div>
             <div
               class="mt-[80px] border-t-2 border-[#1f2329] rounded-3xl bg-[#04070d] flex flex-col items-center justify-center gap-[20px] autoShow"
@@ -2500,20 +2581,14 @@
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256"
                   focusable="false"
-                  color="var(--token-f195ea74-7512-4096-8d91-0e7c7e10d0ab, rgb(213, 219, 230))"
+                  color="#fcaf17"
                   style="
                     user-select: none;
                     width: 20px;
                     height: 20px;
                     display: inline-block;
-                    fill: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
-                    color: var(
-                      --token-f195ea74-7512-4096-8d91-0e7c7e10d0ab,
-                      rgb(213, 219, 230)
-                    );
+                    fill: #fcaf17;
+                    color: #fcaf17;
                     flex-shrink: 0;
                   "
                 >
@@ -2526,7 +2601,7 @@
                     ></path>
                   </g>
                 </svg>
-                <p class="text-[#d5dbe6]">COMPARISON</p>
+                <p class="text-[#d5dbe6]">Comparison</p>
               </div>
               <p class="text-white text-5xl returnSectionPara">
                 Why
@@ -2773,7 +2848,7 @@
                           <p
                             class="text-[13px] uppercase tracking-[0.24em] text-[#a85d57]"
                           >
-                            Not A Fit
+                            Not a Fit
                           </p>
                           <h3 class="text-[28px] font-semibold text-white">
                             If...
@@ -2983,7 +3058,7 @@
                 class="text-[#fcaf17] text-5xl text-center returnSectionPara paraAnimation"
               >
                 Achieve More Than Ever <br />
-                with <span class="italic"> STRATMEDIA </span>
+                with <span id="heading1" class=""> STRATMEDIA </span>
               </p>
               <p class="text-white text-center paraAnimation">
                 We don’t ride waves — we create them.
@@ -2992,17 +3067,27 @@
               <div
                 class="flex flex-row gap-4 items-center justify-center w-full mt-[20px] paraAnimation"
               >
-                <a
-                  href="/contact.html"
-                  class="relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group hover:cursor-pointer flex items-center gap-2"
+                <button
+                  class="relative bg-[#0d1117] text-white font-bold px-9 py-4 rounded-[10px] text-base md:text-lg tracking-widest overflow-hidden group hover:cursor-pointer border border-white/25 hover:border-white/55 shadow-[0_0_0_1px_rgba(255,255,255,0.06),inset_0_1px_0_rgba(255,255,255,0.10)] hover:shadow-[0_0_18px_rgba(255,255,255,0.12),0_0_0_1px_rgba(255,255,255,0.10),inset_0_1px_0_rgba(255,255,255,0.15)] transition-all duration-200"
                 >
-                  Apply To Work With Us
-                  <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                  <span class="relative z-10 flex items-center gap-2.5">
+                    <a href="/contact.html">Apply To Work With Us</a>
+                    <i
+                      class="fa-solid fa-arrow-right -rotate-45 opacity-85"
+                    ></i>
+                  </span>
+
+                  <!-- bottom shimmer -->
                   <div
-                    class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/70 to-transparent"
                   ></div>
-                </a>
-                <a
+
+                  <!-- top edge highlight -->
+                  <div
+                    class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  ></div>
+                </button>
+                <!-- <a
                   href="/contact.html"
                   class="relative bg-[#0d1117] text-white font-bold px-6 py-3 rounded-[8px] text-sm md:text-base tracking-wide overflow-hidden group hover:cursor-pointer flex items-center gap-2"
                 >
@@ -3011,7 +3096,7 @@
                   <div
                     class="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 group-hover:opacity-100 transition duration-300"
                   ></div>
-                </a>
+                </a> -->
               </div>
               <p class="text-white text-[12px] font-medium">
                 Takes less than 30 seconds to schedule.
@@ -3481,7 +3566,7 @@
         <div style="font-size: 0.9rem; color: #aaa; margin-bottom: 18px">
           250+ businesses scored · Free &amp; instant · No sales call
         </div>
-        <a
+        <!-- <a
           href="https://your-link-here.com"
           target="_blank"
           style="
@@ -3496,7 +3581,7 @@
             transition: background 0.2s;
           "
           >Check Your Growth Score</a
-        >
+        > -->
         <div
           style="font-size: 0.9rem; color: #888; cursor: pointer"
           id="popup-no-thanks"
@@ -3536,5 +3621,6 @@
     </script>
 
     <script src="./scripts/card.js"></script>
+    <script src="./scripts/reviewCard.js"></script>
   </body>
 </html>

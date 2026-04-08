@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom styles for select dropdown arrows to match the dark theme */
+      .custom-select {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 0.75rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5em 1.5em;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#09090b] text-white font-sans antialiased min-h-screen py-16 px-4 sm:px-6 lg:px-8"
+  >
+    <div class="max-w-2xl mx-auto">
+      <form class="space-y-12">
+        <section class="space-y-5">
+          <h2 class="text-xl font-bold tracking-wide text-gray-100 mb-6">
+            Contact Information
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label
+                for="first-name"
+                class="block text-sm font-medium text-gray-200 mb-1.5"
+                >First Name *</label
+              >
+              <input
+                type="text"
+                id="first-name"
+                placeholder="First name"
+                class="w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors"
+              />
+            </div>
+            <div>
+              <label
+                for="last-name"
+                class="block text-sm font-medium text-gray-200 mb-1.5"
+                >Last Name *</label
+              >
+              <input
+                type="text"
+                id="last-name"
+                placeholder="Last name"
+                class="w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              for="email"
+              class="block text-sm font-medium text-gray-200 mb-1.5"
+              >Business Email *</label
+            >
+            <input
+              type="email"
+              id="email"
+              placeholder="you@company.com"
+              class="w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors"
+            />
+          </div>
+
+          <div>
+            <label
+              for="phone"
+              class="block text-sm font-medium text-gray-200 mb-1.5"
+              >Phone Number *</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              placeholder="(555) 555-5555"
+              class="w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors"
+            />
+          </div>
+        </section>
+
+        <section class="space-y-5">
+          <h2 class="text-xl font-bold tracking-wide text-gray-100 mb-6">
+            Business Information
+          </h2>
+
+          <div>
+            <label
+              for="company-name"
+              class="block text-sm font-medium text-gray-200 mb-1.5"
+              >Company Name *</label
+            >
+            <input
+              type="text"
+              id="company-name"
+              placeholder="Your company"
+              class="w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors"
+            />
+          </div>
+
+          <div>
+            <label
+              for="website"
+              class="block text-sm font-medium text-gray-200 mb-1.5"
+              >Website URL *</label
+            >
+            <input
+              type="url"
+              id="website"
+              placeholder="yourcompany.com"
+              class="w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors"
+            />
+          </div>
+
+          <div>
+            <label
+              for="revenue"
+              class="block text-sm font-medium text-gray-200 mb-1.5"
+              >Annual Revenue Range *</label
+            >
+            <select
+              id="revenue"
+              class="custom-select w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-2.5 text-sm text-gray-100 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors"
+            >
+              <option value="$1m-$3m">$1M - $3M</option>
+              <option value="$3m-$10m">$3M - $10M</option>
+              <option value="$10m+">$10M+</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              for="industry"
+              class="block text-sm font-medium text-gray-200 mb-1.5"
+              >Industry *</label
+            >
+            <select
+              id="industry"
+              class="custom-select w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-2.5 text-sm text-gray-100 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors"
+            >
+              <option value="automotive">Automotive / Dealerships</option>
+              <option value="ecommerce">E-commerce</option>
+              <option value="saas">SaaS</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="space-y-5">
+          <h2 class="text-xl font-bold tracking-wide text-gray-100 mb-6">
+            Growth Goals
+          </h2>
+
+          <div>
+            <label
+              for="challenge"
+              class="block text-sm font-medium text-gray-200 mb-1.5"
+              >What's your biggest marketing challenge right now? *</label
+            >
+            <textarea
+              id="challenge"
+              rows="3"
+              placeholder="Lead gen, brand awareness, scaling what's working, replacing an agency..."
+              class="w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-3 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors resize-y"
+            ></textarea>
+          </div>
+
+          <div>
+            <label
+              for="tried"
+              class="block text-sm font-medium text-gray-200 mb-1.5"
+              >What have you tried so far? What worked, what didn't?</label
+            >
+            <textarea
+              id="tried"
+              rows="3"
+              placeholder="In-house team, previous agencies, specific channels..."
+              class="w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-3 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors resize-y"
+            ></textarea>
+          </div>
+
+          <div>
+            <label
+              for="impact"
+              class="block text-sm font-medium text-gray-200 mb-1.5"
+              >What happens if you don't solve this in the next 12
+              months?</label
+            >
+            <textarea
+              id="impact"
+              rows="3"
+              placeholder="Revenue plateaus, lose market share, competitors pull ahead..."
+              class="w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-3 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors resize-y"
+            ></textarea>
+          </div>
+
+          <div>
+            <label
+              for="investment"
+              class="block text-sm font-medium text-gray-200 mb-1.5"
+              >Monthly Marketing Investment Range *</label
+            >
+            <select
+              id="investment"
+              class="custom-select w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-2.5 text-sm text-gray-100 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors"
+            >
+              <option value="" disabled selected>Select range</option>
+              <option value="under5k">Under $5k</option>
+              <option value="5k-10k">$5k - $10k</option>
+              <option value="10k-25k">$10k - $25k</option>
+              <option value="25k+">$25k+</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              for="timeline"
+              class="block text-sm font-medium text-gray-200 mb-1.5"
+              >When are you looking to get started? *</label
+            >
+            <select
+              id="timeline"
+              class="custom-select w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-2.5 text-sm text-gray-100 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors"
+            >
+              <option value="" disabled selected>Select timeline</option>
+              <option value="asap">ASAP</option>
+              <option value="1month">Within 1 month</option>
+              <option value="3months">1-3 months</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              for="source"
+              class="block text-sm font-medium text-gray-200 mb-1.5"
+              >How did you hear about ABMG?</label
+            >
+            <select
+              id="source"
+              class="custom-select w-full bg-[#111113] border border-[#27272a] rounded-md px-4 py-2.5 text-sm text-gray-100 focus:outline-none focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6] transition-colors"
+            >
+              <option value="" disabled selected>Select one</option>
+              <option value="google">Google Search</option>
+              <option value="social">Social Media</option>
+              <option value="referral">Referral</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </section>
+
+        <div class="pt-4 space-y-4">
+          <button
+            type="submit"
+            class="w-full bg-[#1c64c2] hover:bg-[#1855a8] text-white font-medium py-3 px-4 rounded-md transition-colors duration-200"
+          >
+            Submit Application
+          </button>
+          <p class="text-center text-xs text-gray-500">
+            By submitting, you agree to our
+            <a href="#" class="text-[#3b82f6] hover:underline">privacy policy</a
+            >. We'll never share your information with third parties.
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
