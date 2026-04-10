@@ -442,7 +442,12 @@
         <p class="text-white text-center font-semibold text-[20px]">
           We’d love to help! Let us know how
         </p>
-        <form id="contactForm" style="width: 90%">
+        <form
+          id="contactForm"
+          action="send.php"
+          method="POST"
+          style="width: 90%"
+        >
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required />
 
@@ -1217,8 +1222,62 @@
       </div>
     </div>
     <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const submitBtn = form.querySelector("button[type='submit']");
+          const originalText = submitBtn.innerHTML;
+
+          // Show loading state
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `<span class="relative z-10">Sending...</span>`;
+
+          try {
+            const formData = new FormData(form);
+
+            const response = await fetch("send.php", {
+              method: "POST",
+              body: formData,
+            });
+
+            const result = (await response.text()).trim(); // .trim() prevents whitespace mismatch
+            console.log("mail response:", result);
+
+            if (result === "success") {
+              alert(
+                "✅ Message sent successfully! We'll get back to you soon.",
+              );
+              form.reset();
+            } else if (result === "invalid_email") {
+              alert("❌ Please enter a valid email address.");
+            } else if (result === "empty_fields") {
+              alert("❌ Please fill in all required fields.");
+            } else {
+              // If mail() is failing on your server, log the result to debug
+              console.error("Unexpected response from server:", result);
+              alert(
+                "❌ Something went wrong. Please try again or contact us directly.",
+              );
+            }
+          } catch (err) {
+            console.error("Fetch error:", err);
+            alert(
+              "❌ Network error. Please check your connection and try again.",
+            );
+          } finally {
+            // Restore button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+          }
+        });
+    </script>
+    <script>
       // Event delegation: works for existing and future .faqBox items
       document.addEventListener("click", (e) => {
+        
         const box = e.target.closest(".faqBox");
         if (!box) return;
 
@@ -1386,9 +1445,7 @@
       function animate() {
         requestAnimationFrame(animate);
 
-        // if (model) {
-        //   model.rotation.y += 0.01; // 🔥 only rotate in circle around Y axis
-        // }
+       
 
         controls.update();
         renderer.render(scene, camera);
