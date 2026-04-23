@@ -681,10 +681,10 @@ body {
 }
 
 .animate-scroll-up {
-  animation: scroll-up 40s linear infinite;
+  animation: scroll-up 20s linear infinite;
 }
 .animate-scroll-down {
-  animation: scroll-down 40s linear infinite;
+  animation: scroll-down 20s linear infinite;
 }
 
 /* Pause on hover (desktop) */
@@ -723,12 +723,12 @@ body {
   /* Each "column" div becomes a horizontal row */
   .animate-scroll-up {
     flex-direction: row !important;
-    animation: scroll-left 40s linear infinite;
+    animation: scroll-left 20s linear infinite;
   }
 
   .animate-scroll-down {
     flex-direction: row !important;
-    animation: scroll-right 40s linear infinite;
+    animation: scroll-right 20s linear infinite;
     padding-top: 0 !important;
     padding-left: 60px; /* stagger offset replaces md:pt-20 */
   }
