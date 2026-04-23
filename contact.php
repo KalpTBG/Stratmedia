@@ -448,6 +448,12 @@
           method="POST"
           style="width: 90%"
         >
+        <form
+          id="contactForm"
+          action="send.php"
+          method="POST"
+          style="width: 90%"
+        >
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required />
 
@@ -1222,33 +1228,9 @@
       </div>
     </div>
     <script>
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", async function (e) {
-          e.preventDefault();
-
-          const form = e.target;
-          const formData = new FormData(form);
-
-          const response = await fetch("send.php", {
-            method: "POST",
-            body: formData,
-          });
-          console.log("mail response", response);
-
-          const result = await response.text();
-
-          if (result === "success") {
-            alert("Message sent successfully!");
-            form.reset();
-          } else {
-            alert("Something went wrong!");
-          }
-        });
-    </script>
-    <script>
       // Event delegation: works for existing and future .faqBox items
       document.addEventListener("click", (e) => {
+        
         const box = e.target.closest(".faqBox");
         if (!box) return;
 
@@ -1416,9 +1398,7 @@
       function animate() {
         requestAnimationFrame(animate);
 
-        // if (model) {
-        //   model.rotation.y += 0.01; // 🔥 only rotate in circle around Y axis
-        // }
+       
 
         controls.update();
         renderer.render(scene, camera);
